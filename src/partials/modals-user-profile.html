@@ -1,0 +1,198 @@
+<div class="modal modal-main fade" id="modalUserInfo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добавить данные</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="mb-3">
+            <h5 class="fw-light fs-5">Личные данные</h5>
+            <div class="mb-3">
+              <label for="userFio" class="form-label">Фамилия Имя Отчество</label>
+              <input type="text" class="form-control" id="userFio">
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="userBirthday" class="form-label">Дата рождения</label>
+                  <input type="date" class="form-control" id="userBirthday">
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="userPhone" class="form-label">Телефон</label>
+                  <input type="text" class="form-control" id="userPhone">
+                </div>
+              </div>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="phoneYesNo">
+              <label class="form-check-label text-secondary" for="phoneYesNo">Скрыть телефон для других
+                пользователей</label>
+            </div>
+          </div>
+          <hr>
+          <!-- <div class="mb-3">
+                            <h5 class="fw-light fs-5">Основные функции</h5>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="funcPropYesNo" checked>
+                                    <label class="form-check-label" for="funcPropYesNo">Собственник</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="funcManagerYesNo" checked>
+                                    <label class="form-check-label" for="funcManagerYesNo">Управляющий</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="funcRentYesNo" checked>
+                                    <label class="form-check-label" for="funcRentYesNo">Арендатор</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr> -->
+          <div class="mb-3">
+            <h5 class="fw-light fs-5">Смена пароля</h5>
+            <div class="row">
+              <div class="col-md">
+                <div class="mb-3">
+                  <label for="newPass" class="form-label">Новый пароль</label>
+                  <input type="password" class="form-control" id="newPass">
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="mb-3">
+                  <label for="checkPass" class="form-label">Подтвердить пароль</label>
+                  <input type="password" class="form-control" id="checkPass">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- <div class="modal modal-main fade" id="modalObjectRequest" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Запрос на добавление объекта</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <p class="text-secondary fs-5">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Nostrum, aliquam. Vitae, autem accusantium distinctio magnam.</p>
+                        <div class="mb-3">
+                            <label for="userId" class="form-label">Кому (ID пользовтеля или Email)</label>
+                            <input type="text" class="form-control" id="userId" placeholder="ID/Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userMessage" class="form-label">Сообщение</label>
+                            <textarea rows="2" class="form-control" id="userMessage"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+<div class="modal modal-main fade" id="modalObjectNotice" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Уведомления</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="row align-items-center mb-3">
+            <label for="selectFilterNotice" class="col-md-5 col-xl-4 col-form-label">Фильтр уведомлений:</label>
+            <div class="col-9 col-md-5">
+              <select name="filter" id="selectFilterNotice" class="form-select">
+                <option selected>все</option>
+                <option value="1">новые</option>
+                <option value="2">прочитанные</option>
+                <option value="3">последние 10</option>
+                <option value="4">за 30 дней</option>
+                <option value="5">за 3 месяца</option>
+                <option value="6">за 6 месяцев</option>
+                <option value="7">за год</option>
+              </select>
+            </div>
+            <div class="col col-md">
+              <button type="submit" class="btn btn-outline-success btn-sm" title="Фильтровать"><i
+                  class="bi bi-funnel-fill"></i></button>
+            </div>
+          </div>
+        </form>
+        <hr>
+        <div class="card card-notice active mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Запрос на аренду</h5>
+            <h6 class="card-subtitle mb-2 text-muted">17.06.2022 г.</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <div class="notice-files mb-2">
+              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+                  class="bi bi-file-earmark-arrow-down me-1"></i>file_sdfjkl_fksk_kldfs.png</a>
+              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+                  class="bi bi-file-earmark-arrow-down me-1"></i>file.pdf</a>
+              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+                  class="bi bi-file-earmark-arrow-down me-1"></i>files.zip</a>
+            </div>
+            <div class="notice-btn">
+              <a href="#" class="btn btn-outline-success btn-sm"><i class="bi bi-check-lg me-1"></i>Подтвердить</a>
+              <a href="#" class="btn btn-outline-danger btn-sm"><i class="bi bi-x-lg me-1"></i>Отклонить</a>
+            </div>
+          </div>
+        </div>
+        <div class="card card-notice active mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Подтверждение оплаты</h5>
+            <h6 class="card-subtitle mb-2 text-muted">17.06.2022 г.</h6>
+            <p class="card-text">Оплата за май отправлена</p>
+            <div class="notice-files mb-2">
+              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+                  class="bi bi-file-earmark-arrow-down me-1"></i>file.pdf</a>
+              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+                  class="bi bi-file-earmark-arrow-down me-1"></i>files.zip</a>
+            </div>
+            <div class="notice-btn">
+              <a href="#" class="btn btn-outline-success btn-sm"><i class="bi bi-check-lg me-1"></i>Подтвердить</a>
+              <a href="#" class="btn btn-outline-danger btn-sm"><i class="bi bi-x-lg me-1"></i>Отклонить</a>
+            </div>
+          </div>
+        </div>
+        <div class="card card-notice mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Подтверждение оплаты</h5>
+            <h6 class="card-subtitle mb-2 text-muted">17.06.2022 г.</h6>
+            <p class="card-text">Оплата за апрель отправлена</p>
+            <div class="notice-files mb-2 mb-lg-0">
+              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+                  class="bi bi-file-earmark-arrow-down me-1"></i>files.zip</a>
+            </div>
+            <div class="notice-btn">
+              <small class="text-success"><i class="bi bi-check-lg me-1"></i>Подтверждено</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+          aria-label="Close">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>

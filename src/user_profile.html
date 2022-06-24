@@ -10,13 +10,9 @@
     <main class="mb-5">
       <div class="container">
         @include('partials/breadcrumb_for_all.html')
-        <!-- @include('partials/page-title.html', {
-          "pageTitle": "Главная"
-        }) -->
-        <h1 class="page-title">
-          <div>Личный кабинет</div>
-          <a href="#" class="btn btn-outline-primary btn-sm mt-2 mt-sm-0"><i class="bi bi-arrow-left me-1"></i>Назад</a>
-        </h1>
+        @include('partials/page-title-inside.html', {
+          "pageTitle": "Личный кабинет"
+        })
 
         <!-- <h4 class="fw-bold text-secondary mb-3">Данные пользователя</h4> -->
         <div class="card card-object shadow-sm bg-success bg-gradient bg-opacity-10 border-0 mb-5">
@@ -79,7 +75,7 @@
           <div class="card card-object">
             <div class="row g-0">
               <div class="d-none d-xl-block col-xl-2 text-center">
-                <img src="images/dest/logo-gray-256.png" class="img-fluid rounded-start" alt="plug">
+                <img src="img/logo-gray-256.png" class="img-fluid rounded-start" alt="plug">
               </div>
               <div class="col-md">
                 <div class="card-object-content">
@@ -221,7 +217,7 @@
             <div class="row g-0">
               <div class="d-none d-xl-block col-xl-2 text-center">
                 <a href="#">
-                  <img src="images/dest/object1.jpg" class="card-img-object rounded-start" alt="квартира">
+                  <img src="img/object1.jpg" class="card-img-object rounded-start" alt="квартира">
                 </a>
               </div>
               <div class="col-md">
@@ -376,7 +372,7 @@
           <div class="card card-object">
             <div class="row g-0">
               <div class="d-none d-xl-block col-xl-2 text-center">
-                <img src="images/dest/logo-gray-256.png" class="img-fluid rounded-start" alt="plug">
+                <img src="img/logo-gray-256.png" class="img-fluid rounded-start" alt="plug">
               </div>
               <div class="col-md">
                 <div class="alternative-content pt-4">
@@ -401,7 +397,7 @@
           <div class="card card-object">
             <div class="row g-0">
               <div class="d-none d-xl-block col-xl-2 text-center">
-                <img src="images/dest/logo-gray-256.png" class="img-fluid rounded-start" alt="plug">
+                <img src="img/logo-gray-256.png" class="img-fluid rounded-start" alt="plug">
               </div>
               <div class="col-md">
                 <div class="card-object-content">
@@ -517,6 +513,7 @@
     @include('partials/footer.html')
 
   </div>
+  @include('partials/modals-user-profile.html')
 </body>
 
 </html>
