@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+        "pageTitle": "Восстановление пароля"
+        })
+
+        <div class="row justify-content-sm-center my-4">
+          <div class="col-sm-6 col-lg-4">
+            <div class="card card-main shadow my-5" id="form-recovery">
+              <form method="post" action="">
+                <div class="card-header fw-bold py-3">Восстановление пароля</div>
+                <div class="card-body">
+                  <p class="fw-light">Введите E-mail (логин). Ссылка для смены пароля будет отправлена на указанный Вами
+                    адрес.</p>
+                  <div class="mb-3">
+                    <label for="email-recovery" class="form-label">Email (логин)</label>
+                    <input type="email" class="form-control" id="email-recovery" required>
+                  </div>
+                </div>
+                <div class="card-footer py-3">
+                  <button type="submit" class="btn btn-primary">Отправить</button>
+                  <a href="authorization.html" class="btn btn-outline-primary" id="btn-cancel-recovery">Отмена</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>

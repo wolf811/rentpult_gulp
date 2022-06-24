@@ -1,0 +1,49 @@
+main {
+    // background-image: url(../img/mega-bg.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: left 25%;
+
+    .page-title {
+        // background: rgb(217, 217, 235);
+        // background: linear-gradient(180deg, rgba(217, 217, 235, 1) 0%, rgba(255, 255, 255, 1) 100%);
+        font-size: 1.75rem;
+        // text-transform: uppercase;
+        font-weight: 600;
+        padding-bottom: 0.5rem;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid rgba(247, 160, 20, 1);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .object-status-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        h4 {
+            font-weight: bold;
+            color: rgba(108, 117, 125, 1);
+        }
+
+        @media (min-width: 576px) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+
+    // ======== IMPORT =============
+    // @import "card-object";
+    // @import "navbar-object";
+    // ======== end import ==========
+
+}
+
+.breadcrumb-sm {
+    font-size: 85%;
+}

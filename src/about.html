@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+          "pageTitle": "О системе"
+        })
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut, modi labore ad dolor, deserunt quam
+          facilis ipsum laudantium provident nostrum quod alias ducimus. Aliquid ipsum minus magni ipsa delectus, et
+          laborum nemo vel odit soluta blanditiis dicta earum architecto provident veniam consectetur id debitis
+          molestiae amet excepturi eos! Delectus, reiciendis quidem molestiae libero. Illo repellat magni at iusto odio
+          ea dolorem cum fugit est, error et modi recusandae aperiam quos vero corrupti nihil optio cumque distinctio
+          fuga vitae, voluptate? Reprehenderit debitis iure est quia nihil facilis. Sed error unde impedit, accusantium
+          voluptatem rem quibusdam asperiores, omnis, corrupti eaque laudantium?</p>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>

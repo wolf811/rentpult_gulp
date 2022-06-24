@@ -1,0 +1,24 @@
+footer {
+    // background-color: rgba(8, 108, 65, 1);
+    background-color: #333333;
+    border-top: 1px solid #F25F25;
+
+
+    .nav-link {
+        color: #A9B0C3;
+
+        &:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 0.9rem;
+        }
+    }
+
+    p {
+        text-transform: uppercase;
+        color: #f8f9fa;
+    }
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+        "pageTitle": "Регистрация"
+        })
+
+        <div class="row justify-content-sm-center my-4">
+          <div class="col-sm-6 col-lg-4">
+            <div class="card card-main shadow my-5" id="form-registration">
+              <form method="post" action="">
+                <div class="card-header fw-bold py-3">Регистрация</div>
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="login-reg" class="form-label">Email (логин)</label>
+                      <input type="email" class="form-control" id="login-reg" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password-reg" class="form-label">Пароль</label>
+                      <input type="password" class="form-control" id="password-reg" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password-reg-repeat" class="form-label">Повторите пароль</label>
+                      <input type="password" class="form-control" id="password-reg-repeat" required>
+                    </div>
+                    <p class="fw-light">Регистрируясь, Вы принимаете <a href="#" target="_blank">Пользовательское
+                        соглашение</a></p>
+                </div>
+                <div class="card-footer py-3">
+                  <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                  <a href="authorization.html" class="btn btn-outline-primary" id="btn-move-to-signin">Вход</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>
