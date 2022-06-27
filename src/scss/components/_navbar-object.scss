@@ -28,60 +28,91 @@
 // }
 
 .navbar-object {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 
-    .navbar-toggler {
-        padding: 0;
-        border: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+  .navbar-toggler {
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
-        @media (min-width: 992px) {
-            display: none;
-        }
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+  }
+
+  .navbar-collapse {}
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @media (max-width: 991px) {
+      border-top: 2px solid #dee2e6;
+    }
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+  }
+
+  .nav-item,
+  .nav-item.dropdown {
+    width: 100%;
+
+    .nav-link {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      display: block;
+      opacity: 0.8;
+      border-left: 2px solid transparent;
+
+      &:hover {
+        opacity: 1;
+        border-left: 2px solid #dee2e6;
+      }
 
     }
 
-    .navbar-collapse {}
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-
-        @media (max-width: 991px) {
-            border-top: 2px solid #dee2e6;
-        }
+    .nav-link.active {
+      background: white;
+      border-left: 2px solid #fd9843;
+      opacity: 1;
     }
+  }
 
-    .nav-item {
+  // .nav-item.dropdown {
+  //   .nav-link.dropdown-toggle {
+  //     background: inherit;
+  //   }
 
-        width: 100%;
+  //   .dropdown-menu {
+  //     border: none;
+  //     border-radius: 0%;
 
+  //     .dropdown-item {
+  //       opacity: 0.8;
+  //       border-left: 2px solid transparent;
 
-        .nav-link {
-            padding-left: 1rem;
-            padding-right: 1rem;
-            display: block;
-            opacity: 0.8;
-            border-left: 2px solid transparent;
+  //       &:hover {
+  //         opacity: 1;
+  //         border-left: 2px solid #dee2e6;
+  //       }
+  //     }
 
-            &:hover {
-                opacity: 1;
-                border-left: 2px solid #dee2e6;
-            }
-
-        }
-
-        .nav-link.active {
-            background: white;
-            border-left: 2px solid #fd9843;
-            opacity: 1;
-        }
-    }
-
+  //     .dropdown-item.active {
+  //       background: white;
+  //       border-left: 2px solid #fd9843;
+  //       opacity: 1;
+  //       color: #212529;
+  //     }
+  //   }
+  // }
 }
