@@ -4,89 +4,136 @@
 @include('partials/head.html')
 
 <body>
-	<div class="wrapper">
-		@include('partials/navbar.html')
-		@include('partials/header.html')
-		<main class="mb-5">
-			<div class="container">
-				<!-- @include('partials/breadcrumb_for_all.html') -->
-				<nav aria-label="breadcrumb" class="mb-4">
-					<ol class="breadcrumb breadcrumb-sm">
-						<li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-						<li class="breadcrumb-item"><a href="user_profile.html">Личный кабинет</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Профиль объекта</li>
-					</ol>
-				</nav>
-				@include('partials/page-title-inside.html', {
-				"pageTitle": "Название объекта"
-				})
+  <div class="wrapper">
+    @include('partials/navbar.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        <!-- @include('partials/breadcrumb_for_all.html') -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb breadcrumb-sm">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="user_profile.html">Личный кабинет</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Профиль объекта</li>
+          </ol>
+        </nav>
+        @include('partials/page-title-inside.html', {
+        "pageTitle": "Название объекта"
+        })
 
-				<div class="row">
-					<div class="col-lg-3">
-						@include('partials/object-detail/navbar-object.html')
-					</div>
-					<div class="col-lg">
-						<div class="tab-content" id="nav-objectProfileContent">
-							<div class="tab-pane fade show active" id="common-data" role="tabpanel"
-								aria-labelledby="common-data-list">
-								<div class="card card-object border-0 shadow-sm">
-									<div
-										class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
-										<div class="fw-light fs-4">Общие данные</div>
-										<div class="text-success text-nowrap">ID: 00001-01</div>
-									</div>
-									@include('partials/object-detail/object-information.html')
+        <div class="row">
+          <div class="col-lg-3">
+            @include('partials/object-detail/navbar-object.html')
+          </div>
+          <div class="col-lg">
+            <div class="tab-content" id="nav-objectProfileContent">
+              <div class="tab-pane fade show active" id="reading-counters" role="tabpanel"
+                aria-labelledby="reading-counters-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Показания счётчиков</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/communal-services/object-reading-counters.html')
 
-								</div>
-							</div>
-							<div class="tab-pane fade" id="docs-object" role="tabpanel"
-								aria-labelledby="docs-object-list">
-								<div class="card card-object border-0 shadow-sm">
-									<div
-										class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
-										<div class="fw-light fs-4">Документы</div>
-										<div class="text-success text-nowrap">ID: 00001-01</div>
-									</div>
-									@include('partials/object-detail/object-docs.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="payment-bills" role="tabpanel" aria-labelledby="payment-bills-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Платежи</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/communal-services/object-payment-bills.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="notification-settings" role="tabpanel"
+                aria-labelledby="notification-settings-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Настройка уведомлений</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/communal-services/notification-settings.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="general-communal-services" role="tabpanel"
+                aria-labelledby="general-communal-services-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Общее</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/communal-services/general-communal-services.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="payment-rent" role="tabpanel" aria-labelledby="payment-rent-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Оплата аренды</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/rent/payment-rent.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="photo-reports" role="tabpanel" aria-labelledby="photo-reports-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Фото-отчёты</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/rent/photo-reports.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="equipment" role="tabpanel" aria-labelledby="equipment-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Фото-отчёты</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/rent/equipment.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="common-data" role="tabpanel" aria-labelledby="common-data-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Общие данные</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/object-information.html')
 
-								</div>
-							</div>
-							<div class="tab-pane fade" id="communal-services" role="tabpanel"
-								aria-labelledby="communal-services-list">
-								<div class="card card-object border-0 shadow-sm">
-									<div
-										class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
-										<div class="fw-light fs-4">Коммунальные услуги</div>
-										<div class="text-success text-nowrap">ID: 00001-01</div>
-									</div>
-									@include('partials/object-detail/object-communal-services.html')
-									
-								</div>
-							</div>
-							<div class="tab-pane fade" id="managers" role="tabpanel" aria-labelledby="managers-list">
-								Управляющие
-							</div>
-							<div class="tab-pane fade" id="tenants" role="tabpanel" aria-labelledby="tenants-list">
-								Арендаторы
-							</div>
-							<div class="tab-pane fade" id="notification-settings" role="tabpanel"
-								aria-labelledby="notification-settings-list">
-								Настройка уведомлений
-							</div>
-							<div class="tab-pane fade" id="other-info" role="tabpanel"
-								aria-labelledby="other-info-list">
-								Прочая информация
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="docs-object" role="tabpanel" aria-labelledby="docs-object-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Документы</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/object-docs.html')
 
-		@include('partials/footer.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="managers" role="tabpanel" aria-labelledby="managers-list">
+                Управляющие
+              </div>
+              <div class="tab-pane fade" id="tenants" role="tabpanel" aria-labelledby="tenants-list">
+                Арендаторы
+              </div>
 
-	</div>
-	@include('partials/object-detail/modals-object-detail.html')
+              <div class="tab-pane fade" id="other-info" role="tabpanel" aria-labelledby="other-info-list">
+                Прочая информация
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/object-detail/modals-object-detail.html')
 </body>
 
 </html>

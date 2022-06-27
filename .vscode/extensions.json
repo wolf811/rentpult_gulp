@@ -1,3 +1,13 @@
 {
-	"recommendations": ["Syler.sass-indented","stylelint.vscode-stylelint","jerryhong.autofilename","EditorConfig.EditorConfig", "mkaufman.HTMLHint", "ritwickdey.LiveServer", "dbaeumer.vscode-eslint", "rebornix.project-snippets"]
+	"recommendations": [
+		"syler.sass-indented",
+		"stylelint.vscode-stylelint",
+		"jerryhong.autofilename",
+		"editorconfig.editorconfig",
+		"mkaufman.htmlhint",
+		"ritwickdey.liveserver",
+		"dbaeumer.vscode-eslint",
+		"rebornix.project-snippets",
+		"MS-CEINTL.vscode-language-pack-ru"
+	]
 }
