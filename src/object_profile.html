@@ -88,12 +88,49 @@
               <div class="tab-pane fade" id="equipment" role="tabpanel" aria-labelledby="equipment-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
-                    <div class="fw-light fs-4">Фото-отчёты</div>
+                    <div class="fw-light fs-4">Оснащение</div>
                     <div class="text-success text-nowrap">ID: 00001-01</div>
                   </div>
                   @include('partials/object-detail/rent/equipment.html')
                 </div>
               </div>
+              <div class="tab-pane fade" id="rental-management" role="tabpanel"
+                aria-labelledby="rental-management-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Управление арендой</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/rent/rental-management.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="rent-messages" role="tabpanel" aria-labelledby="rent-messages-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Сообщения</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/rent/rent-messages.html')
+                </div>
+              </div>
+              <!-- <div class="tab-pane fade" id="useful-contacts" role="tabpanel" aria-labelledby="useful-contacts-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Полезные контакты</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/useful-contacts.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="neighbours" role="tabpanel" aria-labelledby="neighbours-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Соседи</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/neighbours.html')
+                </div>
+              </div> -->
               <div class="tab-pane fade" id="common-data" role="tabpanel" aria-labelledby="common-data-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
@@ -114,15 +151,32 @@
 
                 </div>
               </div>
-              <div class="tab-pane fade" id="managers" role="tabpanel" aria-labelledby="managers-list">
-                Управляющие
+              <div class="tab-pane fade" id="investments" role="tabpanel" aria-labelledby="investments-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Инвестиции</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/about-object/investments.html')
+                </div>
               </div>
-              <div class="tab-pane fade" id="tenants" role="tabpanel" aria-labelledby="tenants-list">
-                Арендаторы
+              <div class="tab-pane fade" id="communication" role="tabpanel" aria-labelledby="communication-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Общение</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/about-object/communication.html')
+                </div>
               </div>
-
-              <div class="tab-pane fade" id="other-info" role="tabpanel" aria-labelledby="other-info-list">
-                Прочая информация
+              <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Заметки</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/about-object/notes.html')
+                </div>
               </div>
             </div>
           </div>
