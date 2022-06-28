@@ -5,7 +5,7 @@
 
 <body>
   <div class="wrapper">
-    @include('partials/navbar.html')
+    @include('partials/navbar-after-login.html')
     @include('partials/header.html')
     <main class="mb-5">
       <div class="container">
@@ -94,7 +94,16 @@
                   @include('partials/object-detail/rent/equipment.html')
                 </div>
               </div>
-              <div class="tab-pane fade" id="rental-management" role="tabpanel"
+              <div class="tab-pane fade" id="tenants" role="tabpanel" aria-labelledby="tenants-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Арендаторы</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/rent/tenants.html')
+                </div>
+              </div>
+              <!-- <div class="tab-pane fade" id="rental-management" role="tabpanel"
                 aria-labelledby="rental-management-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
@@ -103,7 +112,7 @@
                   </div>
                   @include('partials/object-detail/rent/rental-management.html')
                 </div>
-              </div>
+              </div> -->
               <div class="tab-pane fade" id="rent-messages" role="tabpanel" aria-labelledby="rent-messages-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
@@ -113,7 +122,7 @@
                   @include('partials/object-detail/rent/rent-messages.html')
                 </div>
               </div>
-              <!-- <div class="tab-pane fade" id="useful-contacts" role="tabpanel" aria-labelledby="useful-contacts-list">
+              <div class="tab-pane fade" id="useful-contacts" role="tabpanel" aria-labelledby="useful-contacts-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
                     <div class="fw-light fs-4">Полезные контакты</div>
@@ -130,14 +139,14 @@
                   </div>
                   @include('partials/object-detail/neighbours.html')
                 </div>
-              </div> -->
+              </div>
               <div class="tab-pane fade" id="common-data" role="tabpanel" aria-labelledby="common-data-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
                     <div class="fw-light fs-4">Общие данные</div>
                     <div class="text-success text-nowrap">ID: 00001-01</div>
                   </div>
-                  @include('partials/object-detail/object-information.html')
+                  @include('partials/object-detail/about-object/object-information.html')
 
                 </div>
               </div>
@@ -147,7 +156,7 @@
                     <div class="fw-light fs-4">Документы</div>
                     <div class="text-success text-nowrap">ID: 00001-01</div>
                   </div>
-                  @include('partials/object-detail/object-docs.html')
+                  @include('partials/object-detail/about-object/object-docs.html')
 
                 </div>
               </div>
@@ -160,7 +169,7 @@
                   @include('partials/object-detail/about-object/investments.html')
                 </div>
               </div>
-              <div class="tab-pane fade" id="communication" role="tabpanel" aria-labelledby="communication-list">
+              <!-- <div class="tab-pane fade" id="communication" role="tabpanel" aria-labelledby="communication-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
                     <div class="fw-light fs-4">Общение</div>
@@ -168,7 +177,7 @@
                   </div>
                   @include('partials/object-detail/about-object/communication.html')
                 </div>
-              </div>
+              </div> -->
               <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
