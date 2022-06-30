@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Перечень счётчиков</h5>
+        <h5 class="modal-title">Список счётчиков</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="">
@@ -16,7 +16,11 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Сохранить</button>
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
         </div>
       </form>
     </div>
@@ -40,23 +44,37 @@
               <option value="3">август</option>
             </select>
           </div>
-          <div class="mb-3">
-            <label for="counter" class="form-label">Счётчик</label>
-            <select name="" id="counter" class="form-select form-select-sm">
-              <option selected>-</option>
-              <option value="1">Свет</option>
-              <option value="2">ХВС</option>
-              <option value="3">ГВС</option>
-              <option value="4">Газ</option>
-            </select>
+          <p class="form-label">Счётчик/значение</p>
+          <div class="row mb-3">
+            <div class="col-6">
+              <label class="visually-hidden" for="counter">Счётчик</label>
+              <select name="" id="counter" class="form-select form-select-sm">
+                <option selected>-</option>
+                <option value="1">Свет</option>
+                <option value="2">ХВС</option>
+                <option value="3">ГВС</option>
+                <option value="4">Газ</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label class="visually-hidden" for="valueCounter">Значение</label>
+              <input class="form-control form-control-sm" type="text" id="valueCounter">
+            </div>
           </div>
           <div class="mb-3">
+            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+          </div>
+          <!-- <div class="mb-3">
             <label for="valueCounter" class="form-label">Значение</label>
             <input class="form-control form-control-sm" type="text" id="valueCounter">
-          </div>
+          </div> -->
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Сохранить</button>
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
         </div>
       </form>
     </div>
@@ -119,7 +137,11 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Сохранить</button>
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
         </div>
       </form>
     </div>
@@ -159,7 +181,11 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Сохранить</button>
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
         </div>
       </form>
     </div>
@@ -183,19 +209,23 @@
               <input class="form-control form-control-sm" type="date" id="rentalPeriodTo">
             </div>
           </div>
-          <div class="row mb-3 align-items-center">
-            <label for="idTenant" class="form-label">ID</label>
-            <div class="col-6">
-              <input class="form-control form-control-sm" type="text" id="idTenant">
-            </div>
+          <div class="mb-3">
+            <label for="nameTenant" class="form-label">Арендатор, ID</label>
+            <input class="form-control form-control-sm" list="datalistOptionsTenants" id="nameTenant"
+              placeholder="ФИО или ID">
+            <datalist id="datalistOptionsTenants">
+              <option value="00001, Иванов Иван Иванович">
+              <option value="00002, Петров Иван Иванович">
+              <option value="00003, Юмашев Иван Иванович">
+            </datalist>
           </div>
           <div class="mb-3">
-            <label for="nameTenant" class="form-label">Арендатор</label>
-            <input class="form-control form-control-sm" type="text" id="nameTenant" placeholder="ФИО">
+            <label for="nameContract" class="form-label">Основание<small class="text-secondary ms-1">(название Договора
+                аренды и пр.)</small></label>
+            <input class="form-control form-control-sm" type="text" id="nameContract">
           </div>
           <div class="mb-3">
-            <label for="leaseContract" class="form-label">Основание<small class="text-secondary ms-1">(Договор аренды и
-                пр.)</small></label>
+            <label for="leaseContract" class="form-label">Файл договора</label>
             <input class="form-control form-control-sm" type="file" id="leaseContract">
           </div>
           <div class="mb-3">
@@ -217,13 +247,27 @@
             <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить
               файл</a>
           </div> -->
+          <div class="row mb-3 align-items-center">
+            <div class="col-6">
+              <label for="paymentMonth" class="form-label">Ежемесячная плата</label>
+              <input class="form-control form-control-sm" type="text" id="paymentMonth">
+            </div>
+            <div class="col-6">
+              <label for="depositAmount" class="form-label">Депозит</label>
+              <input class="form-control form-control-sm" type="text" id="depositAmount">
+            </div>
+          </div>
           <div class="mb-3">
             <label for="commentAboutTenant" class="form-label">Комментарий</label>
             <textarea class="form-control form-control-sm" name="" id="commentAboutTenant" rows="2"></textarea>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Сохранить</button>
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
         </div>
       </form>
     </div>
@@ -274,18 +318,19 @@
               <input class="form-control form-control-sm" type="date" id="anotherPeriodPaymentTo">
             </div>
           </div>
+          <p class="form-label">Штраф/Блок</p>
           <div class="row mb-3 align-items-center">
-            <label for="fineBlockPaymentRent" class="form-label">Штраф/Блок</label>
             <div class="col">
+              <label for="finePaymentRent" class="visually-hidden">Штраф</label>
               <input class="form-control form-control-sm" type="text" id="finePaymentRent" placeholder="суммы штрафа">
             </div>
             <div class="col">
+              <label for="blockPaymentRent" class="visually-hidden">Блок</label>
               <input class="form-control form-control-sm" type="text" id="blockPaymentRent" placeholder="сумма блока">
             </div>
           </div>
           <div class="row mb-3 align-items-center">
-            <label for="filePaymentRent" class="form-label">Основание<small class="text-secondary ms-1">(Договор аренды
-                и пр.)</small></label>
+            <label for="filePaymentRent" class="form-label">Файл(-ы)</small></label>
             <div class="col-10">
               <input class="form-control form-control-sm" type="file" id="filePaymentRent">
             </div>
@@ -303,7 +348,145 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Сохранить</button>
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="noticeList" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Список типовых уведомлений</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="mb-3">
+            <div class="mb-3">
+              <label for="nameCounter" class="form-label">Название уведомления</label>
+              <input type="text" class="form-control form-control-sm" id="nameCounter">
+            </div>
+            <button class="btn btn-outline-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalAddNotice" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Настройка уведомления</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="row mb-3">
+            <label for="noticeAddDate" class="form-label">Дата создания</label>
+            <div class="col-6">
+              <input type="date" class="form-control form-control-sm" id="noticeAddDate">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="periodicity" class="form-label">Периодичность</label>
+            <select name="" id="periodicity" class="form-select form-select-sm">
+              <option selected>-</option>
+              <option value="0">однократно</option>
+              <option value="1">ежедневно</option>
+              <option value="2">ежемесячно</option>
+              <option value="3">ежеквартально</option>
+              <option value="4">ежегодно</option>
+              <option value="5">раз в пять лет</option>
+            </select>
+          </div>
+          <div class="row mb-3">
+            <div class="col-6">
+              <label class="form-label" for="periodStartDate">Дата начала</label>
+              <input type="date" class="form-control form-control-sm" id="periodStartDate">
+            </div>
+            <div class="col-6">
+              <label class="form-label" for="periodEndDate">Дата окончания</label>
+              <input type="date" class="form-control form-control-sm" id="periodEndDate">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="choiceNotice" class="form-label">Типовые уведомления</label>
+            <select name="" id="choiceNotice" class="form-select form-select-sm">
+              <option selected>-</option>
+              <option value="1">Оплата аренды</option>
+              <option value="2">Показания счётчиков</option>
+              <option value="3">Простое уведомление</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="textNotice" class="form-label">Текст уведомления</label>
+            <textarea class="form-control form-control-sm" name="" id="textNotice" rows="2"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalAddUsefulContact" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добавить контакт</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="statusContact" class="form-label">Статус контакта</label>
+            <input type="text" class="form-control form-control-sm" id="statusContact">
+          </div>
+          <div class="mb-3">
+            <label for="nameUsefulContact" class="form-label">ФИО/Организация</label>
+            <input type="text" class="form-control form-control-sm" id="nameUsefulContact">
+          </div>
+          <p class="form-label">Телефон/E-mail</p>
+          <div class="row mb-3 align-items-center">
+            <div class="col">
+              <label for="phoneUsefulContact" class="visually-hidden">Телефон</label>
+              <input class="form-control form-control-sm" type="text" id="phoneUsefulContact" placeholder="телефон">
+            </div>
+            <div class="col">
+              <label for="emailUsefulContact" class="visually-hidden">E-mail</label>
+              <input class="form-control form-control-sm" type="text" id="emailUsefulContact" placeholder="e-mail">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="textUsefulContact" class="form-label">Примечание</label>
+            <textarea class="form-control form-control-sm" name="" id="textUsefulContact" rows="2"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
         </div>
       </form>
     </div>

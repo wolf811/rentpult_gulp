@@ -1,28 +1,35 @@
 <div class="card-body">
-  <p class="text-info">В разработке!!!</p>
-  <!-- <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="collapse" href="#formPaymentUtilityServices"
-    role="button" aria-expanded="false" aria-controls="formPaymentUtilityServices"><i
-      class="bi bi-plus-lg me-1"></i>Добавить</a>
-  <div class="collapse" id="formPaymentUtilityServices">
+  <p class="text-secondary"><i class="bi bi-info-circle text-orange me-2"></i>Раздел предназначен для внесения
+    информации, связанной с оплатой ЖКХ (например: личные кабинеты организаций), поверкой счётчиков и прочее.</p>
+  <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="collapse" href="#formAddInformation" role="button"
+    aria-expanded="false" aria-controls="formAddInformation"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+  <div class="collapse" id="formAddInformation">
     <div class="card card-body rounded-0">
       <form action="">
         <fieldset class="small pb-3">
           <div class="row mb-3">
-            <label for="paymentDate" class="col-md-4 col-form-label">Дата</label>
+            <label for="recordDate" class="col-md-4 col-form-label">Дата</label>
             <div class="col-sm-3">
-              <input class="form-control form-control-sm" type="date" id="paymentDate">
+              <input class="form-control form-control-sm" type="date" id="recordDate">
             </div>
           </div>
           <div class="row mb-3">
-            <label for="amountPayment" class="col-md-4 col-form-label">Сумма
-              платежа</label>
+            <label for="nameRecord" class="col-md-4 col-form-label">Описание записи</label>
             <div class="col-sm col-xl-6">
-              <input class="form-control form-control-sm" type="text" id="amountPayment">
+              <input class="form-control form-control-sm" type="text" id="nameRecord">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="nameLinkRecord" class="col-md-4 col-form-label">Название ссылки/ссылка</label>
+            <div class="col-sm-3">
+              <input class="form-control form-control-sm" type="text" id="nameLinkRecord" placeholder="название">
+            </div>
+            <div class="col-sm-3">
+              <input class="form-control form-control-sm" type="text" id="linkRecord" placeholder="ссылка">
             </div>
           </div>
           <div class="row mb-3 align-items-center">
-            <label for="" class="col-md-4 col-form-label">Файл(-ы)
-              оплаты</label>
+            <label for="" class="col-md-4 col-form-label">Файл(-ы) к записи</label>
             <div class="col-10 col-md-6">
               <input class="form-control form-control-sm" type="file" id="paymentFiles">
             </div>
@@ -36,6 +43,12 @@
                 файл</a>
             </div>
           </div>
+          <div class="row mb-3">
+            <label for="commentFilesRecord" class="col-md-4 col-form-label">Комментарии к файлам</label>
+            <div class="col-sm col-xl-6">
+              <textarea class="form-control form-control-sm" name="" id="commentFilesRecord" rows="2"></textarea>
+            </div>
+          </div>
         </fieldset>
         <div class="d-flex align-items-center justify-content-between">
           <div>
@@ -44,8 +57,8 @@
               Сохраняем...
             </button>
             <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
-            <a href="#formPaymentUtilityServices" class="btn btn-link btn-sm" data-bs-toggle="collapse" role="button"
-              aria-expanded="false" aria-controls="formPaymentUtilityServices">Закрыть</a>
+            <a href="#formAddInformation" class="btn btn-link btn-sm" data-bs-toggle="collapse" role="button"
+              aria-expanded="false" aria-controls="formAddInformation">Закрыть</a>
           </div>
           <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
         </div>
@@ -58,8 +71,10 @@
         <tr>
           <th scope="col" width="50" class="text-center">#</th>
           <th scope="col">Дата</th>
-          <th scope="col">Сумма</th>
+          <th scope="col">Описание</th>
+          <th scope="col">Ссылка</th>
           <th scope="col">Файлы</th>
+          <th scope="col">Комментарии</th>
         </tr>
       </thead>
       <tbody>
@@ -67,25 +82,29 @@
           <td class="text-center"><a href="#" class="text-danger btn-sm" title="Удалить"><i class="bi bi-x-lg"></i>
           </td>
           <td>12.05.2022</td>
-          <td class="text-nowrap">7510.00 руб.</td>
+          <td>Вход на сайт Мособлеирц</td>
+          <td><a href="#" target="_blank">ЛК Мособлеирц</a></td>
           <td>
             <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
                 class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a>
             <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
                 class="bi bi-file-earmark-arrow-down me-1"></i>file_receipt.pdf</a>
           </td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, esse.</td>
         </tr>
         <tr>
           <td class="text-center"><a href="#" class="text-danger btn-sm" title="Удалить"><i class="bi bi-x-lg"></i>
           </td>
-          <td>03.07.2021</td>
-          <td class="text-nowrap">7510.00 руб.</td>
+          <td>12.05.2022</td>
+          <td>Сайт УК Дружба</td>
+          <td><a href="#" target="_blank">УК Дружба</a></td>
           <td>
             <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
-                class="bi bi-file-earmark-arrow-down me-1"></i>file_payment_receipt.zip</a>
+                class="bi bi-file-earmark-arrow-down me-1"></i>contract.pdf</a>
           </td>
+          <td>Договор с УК Дружба</td>
         </tr>
       </tbody>
     </table>
-  </div> -->
+  </div>
 </div>
