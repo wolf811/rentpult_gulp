@@ -1,0 +1,65 @@
+<div class="card-body">
+  <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="collapse" href="#formAddNeighbor" role="button"
+    aria-expanded="false" aria-controls="formAddNeighbor"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+  <div class="collapse" id="formAddNeighbor">
+    <div class="card card-body rounded-0">
+      <form action="">
+        <fieldset class="small pb-3">
+          <div class="row mb-3">
+            <label for="neighborDate" class="col-md-4 col-form-label">Дата</label>
+            <div class="col-sm-3">
+              <input class="form-control form-control-sm" type="date" id="neighborDate">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="identifierNeighbor" class="col-md-4 col-form-label">Идентификатор</label>
+            <div class="col-sm col-xl-6">
+              <input class="form-control form-control-sm" type="text" id="identifierNeighbor"
+                placeholder="ФИО, № квартиры и пр.">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="commentNeighbor" class="col-md-4 col-form-label">Комментарий</label>
+            <div class="col-sm col-xl-6">
+              <textarea class="form-control form-control-sm" name="" id="commentNeighbor" rows="2"></textarea>
+            </div>
+          </div>
+        </fieldset>
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <button class="btn btn-primary btn-sm" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Сохраняем...
+            </button>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+            <a href="#formAddNeighbor" class="btn btn-link btn-sm" data-bs-toggle="collapse" role="button"
+              aria-expanded="false" aria-controls="formAddNeighbor">Закрыть</a>
+          </div>
+          <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="table-responsive mt-2">
+    <table class="table table-light small">
+      <thead>
+        <tr>
+          <th scope="col" width="50" class="text-center">#</th>
+          <th scope="col">Дата</th>
+          <th scope="col">Идентификатор</th>
+          <th scope="col">Комментарий</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center"><a href="#" class="text-danger btn-sm" title="Удалить"><i class="bi bi-x-lg"></i>
+          </td>
+          <td>12.05.2022</td>
+          <td>Василий Иванович, кв. 29</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet numquam, ad explicabo nam atque nobis
+            aperiam nemo minus quae eum error rerum. Modi in maxime aliquid animi, ipsum itaque aperiam.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

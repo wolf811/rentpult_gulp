@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar-after-login.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        <!-- @include('partials/breadcrumb_for_all.html') -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb breadcrumb-sm">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="object_profile.html">Название объекта</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Название фото-отчёта</li>
+          </ol>
+        </nav>
+        @include('partials/page-title-inside.html', {
+        "pageTitle": "Название фото-отчёта"
+        })
+
+        <div class="row row-cols-3 row-cols-md-6 row-cols-xl-10 g-4 align-items-center">
+          <div class="col">
+            <div class="card">
+              <a href="#">
+                <img src="img/logo-gray-256.png" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object1.jpg" data-fancybox="gallery">
+                <img src="img/object1.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/certificat_rus.png" data-fancybox="gallery">
+                <img src="img/certificat_rus.png" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object2.jpg" data-fancybox="gallery">
+                <img src="img/object2.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object3.jpg" data-fancybox="gallery">
+                <img src="img/object3.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object1.jpg" data-fancybox="gallery">
+                <img src="img/object1.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object2.jpg" data-fancybox="gallery">
+                <img src="img/object2.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object3.jpg" data-fancybox="gallery">
+                <img src="img/object3.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object1.jpg" data-fancybox="gallery">
+                <img src="img/object1.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object2.jpg" data-fancybox="gallery">
+                <img src="img/object2.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object3.jpg" data-fancybox="gallery">
+                <img src="img/object3.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object1.jpg" data-fancybox="gallery">
+                <img src="img/object1.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object2.jpg" data-fancybox="gallery">
+                <img src="img/object2.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="img/object3.jpg" data-fancybox="gallery">
+                <img src="img/object3.jpg" class="card-img" alt="foto">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/object-detail/modals-object-detail.html')
+</body>
+
+</html>
