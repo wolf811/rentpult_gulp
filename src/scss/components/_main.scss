@@ -47,3 +47,18 @@ main {
 .breadcrumb-sm {
     font-size: 85%;
 }
+
+.card-file-gallery {
+  position: relative;
+  .form-check-input {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 1000;
+  }
+  .btn {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+  }
+}
