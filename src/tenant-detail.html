@@ -20,65 +20,63 @@
         @include('partials/page-title-inside.html', {
         "pageTitle": "Арендатор"
         })
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-          <div class="col">
-            <div class="card h-100 card-object border-0 shadow-sm">
+        <div class="row">
+          <div class="col mb-4">
+            <div class="card h-100 border-0 shadow-sm">
               <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
                 <div class="fw-light fs-4">Информация об арендаторе</div>
                 <!-- <div class="text-success text-nowrap">ID: 00001-01</div> -->
               </div>
-              <div class="card-body">
-                <form action="">
-                  <fieldset>
-                    <div class="mb-3">
-                      <label for="nameTenant" class="form-label">Арендатор, ID</label>
-                      <input class="form-control" list="datalistOptionsTenants" id="nameTenant"
-                        placeholder="ФИО или ID">
-                      <datalist id="datalistOptionsTenants">
-                        <option value="00001, Иванов Иван Иванович">
-                        </option>
-                        <option value="00002, Петров Иван Иванович">
-                        </option>
-                        <option value="00003, Юмашев Иван Иванович">
-                        </option>
-                      </datalist>
+              <form action="">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="nameTenant" class="form-label">Арендатор, ID</label>
+                    <input class="form-control" list="datalistOptionsTenants" id="nameTenant" placeholder="ФИО или ID">
+                    <datalist id="datalistOptionsTenants">
+                      <option value="00001, Иванов Иван Иванович">
+                      </option>
+                      <option value="00002, Петров Иван Иванович">
+                      </option>
+                      <option value="00003, Юмашев Иван Иванович">
+                      </option>
+                    </datalist>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="rentalPeriod" class="form-label">Период аренды</label>
+                    <div class="col-6">
+                      <input class="form-control" type="date" id="rentalPeriodFrom">
                     </div>
-                    <div class="row mb-3">
-                      <label for="rentalPeriod" class="form-label">Период аренды</label>
-                      <div class="col-6">
-                        <input class="form-control" type="date" id="rentalPeriodFrom">
-                      </div>
-                      <div class="col-6">
-                        <input class="form-control" type="date" id="rentalPeriodTo">
-                      </div>
+                    <div class="col-6">
+                      <input class="form-control" type="date" id="rentalPeriodTo">
                     </div>
-                    <div class="mb-3">
-                      <label for="nameContract" class="form-label">Основание<small class="text-secondary ms-1">(Договор
-                          аренды и&nbsp;пр.)</small></label>
-                      <input class="form-control" type="text" id="nameContract">
+                  </div>
+                  <div class="mb-3">
+                    <label for="nameContract" class="form-label">Основание<small class="text-secondary ms-1">(Договор
+                        аренды и&nbsp;пр.)</small></label>
+                    <input class="form-control" type="text" id="nameContract">
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="prolongation" value="option1">
+                      <label class="form-check-label" for="prolongation">пролонгация</label>
                     </div>
-                    <div class="mb-3">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="prolongation" value="option1">
-                        <label class="form-check-label" for="prolongation">пролонгация</label>
-                      </div>
+                  </div>
+                  <div class="row mb-3 align-items-center">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
+                      <label for="paymentMonth" class="form-label">Ежемесячная плата</label>
+                      <input class="form-control" type="text" id="paymentMonth">
                     </div>
-                    <div class="row mb-3 align-items-center">
-                      <div class="col-lg-6 mb-3 mb-lg-0">
-                        <label for="paymentMonth" class="form-label">Ежемесячная плата</label>
-                        <input class="form-control" type="text" id="paymentMonth">
-                      </div>
-                      <div class="col-lg-6">
-                        <label for="depositAmount" class="form-label">Депозит</label>
-                        <input class="form-control" type="text" id="depositAmount">
-                      </div>
+                    <div class="col-lg-6">
+                      <label for="depositAmount" class="form-label">Депозит</label>
+                      <input class="form-control" type="text" id="depositAmount">
                     </div>
-                    <div class="mb-3">
-                      <label for="commentAboutTenant" class="form-label">Комментарий</label>
-                      <textarea class="form-control" name="" id="commentAboutTenant" rows="2"></textarea>
-                    </div>
-                    <hr>
-                  </fieldset>
+                  </div>
+                  <div class="mb-3">
+                    <label for="commentAboutTenant" class="form-label">Комментарий</label>
+                    <textarea class="form-control" name="" id="commentAboutTenant" rows="2"></textarea>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent py-3">
                   <div class="d-flex align-items-center justify-content-between">
                     <div>
                       <button class="btn btn-primary" type="button" disabled>
@@ -90,18 +88,35 @@
                     </div>
                     <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
                   </div>
-                </form>
-              </div>
-
+                </div>
+              </form>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100 card-object border-0 shadow-sm">
+          <div class="col mb-4">
+            <div class="card h-100 border-0 shadow-sm">
               <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
                 <div class="fw-light fs-4">Файлы аренды</div>
                 <!-- <div class="text-success text-nowrap">ID: 00001-01</div> -->
               </div>
               <div class="card-body">
+                <!-- <p class="text-secondary"><i class="bi bi-info-circle text-orange me-2"></i>Возможно добавить сразу
+                  несколько файлов, формата .jpg, .jpeg, .png, .pdf</p> -->
+                <p class="mb-1">Загрузка файлов</p>
+                <div class="mb-3">
+                  <label for="nameFileRent" class="visually-hidden">Название файла</label>
+                  <input type="text" class="form-control" id="nameFileRent" placeholder="Название файла">
+                </div>
+                <div class="mb-3">
+                  <label for="choiceFileRent" class="visually-hidden">Выбор файла</label>
+                  <div class="input-group">
+                    <input type="file" class="form-control" id="choiceFileRent" aria-describedby="addFileRent"
+                      aria-label="Upload">
+                    <button class="btn btn-outline-primary" type="button" id="addFileRent" title="Загрузить"><i
+                        class="bi bi-download"></i></button>
+                  </div>
+                  <!-- <input type="file" class="form-control" id="choiceFileRent"> -->
+                </div>
+                <!-- <a href="#" class="btn btn-outline-primary"><i class="bi bi-download me-1"></i>Загрузить файл</a> -->
                 <div class="small mb-3">
                   <div class="bg-light d-flex align-items-center justify-content-between border-bottom p-2">
                     <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
@@ -113,18 +128,6 @@
                     <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
                   </div>
                 </div>
-                <!-- <p class="text-secondary"><i class="bi bi-info-circle text-orange me-2"></i>Возможно добавить сразу
-                  несколько файлов, формата .jpg, .jpeg, .png, .pdf</p> -->
-                <p class="mb-1">Загрузка файлов</p>
-                <div class="mb-3">
-                  <label for="nameFileRent" class="visually-hidden">Название файла</label>
-                  <input type="text" class="form-control" id="nameFileRent" placeholder="Название файла">
-                </div>
-                <div class="mb-3">
-                  <label for="choiceFileRent" class="visually-hidden">Выбор файла</label>
-                  <input type="file" class="form-control" id="choiceFileRent">
-                </div>
-                <a href="#" class="btn btn-outline-primary"><i class="bi bi-download me-1"></i>Загрузить файл</a>
               </div>
 
             </div>

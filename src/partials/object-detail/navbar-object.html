@@ -44,8 +44,10 @@
             aria-controls="tenants">Арендаторы</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#rent-messages" id="rent-messages-list" data-bs-toggle="list" role="tab"
-            aria-controls="rent-messages">Чат</a>
+          <a class="nav-link d-flex align-items-center justify-content-between" href="#rent-messages"
+            id="rent-messages-list" data-bs-toggle="list" role="tab" aria-controls="rent-messages">Чат<span
+              class="badge rounded-pill text-bg-danger" title="Непрочитанные сообщения">1</span></a>
+
         </li>
         <p class="mb-0 fs-5 py-2 mb-2 border-bottom w-100">Информация об объекте</p>
         <li class="nav-item">
@@ -88,6 +90,11 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li> -->
+        <li class="nav-item d-block d-lg-none">
+          <a href="#" class="float-end" data-bs-toggle="collapse" data-bs-target="#navbarObject"
+            aria-controls="navbarObject" aria-expanded="false" aria-label="Toggle navigation"><i
+              class="bi bi-x-lg me-1"></i>Свернуть</a>
+        </li>
       </ul>
     </div>
   </div>
