@@ -1,1 +1,5 @@
 // @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-Light", 300, light);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-Regular", 400, normal);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-SemiBold", 600, semibold);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-Bold", 700, bold);

@@ -32,12 +32,28 @@ body {
 
 body {
   // font-family: 'Montserrat', sans-serif;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   background-image: url(../img/bg-content.png);
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.fw-light {
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 300;
+}
+.fw-normal {
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+}
+.fw-semibold {
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 600;
+}
+.fw-semibold {
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 700;
+}
 .wrapper {
   display: flex !important;
   flex-direction: column !important;
