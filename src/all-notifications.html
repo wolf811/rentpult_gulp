@@ -108,18 +108,39 @@
           <table class="table table-light align-middle">
             <thead>
               <tr>
+                <th scope="col" width="50" class="text-center">#</th>
                 <th>Дата</th>
                 <th>ID объекта</th>
-                <th>Арендатор, ID</th>
+                <th class="text-nowrap">Арендатор, ID</th>
                 <th>Тема</th>
                 <th>Текст</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td class="text-center">
+                  <div class="btn-group btn-group-sm" role="group">
+                    <a href="#" class="btn btn-outline-success"><i class="bi bi-check2" title="Выполнено"></i></a>
+                    <a href="#" class="btn btn-outline-success" title="Напомнить"><i class="bi bi-arrow-repeat"></i></a>
+                    <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </td>
                 <td>12.06.2022</td>
                 <td>00001-01</td>
-                <td>Петров Александр Иванович, 00023</td>
+                <td>Петров Александр Иванович, <div class="small text-muted">00023</div>
+                </td>
+                <td>Оплата счетчиков</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quam quis et nesciunt ea excepturi?
+                </td>
+              </tr>
+              <tr class="text-secondary">
+                <td class="text-center">
+                  <span class="text-success text-nowrap small"><i class="bi bi-check2-all me-1"></i>Выполнено</span>
+                </td>
+                <td>12.06.2022</td>
+                <td>00001-01</td>
+                <td>Петров Александр Иванович,<div class="small text-muted">00023</div>
+                </td>
                 <td>Оплата счетчиков</td>
                 <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quam quis et nesciunt ea excepturi?
                 </td>
