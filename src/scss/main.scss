@@ -73,6 +73,11 @@ body {
 
 }
 
+.container-main {
+  @media (min-width: 1921px) {
+    max-width: 1920px;
+  }
+}
 a,
 a.btn-link {
   color: #0462B1;
