@@ -1,7 +1,30 @@
 .compact-view {
+  .view-buttons {
+    position: absolute;
+    right: 20px;
+  }
+  .header-main {
+    padding-top: 0;
+    padding-bottom: 0;
+    img {
+      width: 75px;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    .contacts a {
+      font-size: inherit;
+    }
+  }
   main {
+    .page-title {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+    }
     .object-status-title {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0;
       h5 {
         font-weight: bold;
         color: rgba(108, 117, 125, 1);
@@ -14,24 +37,28 @@
       font-size: 75%;
     }
     .card-object-content {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+      padding: 0;
     }
     .card-title {
-      padding: 0 0.5rem 0.5rem 0.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0;
 
       h5 {
         font-weight: lighter;
+
       }
     }
     .card-body {
-      padding: 0.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
     .card-text {
-      font-size: 0.875rem;;
+      font-size: 0.875rem;
+      margin-bottom: 0.125rem;
     }
     .card-object-footer {
-      padding: 0.5rem 0.5rem 0 0.5rem;
+      padding: 0 0.5rem;
       border-top: none;
     }
     .card-object-badge {
@@ -45,14 +72,14 @@
 
       .badge-item {
         padding: 0.15rem 0.3rem;
-        border-radius: 0.3rem;
+        // border-radius: 0.3rem;
         font-size: 0.75rem;
-        margin-right: 0.2rem;
-        margin-bottom: 0;
+        // margin-right: 0.2rem;
+        margin-bottom: 0.2rem;
 
-        &:hover {
-          opacity: 0.8;
-        }
+        // &:hover {
+        //   opacity: 0.8;
+        // }
       }
     }
   }

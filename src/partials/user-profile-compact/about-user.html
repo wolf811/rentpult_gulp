@@ -1,38 +1,38 @@
 <div class="card card-object shadow-sm bg-success bg-gradient bg-opacity-10 border-0 mb-3">
-  <div class="card-header d-flex flex-wrap align-items-center justify-content-between py-2">
-    <div class="fs-5">eroshenkov@gmail.com</div>
-    <div class="d-flex align-items-center">
-      <div class="text-success text-nowrap small me-3">ID: 00001</div>
-      <a href="#collapseUserDetail" class="small" data-bs-toggle="collapse" role="button" aria-expanded="false"
-        aria-controls="collapseUserDetail">Больше информации<i class="bi bi-chevron-down ms-1"></i></a>
-    </div>
-  </div>
-
-  <div class="card-body collapse" id="collapseUserDetail">
-    <a href="#" class="btn btn-success btn-sm" role="button" data-bs-toggle="modal" data-bs-target="#modalUserInfo"><i
-        class="bi bi-plus-lg me-1"></i>Добавить данные</a>
-    <div class="text-info small mb-2">кнопка есть пока нет данных</div>
-    <div class="row">
-      <div class="col-lg-7 col-xl-6 offset-xl-2 mb-3">
-        <h5 class="fw-semibold fs-5">Личные данные</h5>
-        <div class="card-text d-flex flex-column flex-sm-row align-items-sm-center mb-2">
-          <span class="text-secondary fw-bold me-2">Фамилия Имя Отчество:</span>
-          <span class="fs-6">Иванов Иван Иванович</span>
-        </div>
-        <div class="card-text d-flex flex-column flex-sm-row align-items-sm-center mb-2">
-          <span class="text-secondary fw-bold me-2">Дата рождения:</span>
-          <span class="fs-6">15.10.1981 г.</span>
-        </div>
-        <div class="card-text d-flex flex-column flex-sm-row align-items-sm-center mb-2">
-          <span class="text-secondary fw-bold me-2">Телефон:</span>
-          <span class="fs-6">+7 (926) 133-45-77</span>
-        </div>
+  <div class="card-object-content">
+    <div class="card-title">
+      <div class="fs-5">eroshenkov@gmail.com</div>
+      <div class="d-flex align-items-center">
+        <div class="text-success text-nowrap small me-2">ID: 00001</div>
+        <a href="#" class="btn btn-outline-success btn-xs me-2" role="button" data-bs-toggle="modal"
+          data-bs-target="#modalUserInfo" title="Изменить данные"><i class="bi bi-pencil"></i></a>
+        <a href="#collapseUserDetail" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse" role="button"
+          aria-expanded="false" aria-controls="collapseUserDetail" title="Подробнее"><i
+            class="bi bi-chevron-down"></i></a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg offset-xl-2">
-        <a href="#" class="btn btn-outline-success btn-sm" role="button" data-bs-toggle="modal"
-          data-bs-target="#modalUserInfo"><i class="bi bi-pencil me-1"></i>Изменить данные</a>
+    <div class="card-body collapse" id="collapseUserDetail">
+      <a href="#" class="btn btn-success btn-sm" role="button" data-bs-toggle="modal" data-bs-target="#modalUserInfo"><i
+          class="bi bi-plus-lg me-1"></i>Добавить данные</a>
+      <div class="row">
+        <div class="offset-xl-1 col-sm">
+          <div class="card-text d-block">
+            <div class="text-secondary fw-bold">Фамилия Имя Отчество:</div>
+            <div class="fs-6">Иванов Иван Иванович</div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card-text d-block">
+            <div class="text-secondary fw-bold">Дата рождения:</div>
+            <div class="fs-6">15.10.1981 г.</div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card-text d-block">
+            <div class="text-secondary fw-bold">Телефон:</div>
+            <div class="fs-6">+7 926 133-45-77</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

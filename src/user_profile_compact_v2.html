@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper compact-view">
+
+    @include('partials/navbar-after-login.html')
+    @include('partials/user-profile-compact/header.html')
+    <main>
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title-inside.html', {
+        "pageTitle": "Личный кабинет"
+        })
+
+        @include('partials/user-profile-compact/about-user.html')
+
+        <ul class="nav nav-pills mb-3" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+              type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Объекты в собственности</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+              type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Объекты в управлении</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+              data-bs-target="#contact-tab-pane"
+              type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Объекты в аренде</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            @include('partials/user-profile-compact/objects-in-property.html')
+            @include('partials/user-profile-compact/objects-in-property.html')
+            @include('partials/user-profile-compact/objects-in-property.html')
+            <a href="object_profile.html" class="btn btn-success btn-sm" role="button"><i class="bi bi-plus-lg me-1"></i>Добавить объект</a>
+          </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            @include('partials/user-profile-compact/objects-in-management.html')
+            @include('partials/user-profile-compact/objects-in-management.html')
+          </div>
+          <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            @include('partials/user-profile-compact/objects-for-rent.html')
+          </div>
+
+        </div>
+      </div>
+      <div class="py-5">
+        <div class="container">
+          <div class="card card-object shadow-sm mb-0">
+            <div class="row g-0">
+              <div class="d-none d-xl-block col-xl-2 text-center">
+                <img src="img/logo-gray-256.png" class="img-fluid rounded-start" alt="plug">
+              </div>
+              <div class="col-md">
+                <div class="alternative-content pt-4">
+                  <p class="text-orange fs-3 w-xl-75 mb-1">Хотите иметь в профиле более 3-x объектов?</p>
+                  <p class="text-orange fs-4 w-xl-75">Это возможно за символическую плату - 100 руб/объект</p>
+                  <div class="btn btn-orange btn-lg"><i class="bi bi-download me-2"></i>Скачать счет</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/modals-user-profile.html')
+</body>
+
+</html>
