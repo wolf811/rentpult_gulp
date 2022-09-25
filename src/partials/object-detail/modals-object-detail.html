@@ -502,3 +502,80 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="modalPaymentInvoice" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Оплата по счёту</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="row mb-3 align-items-center">
+            <label for="paymentObjDate" class="form-label">Дата платежа</label>
+            <div class="col-6">
+              <input class="form-control form-control-sm" type="date" id="paymentObjDate">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="payer" class="form-label">Плательщик (ФИО / Организация)</label>
+            <input type="text" class="form-control form-control-sm" id="payer">
+          </div>
+          <div class="row mb-3 align-items-center">
+            <label for="changePeriodPayment" class="form-label">Период оплаты / сумма</label>
+            <div class="col-6">
+              <select name="" id="paymentRentMonth" class="form-select form-select-sm" disabled>
+                <option selected>выбрать</option>
+                <option value="2">1 месяц</option>
+                <option value="3">2 месяц</option>
+                <option value="4">3 месяц</option>
+                <option value="5">4 месяц</option>
+                <option value="6">5 месяц</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <input type="text" class="form-control form-control-sm" readonly value="300">
+              <select name="" id="changePeriodPayment" class="form-select form-select-sm">
+                <option value="1">за месяц</option>
+                <option selected>другой период</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3 align-items-center">
+            <label for="anotherPeriodPayment" class="form-label">Другой период</label>
+            <div class="col">
+              <input class="form-control form-control-sm" type="date" id="anotherPeriodPaymentFrom">
+            </div>
+            <div class="col">
+              <input class="form-control form-control-sm" type="date" id="anotherPeriodPaymentTo">
+            </div>
+          </div>
+          <div class="row mb-3 align-items-center">
+            <label for="filePaymentRent" class="form-label">Файл(-ы)</small></label>
+            <div class="col-10">
+              <input class="form-control form-control-sm" type="file" id="filePaymentRent">
+            </div>
+            <div class="col-2">
+              <a href="#" class="btn btn-link text-danger btn-sm"><i class="bi bi-x-lg"></i></a>
+            </div>
+          </div>
+          <div class="mb-3">
+            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить
+              файл</a>
+          </div>
+          <div class="mb-3">
+            <label for="commentPaymentRent" class="form-label">Комментарий</label>
+            <textarea class="form-control form-control-sm" name="" id="commentPaymentRent" rows="2"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
