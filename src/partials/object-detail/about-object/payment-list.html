@@ -54,26 +54,59 @@
       <thead>
         <tr>
           <th scope="col" width="50" class="text-center">#</th>
-          <th scope="col">Дата</th>
-          <th scope="col">Сумма / период</th>
-          <th scope="col">Документ</th>
-          <th scope="col">Активно</th>
+          <th scope="col">Онлайн / счёт</th>
+          <th scope="col">Дата платежа</th>
+          <th scope="col">Плательщик</th>
+          <th scope="col">Период / сумма</th>
+          <th scope="col">Чек</th>
+          <th scope="col">Оплачено</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="text-center"><a href="#" class="text-danger btn-sm" title="Удалить"><i class="bi bi-x-lg"></i></td>
+          <td class="text-center">
+            <div class="btn-group btn-group-sm" role="group">
+              <a href="#" class="btn btn-outline-success" data-bs-toggle="modal"
+                data-bs-target="#modalPaymentInvoice"><i class="bi bi-pencil" title="Редактировть"></i></a>
+              <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+            </div>
+          </td>
+          <td class="text-muted"><a href="#" target="_blank"><i class="bi bi-download me-1"></i>скачать</a></td>
           <td>12.09.2022</td>
-          <td>300 руб. / 3 мес.</td>
-          <td><a href="#" target="_blank">check</a></td>
+          <td>ООО "Агентство недвижимости"</td>
+          <td>3 мес. / 300 руб.</td>
+          <td></td>
           <td class="text-success">до 11.12.2022</td>
         </tr>
         <tr>
-          <td class="text-center"><a href="#" class="text-danger btn-sm" title="Удалить"><i class="bi bi-x-lg"></i></td>
+          <td class="text-center">
+            <div class="btn-group btn-group-sm" role="group">
+              <a href="#" class="btn btn-outline-success" data-bs-toggle="modal"
+                data-bs-target="#modalPaymentInvoice"><i class="bi bi-pencil" title="Редактировть"></i></a>
+              <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+            </div>
+          </td>
+          <td class="text-muted"><a href="#" target="_blank"><i class="bi bi-download me-1"></i>скачать</a></td>
           <td>12.05.2022</td>
-          <td>300 руб. / 3 мес.</td>
+          <td>Иванов Иван Иванович</td>
+          <td>3 мес. / 300 руб.</td>
           <td><a href="#" target="_blank">check</a></td>
           <td class="text-danger">до 11.08.2022</td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <div class="btn-group btn-group-sm" role="group">
+              <a href="#" class="btn btn-outline-success" data-bs-toggle="modal"
+                data-bs-target="#modalPaymentInvoice"><i class="bi bi-pencil" title="Редактировть"></i></a>
+              <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+            </div>
+          </td>
+          <td class="text-muted">онлайн</td>
+          <td>12.05.2022</td>
+          <td>Иванов Иван Иванович</td>
+          <td>1 мес. / 100 руб.</td>
+          <td><a href="#" target="_blank">check</a></td>
+          <td class="text-danger">до 11.06.2022</td>
         </tr>
       </tbody>
     </table>

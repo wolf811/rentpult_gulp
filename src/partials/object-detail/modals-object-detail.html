@@ -511,6 +511,8 @@
       </div>
       <form action="">
         <div class="modal-body">
+          <p class="text-secondary"><i class="bi bi-info-circle text-orange me-2"></i>Для формирования счёта заполните
+            форму. После сохранения счёт будет доступен для скачивания в соответствующей строке таблицы.</p>
           <div class="row mb-3 align-items-center">
             <label for="paymentObjDate" class="form-label">Дата платежа</label>
             <div class="col-6">
@@ -524,49 +526,30 @@
           <div class="row mb-3 align-items-center">
             <label for="changePeriodPayment" class="form-label">Период оплаты / сумма</label>
             <div class="col-6">
-              <select name="" id="paymentRentMonth" class="form-select form-select-sm" disabled>
-                <option selected>выбрать</option>
-                <option value="2">1 месяц</option>
-                <option value="3">2 месяц</option>
-                <option value="4">3 месяц</option>
-                <option value="5">4 месяц</option>
-                <option value="6">5 месяц</option>
+              <select name="" id="paymentRentMonth" class="form-select form-select-sm">
+                <option>выбрать</option>
+                <option value="2">1 мес.</option>
+                <option value="3">2 мес.</option>
+                <option selected value="4">3 мес.</option>
+                <option value="5">4 мес.</option>
+                <option value="6">5 мес.</option>
               </select>
             </div>
             <div class="col-6">
               <input type="text" class="form-control form-control-sm" readonly value="300">
-              <select name="" id="changePeriodPayment" class="form-select form-select-sm">
-                <option value="1">за месяц</option>
-                <option selected>другой период</option>
-              </select>
             </div>
           </div>
-          <div class="row mb-3 align-items-center">
-            <label for="anotherPeriodPayment" class="form-label">Другой период</label>
-            <div class="col">
-              <input class="form-control form-control-sm" type="date" id="anotherPeriodPaymentFrom">
-            </div>
-            <div class="col">
-              <input class="form-control form-control-sm" type="date" id="anotherPeriodPaymentTo">
-            </div>
-          </div>
-          <div class="row mb-3 align-items-center">
-            <label for="filePaymentRent" class="form-label">Файл(-ы)</small></label>
-            <div class="col-10">
-              <input class="form-control form-control-sm" type="file" id="filePaymentRent">
-            </div>
-            <div class="col-2">
-              <a href="#" class="btn btn-link text-danger btn-sm"><i class="bi bi-x-lg"></i></a>
-            </div>
-          </div>
+          <p class="text-secondary mb-1"><i class="bi bi-info-circle text-orange me-2"></i>После оплаты можно добавить
+            чек.
+          </p>
           <div class="mb-3">
-            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить
-              файл</a>
+            <label for="filePaymentRent" class="form-label">Чек</label>
+            <input class="form-control form-control-sm" type="file" id="filePaymentRent">
           </div>
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <label for="commentPaymentRent" class="form-label">Комментарий</label>
             <textarea class="form-control form-control-sm" name="" id="commentPaymentRent" rows="2"></textarea>
-          </div>
+          </div> -->
         </div>
         <div class="modal-footer">
           <button class="btn btn-primary btn-sm" type="button" disabled>
