@@ -24,8 +24,10 @@
       }
     }
     .object-status-title {
-      margin-bottom: 0;
+      justify-content: normal;
+      margin-bottom: 0.5rem;
       h5 {
+        margin-bottom: 0;
         font-weight: bold;
         color: rgba(108, 117, 125, 1);
       }

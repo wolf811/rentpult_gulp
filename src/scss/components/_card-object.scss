@@ -23,8 +23,11 @@
         padding: 0 1rem 1rem 1rem;
         border-bottom: 1px solid #dee2e6;
 
-        h4 {
+        a.h4 {
             font-weight: lighter;
+            &:hover {
+              color: #6c757d;
+            }
         }
     }
 
