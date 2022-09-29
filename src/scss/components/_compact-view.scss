@@ -24,12 +24,19 @@
       }
     }
     .object-status-title {
+
       justify-content: normal;
+
       margin-bottom: 0.5rem;
       h5 {
         margin-bottom: 0;
         font-weight: bold;
         color: rgba(108, 117, 125, 1);
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        @media (min-width: 576px) {
+            margin-bottom: 0;
+          }
       }
     }
   }

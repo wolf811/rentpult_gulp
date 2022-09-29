@@ -20,7 +20,12 @@
         @include('partials/page-title-inside.html', {
         "pageTitle": "Название объекта"
         })
-
+        <div class="alert alert-danger py-2" role="tablist">
+          <span class="mb-1 mb-sm-0 me-2"><i class="bi bi-info-circle me-2"></i>Пробный период <strong>до
+              30.10.2022</strong></span>
+          <a href="#payment" id="payment-list" class="btn btn-outline-primary btn-sm" data-bs-toggle="list" role="tab"
+            aria-controls="payment">Оплатить<i class="bi bi-chevron-right ms-1"></i></a>
+        </div>
         <div class="row">
           <div class="col-lg-3">
             @include('partials/object-detail/navbar-object.html')
@@ -35,7 +40,6 @@
                     <div class="text-success text-nowrap">ID: 00001-01</div>
                   </div>
                   @include('partials/object-detail/communal-services/object-reading-counters.html')
-
                 </div>
               </div>
               <div class="tab-pane fade" id="payment-bills" role="tabpanel" aria-labelledby="payment-bills-list">
@@ -55,6 +59,16 @@
                     <div class="text-success text-nowrap">ID: 00001-01</div>
                   </div>
                   @include('partials/object-detail/communal-services/general-communal-services.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="exp-communal-services" role="tabpanel"
+                aria-labelledby="exp-communal-services-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Эксплуатация</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/communal-services/exp-communal-services.html')
                 </div>
               </div>
               <div class="tab-pane fade" id="payment-rent" role="tabpanel" aria-labelledby="payment-rent-list">
@@ -120,6 +134,15 @@
                     <div class="text-success text-nowrap">ID: 00001-01</div>
                   </div>
                   @include('partials/object-detail/about-object/object-information.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Оплата объекта</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/object-detail/about-object/payment-list.html')
                 </div>
               </div>
               <div class="tab-pane fade" id="notification-settings" role="tabpanel"

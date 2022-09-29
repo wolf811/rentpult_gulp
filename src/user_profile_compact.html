@@ -18,10 +18,13 @@
         @include('partials/user-profile-compact/about-user.html')
 
         <div class="object-status-title">
-          <h5 class="me-2">Объекты в собственности</h5>
-          <a href="#object_profile.html" class="btn btn-success btn-xs"><i class="bi bi-plus-lg me-1"></i>Добавить объект</a>
+          <h5>Объекты в собственности</h5>
+          <a href="#" class="btn btn-success btn-xs" data-bs-toggle="modal" data-bs-target="#modalAddObject"><i
+              class="bi bi-plus-lg me-1"></i>Добавить
+            объект</a>
+
         </div>
-         @include('partials/user-profile-compact/objects-in-property.html')
+        @include('partials/user-profile-compact/objects-in-property.html')
 
         <div class="object-status-title">
           <h5>Объекты в управлении</h5>
