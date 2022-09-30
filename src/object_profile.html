@@ -17,15 +17,21 @@
             <li class="breadcrumb-item active" aria-current="page">Профиль объекта</li>
           </ol>
         </nav>
-        @include('partials/page-title-inside.html', {
+        <!-- @include('partials/page-title-inside.html', {
         "pageTitle": "Название объекта"
-        })
-        <!-- <div class="alert alert-danger py-2" role="tablist">
-          <span class="mb-1 mb-sm-0 me-2"><i class="bi bi-info-circle me-2"></i>Пробный период <strong>до
-              30.10.2022</strong></span>
-          <a href="#payment" id="payment-list" class="btn btn-success btn-sm" data-bs-toggle="list" role="tab"
-            aria-controls="payment">Оплатить<i class="bi bi-chevron-right ms-1"></i></a>
-        </div> -->
+        }) -->
+        <div class="page-title">
+          <h1>Название объекта</h1>
+          <div class="alert alert-success py-1 mb-1">
+            <small class="fw-bold">Доступ до 11.12.2022</small>
+            <i class="bi bi-info-circle ms-1"
+              title='Оплатить доступ к функциям управления объектом можно в разделе "Оплата объекта"'></i>
+          </div>
+          <div class="alert alert-danger py-1 mb-1">
+            <small class="fw-bold">Пробный период до 30.10.2022</small>
+            <a href="" class="btn btn-success btn-xs ms-2">Оплатить</a>
+          </div>
+        </div>
         <div class="row">
           <div class="col-lg-3">
             @include('partials/object-detail/navbar-object.html')
