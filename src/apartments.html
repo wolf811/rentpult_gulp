@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+          "pageTitle": "Квартиры"
+        })
+
+        <div class="card bg-light shadow-sm">
+          <form action="">
+          <div class="card-body">
+            <div class="card-title h3 mb-3">Аренда квартир в Домодедово<a href="#" class="btn btn-secondary btn-sm ms-2"><i class="bi bi-cursor"></i></a></div>
+              <div class="row mb-3">
+                <div class="col-sm-2">
+                  <select name="" id="" class="form-select">
+                    <option selected>Квартиры</option>
+                    <option>Комнаты</option>
+                    <option>Машиноместа</option>
+                    <option>Гаражи</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <div class="btn-group w-100" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btncheck1">Студия</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btncheck2">1</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btncheck3">2</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btncheck4">3</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btncheck5">4+</label>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" placeholder="Площадь от">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" placeholder="до">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" placeholder="Адрес">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" placeholder="Цена от">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" placeholder="до">
+                </div>
+              </div>
+              <a href="#collapseObjFilter" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="collapseObjFilter">Больше информации<i class="bi bi-chevron-down ms-1"></i></a>
+              <div class="collapse border-top pt-2" id="collapseObjFilter">
+                  <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label">Этаж</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="с">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="по">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label">Балкон</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="с">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="по">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label">Дети и животные</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="с">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="по">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label">Удобства</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="с">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="по">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label">Мебель</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="с">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="по">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="" class="col-sm-2 col-form-label">Парковка</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="с">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" placeholder="по">
+                    </div>
+                  </div>
+                  <a href="#collapseObjFilter" data-bs-toggle="collapse" role="button" aria-expanded="true"
+                    aria-controls="collapseObjFilter">Свернуть<i class="bi bi-chevron-up ms-1"></i></a>
+              </div>
+
+              <!-- <div class="card-object-footer">
+                <div class="left-actions mb-2 mb-sm-0">
+                  <button type="submit" class="btn btn-success">Показать 3 объекта</button>
+                  <button type="submit" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill me-1"></i>Показать на карте</button>
+                </div>
+                <div class="right-actions">
+                  <a href="#collapseObjInProp" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                  aria-controls="collapseObjInProp">Больше информации<i class="bi bi-chevron-down ms-1"></i></a>
+                </div>
+              </div> -->
+
+
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-success">Показать 3 объекта</button>
+              <button type="submit" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill me-1"></i>Показать на карте</button>
+            </div>
+</form>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+          "pageTitle": "Документы по оплатам"
+        })
+
+        <div class="card bg-light shadow-sm mb-4">
+          <form action="">
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col-sm-6 col-xl-4 mb-3 mb-sm-0">
+                  <label for="" class="form-label">Организация</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-6 col-sm-3 col-xl-2">
+                  <label for="" class="form-label">Дата платежа от</label>
+                  <input type="date" class="form-control" placeholder="дд.мм.гггг">
+                </div>
+                <div class="col-6 col-sm-3 col-xl-2">
+                  <label for="" class="form-label">до</label>
+                  <input type="date" class="form-control" placeholder="дд.мм.гггг">
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-success"><i class="bi bi-filter me-1"></i>Фильтр</button>
+              <a href="#" class="btn btn-link">Сбросить</a>
+            </div>
+          </form>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="table table-hover table-striped align-middle border">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>
