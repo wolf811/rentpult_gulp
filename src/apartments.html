@@ -4,144 +4,123 @@
 @include('partials/head.html')
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper compact-view">
     @include('partials/navbar.html')
     @include('partials/header.html')
     <main class="mb-5">
       <div class="container">
         @include('partials/breadcrumb_for_all.html')
         @include('partials/page-title.html', {
-          "pageTitle": "Квартиры"
+        "pageTitle": "Квартиры"
         })
 
-        <div class="card bg-light shadow-sm">
-          <form action="">
-          <div class="card-body">
-            <div class="card-title h3 mb-3">Аренда квартир в Домодедово<a href="#" class="btn btn-secondary btn-sm ms-2"><i class="bi bi-cursor"></i></a></div>
-              <div class="row mb-3">
-                <div class="col-sm-2">
-                  <select name="" id="" class="form-select">
-                    <option selected>Квартиры</option>
-                    <option>Комнаты</option>
-                    <option>Машиноместа</option>
-                    <option>Гаражи</option>
-                  </select>
-                </div>
-                <div class="col-sm-4">
-                  <div class="btn-group w-100" role="group" aria-label="Basic checkbox toggle button group">
-                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="btncheck1">Студия</label>
-
-                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="btncheck2">1</label>
-
-                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="btncheck3">2</label>
-
-                    <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="btncheck4">3</label>
-
-                    <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="btncheck5">4+</label>
-                  </div>
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" class="form-control" placeholder="Площадь от">
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" class="form-control" placeholder="до">
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" placeholder="Адрес">
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" class="form-control" placeholder="Цена от">
-                </div>
-                <div class="col-sm-2">
-                  <input type="text" class="form-control" placeholder="до">
-                </div>
-              </div>
-              <a href="#collapseObjFilter" data-bs-toggle="collapse" role="button" aria-expanded="false"
-                aria-controls="collapseObjFilter">Больше информации<i class="bi bi-chevron-down ms-1"></i></a>
-              <div class="collapse border-top pt-2" id="collapseObjFilter">
-                  <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label">Этаж</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="с">
-                    </div>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="по">
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label">Балкон</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="с">
-                    </div>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="по">
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label">Дети и животные</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="с">
-                    </div>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="по">
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label">Удобства</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="с">
-                    </div>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="по">
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label">Мебель</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="с">
-                    </div>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="по">
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="" class="col-sm-2 col-form-label">Парковка</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="с">
-                    </div>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" placeholder="по">
-                    </div>
-                  </div>
-                  <a href="#collapseObjFilter" data-bs-toggle="collapse" role="button" aria-expanded="true"
-                    aria-controls="collapseObjFilter">Свернуть<i class="bi bi-chevron-up ms-1"></i></a>
-              </div>
-
-              <!-- <div class="card-object-footer">
-                <div class="left-actions mb-2 mb-sm-0">
-                  <button type="submit" class="btn btn-success">Показать 3 объекта</button>
-                  <button type="submit" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill me-1"></i>Показать на карте</button>
-                </div>
-                <div class="right-actions">
-                  <a href="#collapseObjInProp" data-bs-toggle="collapse" role="button" aria-expanded="false"
-                  aria-controls="collapseObjInProp">Больше информации<i class="bi bi-chevron-down ms-1"></i></a>
-                </div>
-              </div> -->
+        @include('partials/apartments-filter.html')
 
 
+        <div class="card card-object">
+          <div class="row g-0">
+            <div class="card-object-img-block d-none d-xl-block col-xl-1">
+              <a href="photo-report-detail.html">
+                <img src="img/object1.jpg" class="card-img-object rounded-start" alt="plug">
+              </a>
             </div>
-            <div class="card-footer">
-              <button type="submit" class="btn btn-success">Показать 3 объекта</button>
-              <button type="submit" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill me-1"></i>Показать на карте</button>
+            <div class="col-md">
+              <div class="card-object-content">
+                <div class="card-title">
+                  <a href="object_profile.html" class="h5 mb-1 mb-sm-0">Квартира на Юбилейной</a>
+                  <div class="d-flex align-items-center">
+                    <div class="text-success text-nowrap small me-2">ID: 00001-01</div>
+                    <button class="btn btn-outline-secondary btn-xs position-relative me-2" data-bs-toggle="modal"
+                      data-bs-target="#modalObjectNotice" title="Уведомления"><i class="bi bi-bell"></i>
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </button>
+                    <a href="object_profile.html" class="btn btn-outline-success btn-xs me-2" role="button"
+                      title="Управление объектом"><i class="bi bi-gear"></i></a>
+                    <a href="#" class="btn btn-outline-danger btn-xs me-2" role="button" title="Удалить объект"><i
+                        class="bi bi-x-lg"></i></a>
+                    <a href="#collapseObjInProp" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse" role="button"
+                      aria-expanded="false" aria-controls="collapseObjInProp" title="Подробнее"><i
+                        class="bi bi-chevron-down"></i></a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm">
+                      <div class="card-text text-orange">
+                        <span class="text-secondary fw-bold me-2">Собственник:</span>
+                        <span>Иванов Иван Иванович</span>
+                      </div>
+                      <div class="card-object-badge">
+                        <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00001</div>
+                        <div class="badge-item bg-secondary bg-opacity-10">eroshenkov@gmail.com</div>
+                        <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                      <div class="card-text">
+                        <span class="text-secondary fw-bold me-2">Управляющий:</span>
+                        <span>Петров Арсений Евгеньевич</span>
+                      </div>
+                      <div class="card-object-badge">
+                        <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00002</div>
+                        <div class="badge-item bg-secondary bg-opacity-10">mail@gmail.com</div>
+                        <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                      <div class="card-text">
+                        <span class="text-secondary fw-bold me-2">Арендатор:</span>
+                        <span>Миронов Лаврентий Валерьевич</span>
+                      </div>
+                      <div class="card-object-badge">
+                        <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00002</div>
+                        <div class="badge-item bg-secondary bg-opacity-10">mail@gmail.com</div>
+                        <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
+                        <div class="badge-item bg-secondary bg-opacity-10">до 17.06.22</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-</form>
+          </div>
+          <div class="collapse text-bg-light" id="collapseObjInProp">
+            <div class="card-object-collapse">
+              <div class="row mb-3">
+                <div class="col-md mb-3 mb-xl-0">
+                  <p class="fw-semibold mb-1">Характеристики объекта</p>
+                  <div class="small">
+                    Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Delectus quam obcaecati quos eum cum
+                    dignissimos eos. Recusandae suscipit cupiditate sit est quae, quis, quasi ea eum nesciunt vitae
+                    obcaecati nemo?
+                  </div>
+                </div>
+                <div class="col-md mb-3 mb-xl-0">
+                  <p class="fw-semibold mb-1">Оснащение</p>
+                  <div class="small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sequi dolore voluptates
+                    cupiditate
+                    dolores neque quos consectetur repellendus facilis veritatis voluptatum placeat, reprehenderit
+                    nihil voluptatibus asperiores sit recusandae architecto esse!
+                  </div>
+                </div>
+                <div class="col-md mb-3 mb-xl-0">
+                  <p class="fw-semibold mb-1">Аренда</p>
+                  <div class="small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sequi dolore voluptates
+                    cupiditate
+                    dolores neque quos consectetur repellendus facilis veritatis voluptatum placeat, reprehenderit
+                    nihil voluptatibus asperiores sit recusandae architecto esse!
+                  </div>
+                </div>
+              </div>
+              <a href="#collapseObjInProp" class="d-block text-end small" data-bs-toggle="collapse" role="button"
+                aria-expanded="false" aria-controls="collapseObjInProp"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
