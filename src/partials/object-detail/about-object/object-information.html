@@ -66,6 +66,103 @@
               </div>
             </div>
             <hr>
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" role="switch" id="checkForRent" data-bs-toggle="collapse"
+                data-bs-target="#collapseRentInfo" aria-expanded="false" aria-controls="collapseExample">
+              <label class="form-check-label fw-semibold" for="checkForRent">Квартира сдается в аренду</label>
+            </div>
+            <div class="collapse" id="collapseRentInfo">
+              <div class="row mb-3">
+                <label for="" class="col-md-4 col-form-label">Цена</label>
+                <div class="col-sm-6 col-md-4 col-xl-3">
+                  <input type="number" class="form-control form-control-sm">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="" class="col-md-4 col-form-label">Описание в публикации</label>
+                <div class="col-sm col-xl-6">
+                  <textarea class="form-control form-control-sm" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="" class="col-xl-4 col-form-label">Отметить удобства в публикации:</label>
+                <div class="col-xl">
+                  <div class="d-flex flex-wrap">
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-1">Интернет</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-2">Мебель на кухне</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-3">Мебель в квартире</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-4">Телевизор</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-5">Стиральная машина</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-7">Холодильник</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-8" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-8">Можно с животными</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-9" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-9">Можно с детьми</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="" class="col-xl-4 col-form-label">Открыть доступ в публикации для:</label>
+                <div class="col-xl">
+                  <div class="d-flex flex-wrap">
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-11" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-11">Фото-отчёты</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-12" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-12">Мебель</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-13" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-13">Техника</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-14" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-14">Полезные контакты</label>
+                    </div>
+
+                    <div class="mb-2 me-2">
+                      <input type="checkbox" class="btn-check" id="btn-check-15" autocomplete="off">
+                      <label class="btn btn-outline-secondary btn-sm" for="btn-check-15">Соседи</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
           </fieldset>
           <div class="d-flex align-items-center justify-content-between">
             <div>
@@ -87,7 +184,7 @@
         <form action="">
           <fieldset class="small">
             <div class="row mb-3">
-              <label for="nameManager" class="col-md-4 col-form-label fw-semibold">Управляющий, ID</label>
+              <label for="" class="col-md-4 col-form-label fw-semibold">Управляющий, ID</label>
               <div class="col col-xl-2">
                 <input type="number" class="form-control form-control-sm" placeholder="ID">
               </div>
@@ -99,7 +196,7 @@
               </div>
             </div>
             <div class="row mb-3">
-              <label for="nameManager" class="col-md-4 col-form-label fw-semibold">Собственник, ID</label>
+              <label for="" class="col-md-4 col-form-label fw-semibold">Собственник, ID</label>
               <div class="col col-xl-2">
                 <input type="number" class="form-control form-control-sm" placeholder="ID">
               </div>
@@ -110,95 +207,6 @@
                 <input type="number" class="form-control form-control-sm" placeholder="ID">
               </div>
             </div>
-            <hr>
-            <div class="form-check form-switch mb-3">
-              <input class="form-check-input" type="checkbox" role="switch" id="checkForRent" checked>
-              <label class="form-check-label fw-semibold" for="checkForRent">Квартира сдается в аренду</label>
-            </div>
-            <div class="row mb-3">
-              <label for="nameManager" class="col-md-4 col-form-label">Цена</label>
-              <div class="col col-xl-2">
-                <input type="number" class="form-control form-control-sm">
-              </div>
-            </div>
-            <div class="row mb-3">
-              <label for="" class="col-md-4 col-form-label">Отметить удобства для публикации:</label>
-              <div class="col-xl">
-                <div class="d-flex flex-wrap">
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-1">Интернет</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-2">Мебель на кухне</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-3">Мебель в квартире</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-4">Телевизор</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-5">Стиральная машина</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-7">Холодильник</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-8" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-8">Можно с животными</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-9" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-9">Можно с детьми</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-3">
-              <label for="" class="col-md-4 col-form-label">Открыть доступ для:</label>
-              <div class="col-xl">
-                <div class="d-flex flex-wrap">
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-11" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-11">Фото-отчёты</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-12" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-12">Мебель</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-13" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-13">Техника</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-14" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-14">Полезные контакты</label>
-                  </div>
-
-                  <div class="mb-2 me-2">
-                    <input type="checkbox" class="btn-check" id="btn-check-15" autocomplete="off">
-                    <label class="btn btn-outline-secondary btn-sm" for="btn-check-15">Соседи</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <hr>
           </fieldset>
           <div class="d-flex align-items-center justify-content-between">
@@ -255,6 +263,56 @@
         </div>
         <div class="col-sm">
           1 / 40 м<sup>2</sup>
+        </div>
+      </div>
+    </div>
+    <div class="border-bottom">
+      <div class="row p-2">
+        <div class="col-md-4 fw-semibold">
+          Стоимость аренды
+        </div>
+        <div class="col-sm">
+          25 000 руб.
+        </div>
+      </div>
+    </div>
+    <div class="border-bottom">
+      <div class="row p-2">
+        <div class="col-md-4 fw-semibold">
+          Описание
+        </div>
+        <div class="col-sm">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti placeat nihil laboriosam natus nisi ut consequuntur quo aliquam sapiente exercitationem quod, assumenda expedita distinctio a odit dolore, obcaecati facere cum?
+        </div>
+      </div>
+    </div>
+    <div class="border-bottom">
+      <div class="row p-2">
+        <div class="col-md-4 fw-semibold">
+          Доступ в публикации к просмотру
+        </div>
+        <div class="col-sm">
+          <span class="badge bg-secondary">Фото-отчёты</span>
+          <span class="badge bg-secondary">Мебель</span>
+          <span class="badge bg-secondary">Техника</span>
+          <span class="badge bg-secondary">Полезные контакты</span>
+          <span class="badge bg-secondary">Соседи</span>
+        </div>
+      </div>
+    </div>
+    <div class="border-bottom">
+      <div class="row align-items-center p-2">
+        <div class="col-md-4 fw-semibold">
+          Отмеченные удобства в публикации
+        </div>
+        <div class="col-sm">
+          <span class="badge bg-secondary">Интернет</span>
+          <span class="badge bg-secondary">Мебель на кухне</span>
+          <span class="badge bg-secondary">Телевизор</span>
+          <span class="badge bg-secondary">Холодильник</span>
+          <span class="badge bg-secondary">Стиральная машина</span>
+          <span class="badge bg-secondary">Можно с животными</span>
+          <span class="badge bg-secondary">Можно с детьми</span>
         </div>
       </div>
     </div>
