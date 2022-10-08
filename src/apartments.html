@@ -15,86 +15,20 @@
         })
 
         @include('partials/apartments-filter.html')
-
-
-        <div class="card card-object rounded-0">
-          <div class="row g-0">
-            <div class="col-sm-2">
-              <a href="img/object1.jpg" data-fancybox="gallery">
-                <img src="img/object1.jpg" class="card-img-object" alt="plug">
-              </a>
-            </div>
-            <div class="col-sm">
-              <div class="card-object-content">
-                <div class="card-title">
-                  <a href="#collapseObjInProp" class="text-uppercase fw-semibold mb-1 mb-sm-0" data-bs-toggle="collapse"
-                      role="button" aria-expanded="false" aria-controls="collapseObjInProp">42,2 м<sup>2</sup>,
-                    1-комнатная квартира</a>
-                  <div class="d-flex align-items-center">
-                    <div class="text-success text-nowrap me-2"><strong>25 000</strong> р/мес.</div>
-                    <small class="text-muted me-2">Опубликовано: 08.10.2022</small>
-                    <!-- <a href="object_profile.html" class="btn btn-outline-success btn-xs me-2" role="button"
-                      title="Управление объектом"><i class="bi bi-gear"></i></a>
-                    <a href="#" class="btn btn-outline-danger btn-xs me-2" role="button" title="Удалить объект"><i
-                        class="bi bi-x-lg"></i></a>
-                    <a href="#collapseObjInProp" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse"
-                      role="button" aria-expanded="false" aria-controls="collapseObjInProp" title="Подробнее"><i
-                        class="bi bi-chevron-down"></i></a> -->
-                  </div>
-                </div>
-                <div class="card-body">
-                      <p class="fw-semibold"><span class="me-2">Домодедово, ул. Мечты, д.3к3, 2-й этаж</span><a href="#"
-                          class="btn btn-outline-primary btn-xs"><i class="bi bi-map me-1"></i>на карте</a></p>
-                      <div class="card-text">
-                        <div class="row">
-                          <div class="col-sm">
-                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
-                              doloribus accusamus vitae debitis velit sit iure dolores maxime inventore repellendus
-                              explicabo aliquam voluptatem quia quisquam harum saepe blanditiis. Sequi, nostrum. Lorem ipsum
-                              dolor sit amet consectetur, adipisicing elit. Vel, doloribus accusamus vitae debitis velit sit
-                              iure dolores
-                              maxime inventore repellendus explicabo aliquam voluptatem quia quisquam harum saepe
-                              blanditiis. Sequi, nostrum.</p>
-                          </div>
-                          <div class="col-sm-3">
-                            <span class="badge bg-secondary">Интернет</span>
-                            <span class="badge bg-secondary">Мебель на кухне</span>
-                            <span class="badge bg-secondary">Телевизор</span>
-                            <span class="badge bg-secondary">Холодильник</span>
-                            <span class="badge bg-secondary">Стиральная машина</span>
-                            <span class="badge bg-secondary">Можно с животными</span>
-                            <span class="badge bg-secondary">Можно с детьми</span>
-                          </div>
-                        </div>
-                      </div>
-                      <a href="tel:+79265568904" class="btn btn-outline-success btn-sm"><i
-                          class="bi bi-telephone me-1"></i>+7 926 556-89-04</a>
-                </div>
-              </div>
+        <div class="row align-items-center justify-content-between mb-3">
+          <div class="col-sm-auto">
+            <div class="input-group input-group-sm">
+              <span class="input-group-text" id="basic-addon1">Сортировать:</span>
+              <select name="" class="form-select">
+                <option selected value="">сначала дешевле</option>
+                <option value="">сначала дороже</option>
+                <option value="">по площади</option>
+              </select>
             </div>
           </div>
-          <div class="collapse text-bg-light" id="collapseObjInProp">
-              <div class="row">
-                <div class="col-md mb-3 mb-xl-0">
-                  <div>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Фото-отчёт</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Мебель</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Техника</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Полезные контакты</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Соседи</a>
-                  </div>
-                  <a href="#collapseObjInProp" class="d-block small" data-bs-toggle="collapse" role="button"
-                    aria-expanded="false" aria-controls="collapseObjInProp"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
-                </div>
-                <div class="col-md">
-                  <script type="text/javascript" charset="utf-8" async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A27432cde53b8182ec78926b5ec43fe1a6e492f6745455bcad4a2b15f2b77a97b&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
-              </div>
-
-            </div>
-
         </div>
-      </div>
+        @include('partials/apart-detail.html')
+
     </main>
 
     @include('partials/footer.html')

@@ -92,7 +92,9 @@ a.btn-link {
 a.btn-primary {
   color: #fff;
 }
-
+.pagination {
+  --bs-pagination-active-bg: #0462B1;
+}
 .btn-primary {
   --bs-btn-bg: #0462B1;
   --bs-btn-border-color: #0462B1;
