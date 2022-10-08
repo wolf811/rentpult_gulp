@@ -17,110 +17,82 @@
         @include('partials/apartments-filter.html')
 
 
-        <div class="card card-object">
+        <div class="card card-object rounded-0">
           <div class="row g-0">
-            <div class="card-object-img-block d-none d-xl-block col-xl-1">
-              <a href="photo-report-detail.html">
-                <img src="img/object1.jpg" class="card-img-object rounded-start" alt="plug">
+            <div class="col-sm-2">
+              <a href="img/object1.jpg" data-fancybox="gallery">
+                <img src="img/object1.jpg" class="card-img-object" alt="plug">
               </a>
             </div>
-            <div class="col-md">
+            <div class="col-sm">
               <div class="card-object-content">
                 <div class="card-title">
-                  <a href="object_profile.html" class="h5 mb-1 mb-sm-0">Квартира на Юбилейной</a>
+                  <a href="#collapseObjInProp" class="text-uppercase fw-semibold mb-1 mb-sm-0" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapseObjInProp">42,2 м<sup>2</sup>,
+                    1-комнатная квартира</a>
                   <div class="d-flex align-items-center">
-                    <div class="text-success text-nowrap small me-2">ID: 00001-01</div>
-                    <button class="btn btn-outline-secondary btn-xs position-relative me-2" data-bs-toggle="modal"
-                      data-bs-target="#modalObjectNotice" title="Уведомления"><i class="bi bi-bell"></i>
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        3
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </button>
-                    <a href="object_profile.html" class="btn btn-outline-success btn-xs me-2" role="button"
+                    <div class="text-success text-nowrap me-2"><strong>25 000</strong> р/мес.</div>
+                    <small class="text-muted me-2">Опубликовано: 08.10.2022</small>
+                    <!-- <a href="object_profile.html" class="btn btn-outline-success btn-xs me-2" role="button"
                       title="Управление объектом"><i class="bi bi-gear"></i></a>
                     <a href="#" class="btn btn-outline-danger btn-xs me-2" role="button" title="Удалить объект"><i
                         class="bi bi-x-lg"></i></a>
-                    <a href="#collapseObjInProp" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse" role="button"
-                      aria-expanded="false" aria-controls="collapseObjInProp" title="Подробнее"><i
-                        class="bi bi-chevron-down"></i></a>
+                    <a href="#collapseObjInProp" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapseObjInProp" title="Подробнее"><i
+                        class="bi bi-chevron-down"></i></a> -->
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm">
-                      <div class="card-text text-orange">
-                        <span class="text-secondary fw-bold me-2">Собственник:</span>
-                        <span>Иванов Иван Иванович</span>
-                      </div>
-                      <div class="card-object-badge">
-                        <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00001</div>
-                        <div class="badge-item bg-secondary bg-opacity-10">eroshenkov@gmail.com</div>
-                        <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
-                      </div>
-                    </div>
-                    <div class="col-sm">
+                      <p class="fw-semibold"><span class="me-2">Домодедово, ул. Мечты, д.3к3, 2-й этаж</span><a href="#"
+                          class="btn btn-outline-primary btn-xs"><i class="bi bi-map me-1"></i>на карте</a></p>
                       <div class="card-text">
-                        <span class="text-secondary fw-bold me-2">Управляющий:</span>
-                        <span>Петров Арсений Евгеньевич</span>
+                        <div class="row">
+                          <div class="col-sm">
+                            <p class="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+                              doloribus accusamus vitae debitis velit sit iure dolores maxime inventore repellendus
+                              explicabo aliquam voluptatem quia quisquam harum saepe blanditiis. Sequi, nostrum. Lorem ipsum
+                              dolor sit amet consectetur, adipisicing elit. Vel, doloribus accusamus vitae debitis velit sit
+                              iure dolores
+                              maxime inventore repellendus explicabo aliquam voluptatem quia quisquam harum saepe
+                              blanditiis. Sequi, nostrum.</p>
+                          </div>
+                          <div class="col-sm-3">
+                            <span class="badge bg-secondary">Интернет</span>
+                            <span class="badge bg-secondary">Мебель на кухне</span>
+                            <span class="badge bg-secondary">Телевизор</span>
+                            <span class="badge bg-secondary">Холодильник</span>
+                            <span class="badge bg-secondary">Стиральная машина</span>
+                            <span class="badge bg-secondary">Можно с животными</span>
+                            <span class="badge bg-secondary">Можно с детьми</span>
+                          </div>
+                        </div>
                       </div>
-                      <div class="card-object-badge">
-                        <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00002</div>
-                        <div class="badge-item bg-secondary bg-opacity-10">mail@gmail.com</div>
-                        <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
-                      </div>
-                    </div>
-                    <div class="col-sm">
-                      <div class="card-text">
-                        <span class="text-secondary fw-bold me-2">Арендатор:</span>
-                        <span>Миронов Лаврентий Валерьевич</span>
-                      </div>
-                      <div class="card-object-badge">
-                        <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00002</div>
-                        <div class="badge-item bg-secondary bg-opacity-10">mail@gmail.com</div>
-                        <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
-                        <div class="badge-item bg-secondary bg-opacity-10">до 17.06.22</div>
-                      </div>
-                    </div>
-                  </div>
+                      <a href="tel:+79265568904" class="btn btn-outline-success btn-sm"><i
+                          class="bi bi-telephone me-1"></i>+7 926 556-89-04</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="collapse text-bg-light" id="collapseObjInProp">
-            <div class="card-object-collapse">
-              <div class="row mb-3">
+              <div class="row">
                 <div class="col-md mb-3 mb-xl-0">
-                  <p class="fw-semibold mb-1">Характеристики объекта</p>
-                  <div class="small">
-                    Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Delectus quam obcaecati quos eum cum
-                    dignissimos eos. Recusandae suscipit cupiditate sit est quae, quis, quasi ea eum nesciunt vitae
-                    obcaecati nemo?
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Фото-отчёт</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Мебель</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Техника</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Полезные контакты</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Соседи</a>
                   </div>
+                  <a href="#collapseObjInProp" class="d-block small" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="collapseObjInProp"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
                 </div>
-                <div class="col-md mb-3 mb-xl-0">
-                  <p class="fw-semibold mb-1">Оснащение</p>
-                  <div class="small">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sequi dolore voluptates
-                    cupiditate
-                    dolores neque quos consectetur repellendus facilis veritatis voluptatum placeat, reprehenderit
-                    nihil voluptatibus asperiores sit recusandae architecto esse!
-                  </div>
-                </div>
-                <div class="col-md mb-3 mb-xl-0">
-                  <p class="fw-semibold mb-1">Аренда</p>
-                  <div class="small">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sequi dolore voluptates
-                    cupiditate
-                    dolores neque quos consectetur repellendus facilis veritatis voluptatum placeat, reprehenderit
-                    nihil voluptatibus asperiores sit recusandae architecto esse!
-                  </div>
-                </div>
+                <div class="col-md">
+                  <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A27432cde53b8182ec78926b5ec43fe1a6e492f6745455bcad4a2b15f2b77a97b&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
               </div>
-              <a href="#collapseObjInProp" class="d-block text-end small" data-bs-toggle="collapse" role="button"
-                aria-expanded="false" aria-controls="collapseObjInProp"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+
             </div>
-          </div>
+
         </div>
       </div>
     </main>
