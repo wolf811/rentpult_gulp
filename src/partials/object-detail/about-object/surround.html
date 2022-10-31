@@ -1,0 +1,132 @@
+<div class="card-body">
+  <p class="h5">Россия, г. Москва, ул. Лермонтова, д. 5 (ЖК Лермонтово) <a href="#formAddSurround" class="ms-2 btn btn-outline-success btn-sm" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="formAddSurround"><i class="bi bi-pencil me-1"></i>Изменить</a></p>
+  <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="collapse" href="#formAddSurround" role="button"
+    aria-expanded="false" aria-controls="formAddSurround"><i class="bi bi-geo-alt me-1"></i>Выбрать (добавить) дом</a>
+
+  <div class="collapse" id="formAddSurround">
+    <div class="card card-body rounded-0">
+      <p class="text-secondary small"><i class="bi bi-info-circle text-orange me-2"></i>Lorem ipsum dolor sit amet
+        consectetur
+        adipisicing elit. Unde nisi quos eveniet tempora! Soluta corporis quasi enim quo minus! Enim ipsa consequatur,
+        eveniet
+        explicabo dignissimos est laborum quod ea quae.</p>
+      <form action="">
+        <fieldset class="small pb-3">
+          <div class="row align-items-center mb-3">
+            <label for="country" class="col-md-4 col-form-label">Страна</label>
+            <div class="col-sm-4 col-xl-3">
+              <div class="input-group">
+                <input type="text" id="country" class="form-control form-control-sm" list="countryList"
+                  placeholder="выбрать" aria-label="выбрать" aria-describedby="button-addon1">
+                <button class="btn btn-outline-success btn-sm" type="button" title="Подтвердить" id="button-addon1"><i
+                    class="bi bi-check-lg"></i></button>
+              </div>
+              <datalist id="countryList">
+                <option value="Россия">
+                <option value="Бразилия">
+                <option value="Никарагуа">
+              </datalist>
+            </div>
+            <div class="col-sm-4 col-xl-3 mt-2 mt-sm-0">
+              <small class="text-secondary">Объектов: <b>2</b></small>
+            </div>
+          </div>
+          <div class="row align-items-center mb-3">
+            <label for="city" class="col-md-4 col-form-label">Город</label>
+            <div class="col-sm-4 col-xl-3">
+              <div class="input-group">
+                <input type="text" id="city" class="form-control form-control-sm" list="cityList" placeholder="выбрать"
+                  aria-label="выбрать" aria-describedby="button-addon2">
+                <button class="btn btn-outline-success btn-sm" type="button" title="Подтвердить" id="button-addon2"><i
+                    class="bi bi-check-lg"></i></button>
+              </div>
+              <datalist id="cityList">
+                <option value="Город1">
+                <option value="Город2">
+                <option value="Город3">
+              </datalist>
+            </div>
+            <div class="col-sm-4 col-xl-3 mt-2 mt-sm-0">
+              <small class="text-secondary">Объектов: <b>2</b></small>
+            </div>
+          </div>
+          <div class="row align-items-center mb-3">
+            <label for="area" class="col-md-4 col-form-label">Улица (район)</label>
+            <div class="col-sm-4 col-xl-3">
+              <div class="input-group">
+                <input type="text" id="city" class="form-control form-control-sm" list="areaList" placeholder="выбрать"
+                  aria-label="выбрать" aria-describedby="button-addon3">
+                <button class="btn btn-outline-success btn-sm" type="button" title="Подтвердить" id="button-addon3"><i
+                    class="bi bi-check-lg"></i></button>
+              </div>
+              <datalist id="areaList">
+                <option value="Район1">
+                <option value="Район2">
+                <option value="Район3">
+              </datalist>
+            </div>
+            <div class="col-sm-4 col-xl-3 mt-2 mt-sm-0">
+              <small class="text-secondary">Объектов: <b>0</b></small>
+            </div>
+          </div>
+          <div class="row align-items-center mb-3">
+            <label for="house" class="col-md-4 col-form-label">Дом</label>
+            <div class="col-sm-4 col-xl-3">
+              <div class="input-group disabled">
+                <input type="text" id="house" class="form-control form-control-sm" list="houseList"
+                  placeholder="выбрать" aria-label="выбрать" aria-describedby="button-addon4">
+                <button class="btn btn-outline-success btn-sm" type="button" title="Подтвердить" id="button-addon4"><i
+                    class="bi bi-check-lg"></i></button>
+              </div>
+              <datalist id="houseList">
+                <option value="Дом1">
+                <option value="Дом2">
+                <option value="Дом3">
+              </datalist>
+            </div>
+            <div class="col-sm-4 col-xl-3 mt-2 mt-sm-0">
+              <small class="text-muted"><i class="bi bi-info-circle text-orange me-1"></i>вначале укажите район</small>
+            </div>
+          </div>
+          <div class="row align-items-center mb-3">
+            <label for="gk" class="col-md-4 col-form-label">Жилой комплекс</label>
+            <div class="col-sm-4 col-xl-3">
+              <div class="input-group disabled">
+                <input type="text" id="gk" class="form-control form-control-sm" list="gkList" placeholder="выбрать"
+                  aria-label="выбрать" aria-describedby="button-addon5">
+                <button class="btn btn-outline-success btn-sm" type="button" title="Подтвердить" id="button-addon5"><i
+                    class="bi bi-check-lg"></i></button>
+              </div>
+              <datalist id="gkList">
+                <option value="Дом1">
+                <option value="Дом2">
+                <option value="Дом3">
+              </datalist>
+            </div>
+            <div class="col-sm-4 col-xl-3 mt-2 mt-sm-0">
+              <small class="text-muted"><i class="bi bi-info-circle text-orange me-1"></i>вначале укажите дом</small>
+            </div>
+          </div>
+        </fieldset>
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <button class="btn btn-primary btn-sm" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Сохраняем...
+            </button>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+            <a href="#formAddSurround" class="btn btn-link btn-sm" data-bs-toggle="collapse" role="button"
+              aria-expanded="false" aria-controls="formAddSurround">Закрыть</a>
+          </div>
+          <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="py-3">
+    <a href="#" class="btn btn-outline-primary btn-sm mb-3 mb-sm-0">Форум о городе<i class="bi bi-arrow-right ms-1"></i></a>
+    <a href="#" class="btn btn-outline-primary btn-sm mb-3 mb-sm-0">Форум о районе<i class="bi bi-arrow-right ms-1"></i></a>
+    <a href="#" class="btn btn-outline-primary btn-sm mb-3 mb-sm-0 disabled">Форум о доме<i class="bi bi-arrow-right ms-1"></i></a>
+    <a href="#" class="btn btn-outline-primary btn-sm mb-3 mb-sm-0 disabled">Форум о ЖК<i class="bi bi-arrow-right ms-1"></i></a>
+  </div>
+</div>

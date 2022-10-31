@@ -168,4 +168,18 @@ a.btn-primary {
   --bs-nav-pills-link-active-bg: #0462B1;
 }
 
-
+.input-group.disabled {
+  .btn {
+    display: none;
+    // color: var(--bs-btn-disabled-color);
+    // pointer-events: none;
+    // background-color: var(--bs-btn-disabled-bg);
+    // border-color: var(--bs-btn-disabled-border-color);
+    // opacity: var(--bs-btn-disabled-opacity);
+  }
+  .form-control, .form-select {
+    background-color: #e9ecef;
+    opacity: 1;
+    pointer-events: none;
+  }
+}
