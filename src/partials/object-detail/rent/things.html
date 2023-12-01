@@ -5,6 +5,50 @@
     data-bs-target="#modalAddThings"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
   <a href="#" class="btn btn-outline-secondary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#roomList"><i
       class="bi bi-list me-1"></i>Список комнат</a>
+
+  <div class="text-warning">Вариант 1</div>
+  <div class="p-2 mb-3 shadow-sm bg-success bg-gradient bg-opacity-10">
+    <form action="" method="POST" class="d-flex flex-wrap w-lg-50">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text" id="basic-addon1">Фильтр по комнатам:</span>
+        <select name="filter[sort]" class="form-select">
+          <option value="0">все</option>
+          <option value="1">гостиная</option>
+          <option value="2">спальня</option>
+          <option value="3">кухня</option>
+        </select>
+        <button class="btn btn-outline-success" type="submit" title="Фильтр"><i class="bi bi-filter"></i></button>
+        <button class="btn btn-outline-secondary" type="submit" title="Сбросить"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <div class="text-warning">Вариант 2</div>
+  <div class="card card-object shadow-sm bg-success bg-gradient bg-opacity-10 border-0 mb-4">
+    <form action="" method="POST">
+      <div class="card-body py-3">
+        <div class="d-flex flex-wrap">
+          <div class="me-2">
+            <input type="checkbox" class="btn-check" value="182" id="btn-check-room182" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-room182">Гостиная</label>
+          </div>
+          <div class="me-2">
+            <input type="checkbox" class="btn-check" value="183" id="btn-check-room183" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-room183">Спальня</label>
+          </div>
+          <div class="me-2">
+            <input type="checkbox" class="btn-check" value="181" id="btn-check-room181" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-room181">Кухня</label>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <input type="submit" name="set_filter_room" value="Фильтр" class="btn btn-outline-success btn-sm me-2">
+        <input type="submit" name="clear_filter_room" value="Сбросить" class="btn btn-sm btn-outline-secondary">
+      </div>
+    </form>
+  </div>
+  <div class="text-warning">Вариант 3</div>
   <div class="p-2 mb-3 shadow-sm bg-success bg-gradient bg-opacity-10">
     <form action="" method="POST" class="d-flex flex-wrap">
       <div class="me-2">
@@ -20,7 +64,7 @@
         <label class="btn btn-outline-secondary btn-sm" for="btn-check-room181">Кухня</label>
       </div>
 
-      <input type="submit" name="set_filter_room" value="Фильтр" class="btn btn-success btn-sm me-2">
+      <input type="submit" name="set_filter_room" value="Фильтр" class="btn btn-outline-success btn-sm me-2">
       <input type="submit" name="clear_filter_room" value="Сбросить" class="btn btn-sm btn-link">
     </form>
   </div>
