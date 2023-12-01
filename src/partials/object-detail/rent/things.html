@@ -1,13 +1,12 @@
 <div class="card-body">
-  <p class="text-secondary"><i class="bi bi-info-circle text-orange me-2"></i>Перед внесением
-    имущества добавьте список комнат</p>
+
   <a class="btn btn-outline-success btn-sm mb-2" href="#" role="button" data-bs-toggle="modal"
     data-bs-target="#modalAddThings"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
   <a href="#" class="btn btn-outline-secondary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#roomList"><i
       class="bi bi-list me-1"></i>Список комнат</a>
 
-  <div class="text-warning">Вариант 1</div>
-  <div class="p-2 mb-3 shadow-sm bg-success bg-gradient bg-opacity-10">
+
+  <!-- <div class="p-2 mb-3 shadow-sm bg-success bg-gradient bg-opacity-10">
     <form action="" method="POST" class="d-flex flex-wrap w-lg-50">
       <div class="input-group input-group-sm">
         <span class="input-group-text" id="basic-addon1">Фильтр по комнатам:</span>
@@ -21,51 +20,30 @@
         <button class="btn btn-outline-secondary" type="submit" title="Сбросить"><i class="bi bi-x-lg"></i></button>
       </div>
     </form>
-  </div>
+  </div> -->
 
-  <div class="text-warning">Вариант 2</div>
-  <div class="card card-object shadow-sm bg-success bg-gradient bg-opacity-10 border-0 mb-4">
-    <form action="" method="POST">
-      <div class="card-body py-3">
-        <div class="d-flex flex-wrap">
-          <div class="me-2">
-            <input type="checkbox" class="btn-check" value="182" id="btn-check-room182" autocomplete="off">
-            <label class="btn btn-outline-secondary btn-sm" for="btn-check-room182">Гостиная</label>
-          </div>
-          <div class="me-2">
-            <input type="checkbox" class="btn-check" value="183" id="btn-check-room183" autocomplete="off">
-            <label class="btn btn-outline-secondary btn-sm" for="btn-check-room183">Спальня</label>
-          </div>
-          <div class="me-2">
-            <input type="checkbox" class="btn-check" value="181" id="btn-check-room181" autocomplete="off">
-            <label class="btn btn-outline-secondary btn-sm" for="btn-check-room181">Кухня</label>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <input type="submit" name="set_filter_room" value="Фильтр" class="btn btn-outline-success btn-sm me-2">
-        <input type="submit" name="clear_filter_room" value="Сбросить" class="btn btn-sm btn-outline-secondary">
-      </div>
-    </form>
-  </div>
-  <div class="text-warning">Вариант 3</div>
   <div class="p-2 mb-3 shadow-sm bg-success bg-gradient bg-opacity-10">
     <form action="" method="POST" class="d-flex flex-wrap">
-      <div class="me-2">
-        <input type="checkbox" class="btn-check" value="182" id="btn-check-room182" autocomplete="off">
+      <div class="mb-2 mb-lg-0 me-2">
+        <input type="radio" class="btn-check" name="rooms" value="180" id="btn-check-room180" checked
+          autocomplete="off">
+        <label class="btn btn-outline-secondary btn-sm" for="btn-check-room180">Все</label>
+      </div>
+      <div class="mb-2 mb-lg-0 me-2">
+        <input type="radio" class="btn-check" name="rooms" value="182" id="btn-check-room182" autocomplete="off">
         <label class="btn btn-outline-secondary btn-sm" for="btn-check-room182">Гостиная</label>
       </div>
-      <div class="me-2">
-        <input type="checkbox" class="btn-check" value="183" id="btn-check-room183" autocomplete="off">
+      <div class="mb-2 mb-lg-0 me-2">
+        <input type="radio" class="btn-check" name="rooms" value="183" id="btn-check-room183" autocomplete="off">
         <label class="btn btn-outline-secondary btn-sm" for="btn-check-room183">Спальня</label>
       </div>
-      <div class="me-2">
-        <input type="checkbox" class="btn-check" value="181" id="btn-check-room181" autocomplete="off">
+      <div class="mb-2 mb-lg-0 me-2">
+        <input type="radio" class="btn-check" name="rooms" value="181" id="btn-check-room181" autocomplete="off">
         <label class="btn btn-outline-secondary btn-sm" for="btn-check-room181">Кухня</label>
       </div>
 
-      <input type="submit" name="set_filter_room" value="Фильтр" class="btn btn-outline-success btn-sm me-2">
-      <input type="submit" name="clear_filter_room" value="Сбросить" class="btn btn-sm btn-link">
+      <!-- <input type="submit" name="set_filter_room" value="Фильтр" class="btn btn-outline-success btn-sm me-2">
+      <input type="submit" name="clear_filter_room" value="Сбросить" class="btn btn-sm btn-link"> -->
     </form>
   </div>
 
@@ -74,10 +52,7 @@
       <thead>
         <tr>
           <th scope="col" width="50" class="text-center">#</th>
-          <th scope="col">Дата</th>
-          <th scope="col">Название</th>
-          <th scope="col">Стоимость</th>
-          <th scope="col">Комментарий</th>
+          <th scope="col">Информация</th>
           <th scope="col">Фото</th>
         </tr>
       </thead>
@@ -92,20 +67,16 @@
               <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
             </div>
           </td>
-          <td>15.06.2022</td>
           <td>
-            <p class="mb-1">Диван</p>
-            <span class="badge rounded-pill text-bg-secondary bg-opacity-50">Гостиная</span>
-          </td>
-          <td class="text-nowrap">7500 </td>
-          <td>
-            <div class="mb-1">
-              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
-                  class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a>
-              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+            <p class="mb-1">15.06.2022</p>
+            <p class="mb-1">
+              Диван
+              <small class="ms-2 text-secondary">75000</small>
+              <span class="badge rounded-pill text-bg-secondary bg-opacity-50 ms-2">Гостиная</span>
+              <a href="#" class="ms-1 text-nowrap" target="_blank"><i
                   class="bi bi-file-earmark-arrow-down me-1"></i>file_receipt.pdf</a>
-            </div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, dolore.
+            </p>
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, repudiandae!</small>
           </td>
           <td width="100" class="text-center bg-white">
             <a href="photo-report-detail.html">
@@ -113,7 +84,7 @@
             </a>
           </td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td class="text-center">
             <div class="btn-group btn-group-sm" role="group">
               <a href="photo-report-detail.html" class="btn btn-outline-success" title="Добавить фото"><i
@@ -140,7 +111,7 @@
               <img src="img/logo-gray-256.png" class="small-picture" alt="foto">
             </a>
           </td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
   </div>
