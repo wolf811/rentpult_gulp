@@ -1,5 +1,4 @@
 <div class="card-body">
-
   <a class="btn btn-outline-success btn-sm mb-2" href="#" role="button" data-bs-toggle="modal"
     data-bs-target="#modalAddThings"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
   <a href="#" class="btn btn-outline-secondary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#roomList"><i
@@ -24,20 +23,20 @@
 
   <div class="p-2 mb-3 shadow-sm bg-success bg-gradient bg-opacity-10">
     <form action="" method="POST" class="d-flex flex-wrap">
-      <div class="mb-2 mb-lg-0 me-2">
+      <div class="mb-2 mb-sm-0 me-2">
         <input type="radio" class="btn-check" name="rooms" value="180" id="btn-check-room180" checked
           autocomplete="off">
         <label class="btn btn-outline-secondary btn-sm" for="btn-check-room180">Все</label>
       </div>
-      <div class="mb-2 mb-lg-0 me-2">
+      <div class="mb-2 mb-sm-0 me-2">
         <input type="radio" class="btn-check" name="rooms" value="182" id="btn-check-room182" autocomplete="off">
         <label class="btn btn-outline-secondary btn-sm" for="btn-check-room182">Гостиная</label>
       </div>
-      <div class="mb-2 mb-lg-0 me-2">
+      <div class="mb-2 mb-sm-0 me-2">
         <input type="radio" class="btn-check" name="rooms" value="183" id="btn-check-room183" autocomplete="off">
         <label class="btn btn-outline-secondary btn-sm" for="btn-check-room183">Спальня</label>
       </div>
-      <div class="mb-2 mb-lg-0 me-2">
+      <div class="mb-2 mb-sm-0 me-2">
         <input type="radio" class="btn-check" name="rooms" value="181" id="btn-check-room181" autocomplete="off">
         <label class="btn btn-outline-secondary btn-sm" for="btn-check-room181">Кухня</label>
       </div>
@@ -52,7 +51,7 @@
       <thead>
         <tr>
           <th scope="col" width="50" class="text-center">#</th>
-          <th scope="col">Информация</th>
+          <th scope="col">Название</th>
           <th scope="col">Фото</th>
         </tr>
       </thead>
@@ -68,15 +67,16 @@
             </div>
           </td>
           <td>
-            <p class="mb-1">15.06.2022</p>
-            <p class="mb-1">
-              Диван
-              <small class="ms-2 text-secondary">75000</small>
-              <span class="badge rounded-pill text-bg-secondary bg-opacity-50 ms-2">Гостиная</span>
-              <a href="#" class="ms-1 text-nowrap" target="_blank"><i
+            <div class="text-nowrap">
+              <span>15.06.2022</span> - <span>Диван</span>
+            </div>
+            <div class="text-secondary">
+              <span class="me-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+              <span class="me-1">(75000)</span>
+              <a href="#" class="text-nowrap" target="_blank"><i
                   class="bi bi-file-earmark-arrow-down me-1"></i>file_receipt.pdf</a>
-            </p>
-            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, repudiandae!</small>
+            </div>
+            <span class="badge rounded-pill text-bg-secondary bg-opacity-50">Гостиная</span>
           </td>
           <td width="100" class="text-center bg-white">
             <a href="photo-report-detail.html">
@@ -84,7 +84,7 @@
             </a>
           </td>
         </tr>
-        <!-- <tr>
+        <tr>
           <td class="text-center">
             <div class="btn-group btn-group-sm" role="group">
               <a href="photo-report-detail.html" class="btn btn-outline-success" title="Добавить фото"><i
@@ -94,25 +94,35 @@
               <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
             </div>
           </td>
-          <td>15.06.2022</td>
           <td>
-            <p class="mb-1">Шкаф</p>
-            <span class="badge rounded-pill text-bg-secondary bg-opacity-50">Спальня</span>
-          </td>
-          <td class="text-nowrap">7500 </td>
-          <td>
-            <div class="mb-1">
-              <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
-                  class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a>
+            <div class="text-nowrap">
+              <span>15.06.2022</span> - <span>Кровать двухспальная</span>
             </div>
+            <div class="text-secondary">
+              <span class="me-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+              <span class="me-1">(35000)</span>
+              <!-- <a href="#" class="text-nowrap" target="_blank"><i
+                  class="bi bi-file-earmark-arrow-down me-1"></i>file_receipt.pdf</a> -->
+            </div>
+            <span class="badge rounded-pill text-bg-secondary bg-opacity-50">Спальня</span>
           </td>
           <td width="100" class="text-center bg-white">
             <a href="photo-report-detail.html">
               <img src="img/logo-gray-256.png" class="small-picture" alt="foto">
             </a>
           </td>
-        </tr> -->
+        </tr>
       </tbody>
     </table>
   </div>
 </div>
+
+<!-- <ul class="list-group text-small w-auto">
+  <li class="list-group-item list-group-item-light">1. Справочная информация - размещена по этой <a
+      href="https://rent-pult.ru/about/System/type_equipment-furniture.php" target="_blank">ссылке</a></li>
+  <li class="list-group-item list-group-item-light">2. Видео-инструкцию можно посмотреть на <a
+      href="https://www.youtube.com/watch?v=Qp4JHQD1qg0&t" target="_blank">youtube</a> или <a href="#">скачать себе (297
+      мб)</a></li>
+  <li class="list-group-item list-group-item-light">3. А задать свой вопрос можно на <a
+      href="https://rent-pult.ru/forum/?PAGE_NAME=list&FID=15">форуме</a></li>
+</ul> -->
