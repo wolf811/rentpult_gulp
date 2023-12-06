@@ -2,20 +2,20 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+// import { mobileCheck } from "./functions/mobile-check";
+// console.log(mobileCheck())
 
 // Определение ширины экрана
-import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
-if (isDesktop()) {
-  console.log('Привет Desktop')
-};
-if (isTablet()) {
-  console.log('Привет Tablet');
-};
-if (isMobile()) {
-  console.log('Привет Mobile')
-};
+// import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
+// if (isDesktop()) {
+//   console.log('Привет Desktop')
+// };
+// if (isTablet()) {
+//   console.log('Привет Tablet');
+// };
+// if (isMobile()) {
+//   console.log('Привет Mobile')
+// };
 
 // Троттлинг функции (для ресайза, ввода в инпут, скролла и т.д.)
 // import { throttle } from './functions/throttle';
