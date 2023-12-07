@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper compact-view">
+    @include('partials/navbar-after-login.html')
+    @include('partials/user-profile-compact/header.html')
+    <main class="mb-5">
+      <div class="container">
+        <!-- @include('partials/breadcrumb_for_all.html') -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb breadcrumb-sm">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="user_profile.html">Личный кабинет</a></li>
+            <li class="breadcrumb-item"><a href="object_profile.html">Название объекта</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Хронология</li>
+          </ol>
+        </nav>
+        <div class="page-title">
+          <h1>Название объекта</h1>
+          <a href="object_profile.html" class="btn btn-outline-primary btn-sm mt-2 mt-sm-0"><i
+              class="bi bi-arrow-left me-1"></i>Назад</a>
+        </div>
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+            <div class="fw-light fs-4">Хронология</div>
+            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-filetype-txt me-1"></i>Выгрузка в файл</a>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive mt-2">
+              <table class="table table-light align-middle small">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-nowrap">
+                      Дата
+                      <span class="ms-1">
+                        <a href="#" class="text-danger"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      Событие
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      Описание
+                    </th>
+                    <th scope="col" class="text-nowrap">Действие</th>
+                    <th scope="col" class="text-nowrap">
+                      Период
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      Кто сделал
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>04.12.2023</td>
+                    <td>Оплата аренды</td>
+                    <td>Коммуналка</td>
+                    <td>Добавлено значение: 20000 р.</td>
+                    <td>ноябрь 2023</td>
+                    <td>Вероника (ID 17314)</td>
+                  </tr>
+                  <tr>
+                    <td>11.11.2023</td>
+                    <td>Фото-отчеты</td>
+                    <td>05.02.2023 - Фотоотчет</td>
+                    <td>Изменено описание фотографии<br>Новый текст: мойка из нержавейки<br>Старай текст: мойка</td>
+                    <td></td>
+                    <td>Кирилл Ерошенков (ID 17281)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/object-detail/modals-object-detail.html')
+</body>
+
+</html>
