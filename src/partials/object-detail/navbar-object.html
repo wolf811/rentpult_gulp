@@ -13,11 +13,16 @@
         <p class="mb-0 fs-5 py-2 mb-2 border-bottom w-100">Коммунальные услуги</p>
         <li class="nav-item">
           <a class="nav-link active" href="#reading-counters" id="reading-counters-list" data-bs-toggle="list"
-            role="tab" aria-controls="reading-counters">Показания счётчиков</a>
+            role="tab" aria-controls="reading-counters">Показания счётчиков<span
+              class="badge rounded-pill text-bg-danger float-end" title="Непрочитанные сообщения">1</span></a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link disabled" href="#payment-bills" id="payment-bills-list" data-bs-toggle="list" role="tab"
             aria-controls="payment-bills"><i class="bi bi-slash-circle me-1"></i>Платежи</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="#payment-bills" id="payment-bills-list" data-bs-toggle="list" role="tab"
+            aria-controls="payment-bills">Платежи</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#general-communal-services" id="general-communal-services-list"
@@ -30,11 +35,13 @@
         <p class="mb-0 fs-5 py-2 mb-2 border-bottom w-100">Аренда</p>
         <li class="nav-item">
           <a class="nav-link" href="#payment-rent" id="payment-rent-list" data-bs-toggle="list" role="tab"
-            aria-controls="payment-rent">Оплата аренды</a>
+            aria-controls="payment-rent">Оплата аренды<span class="badge rounded-pill text-bg-danger float-end"
+              title="Непрочитанные сообщения">5</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#photo-reports" id="photo-reports-list" data-bs-toggle="list" role="tab"
-            aria-controls="photo-reports">Фото-отчёты</a>
+            aria-controls="photo-reports">Фото-отчёты<span class="badge rounded-pill text-bg-danger float-end"
+              title="Непрочитанные сообщения">2</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#things" id="things-list" data-bs-toggle="list" role="tab"
@@ -53,9 +60,9 @@
             aria-controls="tenants">Арендаторы</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center justify-content-between" href="#rent-messages"
-            id="rent-messages-list" data-bs-toggle="list" role="tab" aria-controls="rent-messages">Чат<span
-              class="badge rounded-pill text-bg-danger" title="Непрочитанные сообщения">1</span></a>
+          <a class="nav-link" href="#rent-messages" id="rent-messages-list" data-bs-toggle="list" role="tab"
+            aria-controls="rent-messages">Чат<span class="badge rounded-pill text-bg-danger float-end"
+              title="Непрочитанные сообщения">1</span></a>
         </li>
         <p class="mb-0 fs-5 py-2 mb-2 border-bottom w-100">Информация об объекте</p>
         <li class="nav-item">
@@ -106,13 +113,15 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li> -->
-        <li class="nav-item text-right mt-3">
-          <a href="chronology.html" class="btn btn-outline-secondary btn-sm" title="Хронология"><i
-              class="bi bi-clock-history"></i></a>
-          <!-- <a href="#" class="btn btn-outline-secondary btn-sm" title="Выгрузка в файл"><i
-              class="bi bi-filetype-txt"></i></a> -->
-          <a href="#" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalMenuSetting"
-            title="Настройка меню"><i class="bi bi-gear"></i></a>
+        <li class="nav-item mt-3">
+          <div class="float-end">
+            <a href="chronology.html" class="btn btn-outline-secondary btn-sm" title="Хронология"><i
+                class="bi bi-clock-history"></i></a>
+            <!-- <a href="#" class="btn btn-outline-secondary btn-sm" title="Выгрузка в файл"><i
+                class="bi bi-filetype-txt"></i></a> -->
+            <a href="#" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+              data-bs-target="#modalMenuSetting" title="Настройка меню"><i class="bi bi-gear"></i></a>
+          </div>
         </li>
         <li class="nav-item d-block d-lg-none">
           <a href="#" class="float-end" data-bs-toggle="collapse" data-bs-target="#navbarObject"
