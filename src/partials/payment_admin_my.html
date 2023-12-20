@@ -1,0 +1,166 @@
+<h2 class="text-warning">Новый вариант</h2>
+
+<div class="card card-object shadow-sm bg-success bg-gradient bg-opacity-10 border-0 mb-4 small">
+  <form action="">
+    <div class="card-body py-3">
+      <div class="row mb-3">
+        <div class="col-sm-6 col-xl-4 mb-3 mb-sm-0">
+          <label for="" class="form-label">Пользователь</label>
+          <input type="text" class="form-control form-control-sm">
+        </div>
+        <div class="col-6 col-sm-3 col-xl-2">
+          <label for="" class="form-label">Дата платежа от</label>
+          <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+        </div>
+        <div class="col-6 col-sm-3 col-xl-2">
+          <label for="" class="form-label">до</label>
+          <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="submit" class="btn btn-outline-success btn-sm"><i class="bi bi-filter me-1"></i>Фильтр</button>
+      <a href="#" class="btn btn-link btn-sm">Сбросить</a>
+    </div>
+  </form>
+</div>
+<!-- <div class="row align-items-center justify-content-between mb-3">
+          <div class="col-sm-auto mb-3 mb-sm-0">
+            <div class="input-group input-group-sm">
+              <span class="input-group-text" id="basic-addon1">Сортировать:</span>
+              <select name="" class="form-select">
+                <option selected value="">по дате платежа</option>
+                <option value="">по пользователю</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm">
+            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-zip me-1"></i>Скачать архив</a>
+            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-excel me-1"></i>Экспорт в excel</a>
+          </div>
+        </div> -->
+<div class="table-responsive">
+  <table class="table table-hover table-striped align-middle border small">
+    <thead>
+      <tr>
+        <th scope="col" class="text-center">#</th>
+        <th scope="col" class="text-nowrap">
+          Дата платежа
+          <span class="ms-1">
+            <a href="#"><i class="bi bi-arrow-down"></i></a>
+            <a href="#"><i class="bi bi-arrow-up"></i></a>
+          </span>
+        </th>
+        <th scope="col" class="text-nowrap">
+          № объекта
+          <span class="ms-1">
+            <a href="#"><i class="bi bi-arrow-down"></i></a>
+            <a href="#"><i class="bi bi-arrow-up"></i></a>
+          </span>
+        </th>
+        <th scope="col" class="text-nowrap">
+          Пользователь
+          <span class="ms-1">
+            <a href="#"><i class="bi bi-arrow-down"></i></a>
+            <a href="#"><i class="bi bi-arrow-up"></i></a>
+          </span>
+        </th>
+        <th scope="col">Сумма</th>
+        <th scope="col" class="text-nowrap">
+          Оплачено
+          <span class="ms-1">
+            <a href="#"><i class="bi bi-arrow-down"></i></a>
+            <a href="#"><i class="bi bi-arrow-up"></i></a>
+          </span>
+        </th>
+        <th scope="col">Срок действия</th>
+        <th scope="col">Документ</th>
+        <th scope="col" class="text-nowrap">
+          VIP
+          <span class="ms-1">
+            <a href="#"><i class="bi bi-arrow-down"></i></a>
+            <a href="#"><i class="bi bi-arrow-up"></i></a>
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row" class="text-center">
+          <div class="btn-group btn-group-sm" role="group">
+            <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalPaymentAdminCheck"><i
+                class="bi bi-check-lg" title="Подтвердить оплату"></i></a>
+            <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+          </div>
+        </td>
+        <td>12.10.2022</td>
+        <td>375</td>
+        <td>Kir-ero@mail.ru</td>
+        <td>1200</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="fw-bold text-secondary"></td>
+      </tr>
+      <tr>
+        <td scope="row" class="text-center">
+          <div class="btn-group btn-group-sm" role="group">
+            <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalPaymentAdminCheck"><i
+                class="bi bi-pencil" title="Редактировть"></i></a>
+            <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+          </div>
+        </td>
+        <td>12.10.2022</td>
+        <td>375</td>
+        <td>Kir-ero@mail.ru</td>
+        <td>1200</td>
+        <td>Да</td>
+        <td>12.10.2023 - 12.10.2024</td>
+        <td><a href="#" target="_blank">file.pdf</a></td>
+        <td class="fw-bold text-secondary">Да</td>
+      </tr>
+      <!-- <tr>
+        <td scope="row" class="text-center">
+          <div class="btn-group btn-group-sm" role="group">
+            <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalPaymentInvoice"><i
+                class="bi bi-pencil" title="Редактировть"></i></a>
+            <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+          </div>
+        </td>
+        <td>12.10.2022</td>
+        <td>375</td>
+        <td>Kir-ero@mail.ru</td>
+        <td>1200</td>
+        <td>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="paid">
+            <label class="form-check-label" for="paid">Да</label>
+          </div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input type="date" class="form-control form-control-sm me-1">
+            <input type="date" class="form-control form-control-sm">
+          </div>
+        </td>
+        <td>
+          <input type="file" class="form-control form-control-sm">
+        </td>
+        <td>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="vip">
+            <label class="form-check-label fw-bold" for="vip">Да</label>
+          </div>
+        </td>
+      </tr> -->
+  </table>
+</div>
+<nav aria-label="...">
+  <ul class="pagination pagination-sm">
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">1</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+  </ul>
+</nav>

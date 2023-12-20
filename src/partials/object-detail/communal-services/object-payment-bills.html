@@ -28,7 +28,7 @@
           <div class="row mb-3">
             <label for="amountPayment" class="col-md-4 col-form-label">Сумма
               платежа / за месяц</label>
-            <div class="col-sm col-xl-3">
+            <div class="col-sm col-xl-3 mb-2 mb-sm-0">
               <input class="form-control form-control-sm" type="text" id="amountPayment">
             </div>
             <div class="col-sm col-xl-3">
@@ -47,19 +47,6 @@
             <div class="col-sm col-xl-6">
               <input class="form-control form-control-sm" type="file" id="paymentFiles">
             </div>
-            <!-- <div class="col-10 col-md-6">
-              <input class="form-control form-control-sm" type="file" id="paymentFiles">
-            </div>
-            <div class="col-2">
-              <a href="#" class="btn btn-link text-danger btn-sm"><i class="bi bi-x-lg"></i></a>
-            </div> -->
-          </div>
-          <!-- <div class="row mb-3">
-            <div class="offset-md-4 col-md">
-              <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить
-                файл</a>
-            </div>
-          </div> -->
         </fieldset>
         <div class="d-flex align-items-center justify-content-between">
           <div>
@@ -84,13 +71,14 @@
       <div class="col-3">Квитанции и оплаты</div>
     </div>
     <div class="row align-items-center fw-bold p-2 bg-light border-bottom">
-      <div class="col-lg offset-lg-1"><a href="#">Декабрь 2023<i class="bi bi-chevron-down ms-1"></i></a></div>
+      <div class="col-lg offset-lg-1"><a href="#collapseBillsMonth01" data-bs-toggle="collapse" aria-expanded="false"
+          aria-controls="collapseBillsMonth01">Декабрь 2023<i class="bi bi-chevron-down ms-1"></i></a></div>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive collapse" id="collapseBillsMonth01">
       <table class="table table-light">
         <tr>
           <td>
-            <div class="btn-group btn-group-sm" role="group">
+            <div class="btn-group-action btn-group btn-group-sm" role="group">
               <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#formPaymentUtilityServices"><i
                   class="bi bi-pencil" title="Редактировать"></i></a>
               <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
@@ -105,7 +93,45 @@
         </tr>
         <tr>
           <td>
-            <div class="btn-group btn-group-sm" role="group">
+            <div class="btn-group-action btn-group btn-group-sm" role="group">
+              <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#formPaymentUtilityServices"><i
+                  class="bi bi-pencil" title="Редактировать"></i></a>
+              <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+            </div>
+          </td>
+          <td>Электричество<small class="text-secondary ms-1">(какой-то комментарий)</small></td>
+          <td class="text-nowrap">7510.00</td>
+          <td>
+            <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+                class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="row align-items-center fw-bold p-2 bg-light border-bottom">
+      <div class="col-lg offset-lg-1"><a href="#collapseBillsMonth02" data-bs-toggle="collapse" aria-expanded="false"
+          aria-controls="collapseBillsMonth02">Ноябрь 2023<i class="bi bi-chevron-down ms-1"></i></a></div>
+    </div>
+    <div class="table-responsive collapse" id="collapseBillsMonth02">
+      <table class="table table-light">
+        <tr>
+          <td>
+            <div class="btn-group-action btn-group btn-group-sm" role="group">
+              <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#formPaymentUtilityServices"><i
+                  class="bi bi-pencil" title="Редактировать"></i></a>
+              <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+            </div>
+          </td>
+          <td>Капитальный ремонт<small class="text-secondary ms-1">(какой-то комментарий)</small></td>
+          <td class="text-nowrap">7510.00</td>
+          <td>
+            <a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
+                class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="btn-group-action btn-group btn-group-sm" role="group">
               <a class="btn btn-outline-success" data-bs-toggle="collapse" href="#formPaymentUtilityServices"><i
                   class="bi bi-pencil" title="Редактировать"></i></a>
               <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>

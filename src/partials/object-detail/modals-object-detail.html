@@ -758,18 +758,16 @@
       </div>
       <form action="">
         <div class="modal-body">
-          <p class="text-secondary"><i class="bi bi-info-circle text-orange me-2"></i>Для формирования счёта заполните
-            форму. После сохранения счёт будет доступен для скачивания в соответствующей строке таблицы.</p>
-          <!-- <div class="row mb-3 align-items-center">
+          <div class="row mb-3 align-items-center">
             <label for="paymentObjDate" class="form-label">Дата платежа</label>
             <div class="col-6">
               <input class="form-control form-control-sm" type="date" id="paymentObjDate">
             </div>
-          </div> -->
-          <div class="mb-3">
+          </div>
+          <!-- <div class="mb-3">
             <label for="payer" class="form-label">Плательщик (ФИО / Организация)</label>
             <input type="text" class="form-control form-control-sm" id="payer">
-          </div>
+          </div> -->
           <div class="row mb-3 align-items-center">
             <label for="changePeriodPayment" class="form-label">Период оплаты / сумма</label>
             <div class="col-6">
@@ -786,11 +784,82 @@
               <input type="text" class="form-control form-control-sm" readonly value="300">
             </div>
           </div>
-          <p class="text-secondary mb-1"><i class="bi bi-info-circle text-orange me-2"></i>После оплаты можно добавить
+          <!-- <p class="text-secondary mb-1"><i class="bi bi-info-circle text-orange me-2"></i>После оплаты можно добавить
             чек.
           </p>
           <div class="mb-3">
             <label for="filePaymentRent" class="form-label">Чек</label>
+            <input class="form-control form-control-sm" type="file" id="filePaymentRent">
+          </div> -->
+          <!-- <div class="mb-3">
+            <label for="commentPaymentRent" class="form-label">Комментарий</label>
+            <textarea class="form-control form-control-sm" name="" id="commentPaymentRent" rows="2"></textarea>
+          </div> -->
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalPaymentAdminCheck" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Подтверждение оплаты</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="alert alert-success small py-2 mb-3">
+            <p class="mb-1">
+              <strong>Дата:</strong><span class="ms-1">12.10.2022</span>
+            </p>
+            <p class="mb-1">
+              <strong>№ объекта:</strong><span class="ms-1">375</span>
+            </p>
+            <p class="mb-1">
+              <strong>Пользователь:</strong><span class="ms-1">Kir-ero@mail.ru</span>
+            </p>
+            <p class="mb-0">
+              <strong>Сумма:</strong><span class="ms-1">1200</span>
+            </p>
+          </div>
+          <div class="row mb-3 align-items-center">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="checkPayment">
+                <label class="form-check-label" for="checkPayment">Подтвердить оплату</label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="checkVip">
+                <label class="form-check-label" for="checkVip">установить VIP</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3 align-items-center">
+            <label for="paymentObjDate" class="form-label">Срок действия</label>
+            <div class="col-6">
+              <input class="form-control form-control-sm" type="date" id="paymentObjDate">
+            </div>
+            <div class="col-6">
+              <input class="form-control form-control-sm" type="date" id="paymentObjDate">
+            </div>
+          </div>
+          <!-- <div class="mb-3">
+            <label for="payer" class="form-label">Плательщик (ФИО / Организация)</label>
+            <input type="text" class="form-control form-control-sm" id="payer">
+          </div> -->
+
+          <div class="mb-3">
+            <label for="filePaymentRent" class="form-label">Документ</label>
             <input class="form-control form-control-sm" type="file" id="filePaymentRent">
           </div>
           <!-- <div class="mb-3">
