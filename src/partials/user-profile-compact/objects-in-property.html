@@ -1,5 +1,5 @@
 <div id="objectsInProperty" class="mb-3">
-  <div class="card card-object">
+  <div class="card card-object" draggable="true">
     <div class="row g-0">
       <div class="card-object-img-block d-none d-xl-block col-xl-1">
         <a href="photo-report-detail.html">
@@ -21,9 +21,11 @@
                 title="Управление объектом"><i class="bi bi-gear"></i></a>
               <a href="#" class="btn btn-outline-danger btn-xs me-2" role="button" title="Удалить объект"><i
                   class="bi bi-x-lg"></i></a>
-              <a href="#collapseObjInProp" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse"
-                role="button" aria-expanded="false" aria-controls="collapseObjInProp" title="Подробнее"><i
+              <a href="#collapseObjInProp1" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse"
+                role="button" aria-expanded="false" aria-controls="collapseObjInProp1" title="Подробнее"><i
                   class="bi bi-chevron-down"></i></a>
+              <a href="#" class="btn btn-link text-secondary fs-6 pe-0" title="Переместить"><i
+                  class="bi bi-three-dots-vertical"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -44,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div class="collapse text-bg-light" id="collapseObjInProp">
+    <div class="collapse text-bg-light" id="collapseObjInProp1">
       <div class="card-object-collapse">
         <div class="d-flex align-items-center justify-content-between pb-1 border-bottom mb-2">
           <p class="text-secondary mb-0">Хронология</p>
@@ -60,8 +62,15 @@
             <div class="col">Период</div>
           </div>
         </div>
-        <a href="#collapseObjInProp" class="d-block text-end small" data-bs-toggle="collapse" role="button"
-          aria-expanded="false" aria-controls="collapseObjInProp"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+        <div class="d-flex align-items-center justify-content-between">
+          <select name="" id="" class="form-select form-select-sm w-auto">
+            <option selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <a href="#collapseObjInProp1" class="small" data-bs-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="collapseObjInProp1"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+        </div>
       </div>
     </div>
   </div>
@@ -86,9 +95,11 @@
                 title="Управление объектом"><i class="bi bi-gear"></i></a>
               <a href="#" class="btn btn-outline-danger btn-xs me-2" role="button" title="Удалить объект"><i
                   class="bi bi-x-lg"></i></a>
-              <a href="#collapseObjInProp" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse"
-                role="button" aria-expanded="false" aria-controls="collapseObjInProp" title="Подробнее"><i
+              <a href="#collapseObjInProp2" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse"
+                role="button" aria-expanded="false" aria-controls="collapseObjInProp2" title="Подробнее"><i
                   class="bi bi-chevron-down"></i></a>
+              <a href="#" class="btn btn-link text-secondary fs-6 pe-0" title="Переместить"><i
+                  class="bi bi-three-dots-vertical"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -109,7 +120,7 @@
         </div>
       </div>
     </div>
-    <div class="collapse text-bg-light" id="collapseObjInProp">
+    <div class="collapse text-bg-light" id="collapseObjInProp2">
       <div class="card-object-collapse">
         <div class="d-flex align-items-center justify-content-between pb-1 border-bottom mb-2">
           <p class="text-secondary mb-0">Хронология</p>
@@ -161,8 +172,17 @@
             <div class="col-md"></div>
           </div>
         </div>
-        <a href="#collapseObjInProp" class="d-block text-end small" data-bs-toggle="collapse" role="button"
-          aria-expanded="false" aria-controls="collapseObjInProp"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+        <div class="d-flex align-items-center justify-content-between">
+          <select name="" id="" class="form-select form-select-sm w-auto">
+            <option value="1">1</option>
+            <option selected>2</option>
+            <option value="3">3</option>
+          </select>
+          <a href="#collapseObjInProp2" class="small" data-bs-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="collapseObjInProp2"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+        </div>
+        <!-- <a href="#collapseObjInProp2" class="d-block text-end small" data-bs-toggle="collapse" role="button"
+          aria-expanded="false" aria-controls="collapseObjInProp2"><i class="bi bi-x-lg me-1"></i>Закрыть</a> -->
       </div>
     </div>
   </div>
@@ -190,9 +210,11 @@
                 title="Управление объектом"><i class="bi bi-gear"></i></a>
               <a href="#" class="btn btn-outline-danger btn-xs me-2" role="button" title="Удалить объект"><i
                   class="bi bi-x-lg"></i></a>
-              <a href="#collapseObjInProp" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse"
-                role="button" aria-expanded="false" aria-controls="collapseObjInProp" title="Подробнее"><i
+              <a href="#collapseObjInProp3" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse"
+                role="button" aria-expanded="false" aria-controls="collapseObjInProp3" title="Подробнее"><i
                   class="bi bi-chevron-down"></i></a>
+              <a href="#" class="btn btn-link text-secondary fs-6 pe-0" title="Переместить"><i
+                  class="bi bi-three-dots-vertical"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -236,7 +258,7 @@
         </div>
       </div>
     </div>
-    <div class="collapse text-bg-light" id="collapseObjInProp">
+    <div class="collapse text-bg-light" id="collapseObjInProp3">
       <div class="card-object-collapse">
         <div class="d-flex align-items-center justify-content-between pb-1 border-bottom mb-2">
           <p class="text-secondary mb-0">Хронология</p>
@@ -316,8 +338,17 @@
             </div>
           </div>
         </div> -->
-        <a href="#collapseObjInProp" class="d-block text-end small" data-bs-toggle="collapse" role="button"
-          aria-expanded="false" aria-controls="collapseObjInProp"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+        <div class="d-flex align-items-center justify-content-between">
+          <select name="" id="" class="form-select form-select-sm w-auto">
+            <option value="2">1</option>
+            <option value="2">2</option>
+            <option selected>3</option>
+          </select>
+          <a href="#collapseObjInProp3" class="small" data-bs-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="collapseObjInProp3"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+        </div>
+        <!-- <a href="#collapseObjInProp3" class="d-block text-end small" data-bs-toggle="collapse" role="button"
+          aria-expanded="false" aria-controls="collapseObjInProp3"><i class="bi bi-x-lg me-1"></i>Закрыть</a> -->
       </div>
     </div>
   </div>
