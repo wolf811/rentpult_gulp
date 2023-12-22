@@ -17,10 +17,10 @@
         <!-- @include('partials/payment_admin_my.html') -->
         <ul class="nav nav-tabs mb-4">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="payment_admin.html">Счета</a>
+            <a class="nav-link" href="payment_admin.html">Счета</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
+            <a class="nav-link active" aria-current="page" href="vip_clients_admin.html">VIP-клиенты</a>
           </li>
         </ul>
 
@@ -28,7 +28,7 @@
           <div class="mb-3">
             <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить
               всё</button>
-            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-excel me-1"></i>Экспорт в excel</a>
+            <a href="#" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
           </div>
           <div class="table-responsive">
             <table class="table table-hover table-striped align-middle border small">
@@ -36,43 +36,21 @@
                 <tr>
                   <th scope="col" class="text-center">#</th>
                   <th scope="col" class="text-nowrap">
-                    Дата платежа
+                    Дата
                     <span class="ms-1">
                       <a href="#"><i class="bi bi-arrow-down"></i></a>
                       <a href="#"><i class="bi bi-arrow-up"></i></a>
                     </span>
                   </th>
+                  <th>ФИО</th>
                   <th scope="col" class="text-nowrap">
-                    № объекта
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th>
-                  <th scope="col" class="text-nowrap">
-                    Пользователь
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th>
-                  <th scope="col">Сумма</th>
-                  <th scope="col" class="text-nowrap">
-                    Оплачено
+                    ID клиента
                     <span class="ms-1">
                       <a href="#"><i class="bi bi-arrow-down"></i></a>
                       <a href="#"><i class="bi bi-arrow-up"></i></a>
                     </span>
                   </th>
                   <th scope="col">Срок действия</th>
-                  <th scope="col">Документы</th>
-                  <!-- <th scope="col" class="text-nowrap">
-                    VIP
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th> -->
                 </tr>
               </thead>
               <tbody>
@@ -84,30 +62,23 @@
                     </div>
                   </td>
                   <td>12.10.2022</td>
-                  <td>375</td>
-                  <td>Kir-ero@mail.ru</td>
-                  <td>1200</td>
+                  <td></td>
                   <td>
-                    <div class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="paid">
-                      <label class="form-check-label" for="paid">Да</label>
+                    <div class="has-validation">
+                      <div class="is-invalid">
+                        <input type="text" class="form-control form-control-sm w-xl-25 w-lg-50" placeholder="ID">
+                      </div>
+                      <div class="invalid-feedback">
+                        ID не найдено!
+                      </div>
                     </div>
                   </td>
                   <td>
                     <div class="d-flex">
-                      <input type="date" class="form-control form-control-sm me-1">
-                      <input type="date" class="form-control form-control-sm">
+                      <input type="date" class="form-control form-control-sm me-1 w-lg-50 w-xl-25">
+                      <input type="date" class="form-control form-control-sm w-lg-50 w-xl-25">
                     </div>
                   </td>
-                  <td>
-                    <input type="file" class="form-control form-control-sm">
-                  </td>
-                  <!-- <td>
-                    <div class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="vip">
-                      <label class="form-check-label fw-bold" for="vip">Да</label>
-                    </div>
-                  </td> -->
                 </tr>
                 <tr>
                   <td scope="row" class="text-center">
@@ -117,13 +88,9 @@
                     </div>
                   </td>
                   <td>12.10.2022</td>
+                  <td>Иванов Иван Иванович</td>
                   <td>375</td>
-                  <td>Kir-ero@mail.ru</td>
-                  <td>1200</td>
-                  <td>Да</td>
                   <td>12.10.2023 - 12.10.2024</td>
-                  <td><a href="#" target="_blank">files.zip</a></td>
-                  <!-- <td class="fw-bold">Да</td> -->
                 </tr>
             </table>
           </div>
