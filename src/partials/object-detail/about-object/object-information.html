@@ -4,7 +4,8 @@
       data-bs-target="#formGeneralInfo" role="tab" aria-controls="formGeneralInfo" aria-selected="true"><i
         class="bi bi-pencil me-1"></i>Редактировать</a>
     <a class="btn btn-outline-success btn-sm mb-2" id="tabControl" data-bs-toggle="pill"
-      data-bs-target="#formAddControl" role="tab" aria-controls="formAddControl" aria-selected="true"><i class="bi bi-person-plus me-1"></i>Управление</a>
+      data-bs-target="#formAddControl" role="tab" aria-controls="formAddControl" aria-selected="true"><i
+        class="bi bi-person-plus me-1"></i>Управление</a>
   </div>
   <!-- <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="collapse" href="#formAddGeneralInfo" role="button"
     aria-expanded="false" aria-controls="formAddGeneralInfo"><i class="bi bi-pencil me-1"></i>Редактировть</a>
@@ -22,21 +23,7 @@
                 <input type="text" class="form-control form-control-sm" id="" required>
               </div>
             </div>
-            <div class="row mb-3">
-              <label for="" class="col-md-4 col-form-label">Адрес объекта</label>
-              <div class="col-sm col-xl-6">
-                <input type="text" class="form-control form-control-sm" id="">
-              </div>
-            </div>
-            <div class="row mb-3">
-              <label for="" class="col-md-4 col-form-label">Этаж / подъезд</label>
-              <div class="col-sm col-xl-3 mb-3 mb-sm-0">
-                <input type="number" class="form-control form-control-sm" id="" placeholder="№ этажа">
-              </div>
-              <div class="col-sm col-xl-3">
-                <input type="number" class="form-control form-control-sm" id="" placeholder="№ подъезда">
-              </div>
-            </div>
+
             <div class="row mb-3">
               <label for="" class="col-md-4 col-form-label">Кол-во комнат / площадь</label>
               <div class="col-sm col-xl-3 mb-3 mb-sm-0">
@@ -46,24 +33,7 @@
                 <input type="number" class="form-control form-control-sm" id="">
               </div>
             </div>
-            <div class="row mb-3">
-              <label for="" class="col-md-4 col-form-label">Сан.узел / балкон</label>
-              <div class="col-sm col-xl-3 mb-3 mb-sm-0">
-                <select class="form-select form-select-sm" aria-label="Default select example">
-                  <option selected>-</option>
-                  <option value="1">раздельный</option>
-                  <option value="2">совмещенный</option>
-                </select>
-              </div>
-              <div class="col-sm col-xl-3">
-                <select class="form-select form-select-sm" aria-label="Default select example">
-                  <option selected>-</option>
-                  <option value="1">балкон</option>
-                  <option value="2">лоджия</option>
-                  <option value="3">нет</option>
-                </select>
-              </div>
-            </div>
+
             <hr>
             <div class="form-check form-switch mb-3">
               <input class="form-check-input" type="checkbox" role="switch" id="checkForRent" data-bs-toggle="collapse"
@@ -75,6 +45,39 @@
                 <label for="" class="col-md-4 col-form-label">Цена</label>
                 <div class="col-sm-6 col-md-4 col-xl-3">
                   <input type="number" class="form-control form-control-sm">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="" class="col-md-4 col-form-label">Адрес объекта</label>
+                <div class="col-sm col-xl-6">
+                  <input type="text" class="form-control form-control-sm" id="">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="" class="col-md-4 col-form-label">Этаж / подъезд</label>
+                <div class="col-sm col-xl-3 mb-3 mb-sm-0">
+                  <input type="number" class="form-control form-control-sm" id="" placeholder="№ этажа">
+                </div>
+                <div class="col-sm col-xl-3">
+                  <input type="number" class="form-control form-control-sm" id="" placeholder="№ подъезда">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="" class="col-md-4 col-form-label">Сан.узел / балкон</label>
+                <div class="col-sm col-xl-3 mb-3 mb-sm-0">
+                  <select class="form-select form-select-sm" aria-label="Default select example">
+                    <option selected>-</option>
+                    <option value="1">раздельный</option>
+                    <option value="2">совмещенный</option>
+                  </select>
+                </div>
+                <div class="col-sm col-xl-3">
+                  <select class="form-select form-select-sm" aria-label="Default select example">
+                    <option selected>-</option>
+                    <option value="1">балкон</option>
+                    <option value="2">лоджия</option>
+                    <option value="3">нет</option>
+                  </select>
                 </div>
               </div>
               <div class="row mb-3">
@@ -170,7 +173,8 @@
                 Сохраняем...
               </button>
               <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
-              <a href="#formGeneralInfo" class="btn btn-link btn-sm" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="formGeneralInfo">Закрыть</a>
+              <a href="#formGeneralInfo" class="btn btn-link btn-sm" data-bs-toggle="collapse" role="button"
+                aria-expanded="true" aria-controls="formGeneralInfo">Закрыть</a>
             </div>
             <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
           </div>
