@@ -945,3 +945,84 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="modalAddTenantFromID" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добавить арендатора по ID</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="row mb-3 align-items-center">
+            <label for="nameTenant" class="form-label">Укажите ID&nbsp;арендатора (ов)</label>
+            <div class="col-sm-4 mb-3 mb-sm-0"><input class="form-control form-control-sm" list="datalistOptionsTenants"
+                id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
+            <div class="col-sm-4 mb-3 mb-sm-0"><input class="form-control form-control-sm" list="datalistOptionsTenants"
+                id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
+            <div class="col-sm-4"><input class="form-control form-control-sm" list="datalistOptionsTenants"
+                id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="modal fade" id="modalAddContractRent" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Договор аренды</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="row mb-3">
+            <label for="rentalPeriod" class="form-label">Период аренды</label>
+            <div class="col-6">
+              <input class="form-control form-control-sm" type="date" id="rentalPeriodFrom">
+            </div>
+            <div class="col-6">
+              <input class="form-control form-control-sm" type="date" id="rentalPeriodTo">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="nameContract" class="form-label">Основание<small class="text-secondary ms-1">(Договор
+                аренды и&nbsp;пр.)</small></label>
+            <input class="form-control form-control-sm" type="text" id="nameContract">
+          </div>
+          <div class="row mb-3 align-items-center">
+            <div class="col-lg-6 mb-3 mb-lg-0">
+              <label for="paymentMonth" class="form-label">Ежемесячная плата</label>
+              <input class="form-control form-control-sm" type="text" id="paymentMonth">
+            </div>
+            <div class="col-lg-6">
+              <label for="depositAmount" class="form-label">Депозит</label>
+              <input class="form-control form-control-sm" type="text" id="depositAmount">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="commentAboutTenant" class="form-label">Файлы (массовая загрузка)</label>
+            <input type="file" name="files[]" multiple="multiple" class="form-control form-control-sm">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем...
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->

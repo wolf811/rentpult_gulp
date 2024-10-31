@@ -14,35 +14,28 @@
           <ol class="breadcrumb breadcrumb-sm">
             <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
             <li class="breadcrumb-item"><a href="object_profile.html">Название объекта</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Арендатор</li>
+            <li class="breadcrumb-item active" aria-current="page">Договор</li>
           </ol>
         </nav>
         @include('partials/page-title-inside.html', {
-        "pageTitle": "Арендатор"
+        "pageTitle": "Договор"
         })
         <div class="row">
           <div class="col-md mb-4">
             <div class="card border-0 shadow-sm">
               <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
-                <div class="fw-light fs-4">Информация об арендаторе</div>
+                <div class="fw-light fs-4">Информация о договоре</div>
                 <!-- <div class="text-success text-nowrap">ID: 00001-01</div> -->
               </div>
               <form action="">
                 <div class="card-body">
-                  <div class="mb-3">
+                  <!-- <div class="mb-3">
                     <label for="commentAboutTenant" class="form-label">Фамилия Имя Отчество (и телефон)</label>
                     <textarea class="form-control" name="PREVIEW_TEXT" id="commentAboutTenant" rows="1"></textarea>
-                  </div>
-                  <!-- <div class="row mb-3">
-                    <label for="nameTenant" class="form-label">(!!!) Или укажите ID арендатора (ов)</label>
-                    <div class="col-lg-4 mb-3 mb-lg-0"><input class="form-control" list="datalistOptionsTenants"
-                        id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
-                    <div class="col-lg-4 mb-3 mb-lg-0"><input class="form-control" list="datalistOptionsTenants"
-                        id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
-                    <div class="col-lg-4"><input class="form-control" list="datalistOptionsTenants" id="nameTenant"
-                        name="prop[renter_id][]" value="" placeholder="ID"></div>
+                  </div> -->
 
-                  </div>
+
+
                   <div class="row mb-3">
                     <label for="rentalPeriod" class="form-label">Период аренды</label>
                     <div class="col-6">
@@ -70,7 +63,7 @@
                   <div class="mb-3">
                     <label for="commentAboutTenant" class="form-label">Файлы (массовая загрузка)</label>
                     <input type="file" name="files[]" multiple="multiple" class="form-control">
-                  </div> -->
+                  </div>
                 </div>
                 <div class="card-footer bg-transparent py-3">
                   <div class="d-flex align-items-center justify-content-between">
