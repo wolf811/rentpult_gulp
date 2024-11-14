@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar-after-login.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        <!-- @include('partials/breadcrumb_for_all.html') -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb breadcrumb-sm">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="object_profile.html">Название объекта</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Договор</li>
+          </ol>
+        </nav>
+        @include('partials/page-title-inside.html', {
+        "pageTitle": "Договор аренды с физическим лицом"
+        })
+        <div class="row">
+          <div class="col-lg-3">
+            @include('partials/navbar-dogovor.html')
+          </div>
+          <div class="col-lg">
+            <div class="tab-content" id="nav-objectProfileContent">
+              <div class="tab-pane fade show active" id="reading-counters" role="tabpanel"
+                aria-labelledby="reading-counters-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Информация о арендодателе</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
+                  </div>
+                  @include('partials/dogovor-detail/landlord.html')
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/object-detail/modals-object-detail.html')
+</body>
+
+</html>
