@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar-after-login.html')
+    @include('partials/user-profile-compact/header.html')
+    <main class="mb-5">
+      <div class="container">
+        <!-- @include('partials/breadcrumb_for_all.html') -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb breadcrumb-sm">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="object_profile.html">Название объекта</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Договор</li>
+          </ol>
+        </nav>
+        @include('partials/page-title-inside.html', {
+        "pageTitle": "Договор аренды с физическим лицом"
+        })
+        <form action="">
+          <div class="card card-object border-0 shadow-sm">
+            <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+              <div class="fw-light fs-4">Данные договора</div>
+              <div class="text-success text-nowrap">ID: 00001-01</div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="numberDogovor" class="form-label">Номер договора</label>
+                  <input class="form-control form-control-sm" type="text" id="numberDogovor">
+                </div>
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="placeDogovor" class="form-label">Место составления</label>
+                  <input class="form-control form-control-sm" type="text" id="placeDogovor">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="dateDogovor" class="form-label">Дата составления</label>
+                  <input class="form-control form-control-sm" type="date" id="dateDogovor">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-object border-0 shadow-sm">
+            <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+              <div class="fw-light fs-4">Информация о арендодателе</div>
+              <div class="text-success text-nowrap">ID: 00001-01</div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="placeDogovor" class="form-label">Место составления</label>
+                  <input class="form-control form-control-sm" type="text" id="placeDogovor">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="dateDogovor" class="form-label">Дата составления</label>
+                  <input class="form-control form-control-sm" type="date" id="dateDogovor">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="fioLandlord" class="form-label">Фамилия Имя Отчество</label>
+                  <input class="form-control form-control-sm" type="text" id="fioLandlord">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="addressLandlord" class="form-label">Место регистрации</label>
+                  <input class="form-control form-control-sm" type="text" id="addressLandlord">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label class="form-label">Паспорт</label>
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="seriaPassLandlord" class="visually-hidden">Серия</label>
+                  <input class="form-control form-control-sm" type="text" id="seriaPassLandlord" placeholder="серия">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="numberPassLandlord" class="visually-hidden">Номер</label>
+                  <input class="form-control form-control-sm" type="text" id="numberPassLandlord" placeholder="№">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="organPassLandlord" class="form-label">Кем выдан</label>
+                  <input class="form-control form-control-sm" type="text" id="organPassLandlord">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="datePassLandlord" class="form-label">Дата выдачи</label>
+                  <input class="form-control form-control-sm" type="date" id="datePassLandlord">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="phoneLandlord" class="form-label">Телефон</label>
+                  <input class="form-control form-control-sm" type="text" id="phoneLandlord">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card card-object border-0 shadow-sm">
+            <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+              <div class="fw-light fs-4">Информация о арендаторе</div>
+              <div class="text-success text-nowrap">ID: 00001-01</div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="fioLandlord" class="form-label">Фамилия Имя Отчество</label>
+                  <input class="form-control form-control-sm" type="text" id="fioLandlord">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="addressLandlord" class="form-label">Место регистрации</label>
+                  <input class="form-control form-control-sm" type="text" id="addressLandlord">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label class="form-label">Паспорт</label>
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="seriaPassLandlord" class="visually-hidden">Серия</label>
+                  <input class="form-control form-control-sm" type="text" id="seriaPassLandlord" placeholder="серия">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="numberPassLandlord" class="visually-hidden">Номер</label>
+                  <input class="form-control form-control-sm" type="text" id="numberPassLandlord" placeholder="№">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="organPassLandlord" class="form-label">Кем выдан</label>
+                  <input class="form-control form-control-sm" type="text" id="organPassLandlord">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="datePassLandlord" class="form-label">Дата выдачи</label>
+                  <input class="form-control form-control-sm" type="date" id="datePassLandlord">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="phoneLandlord" class="form-label">Телефон</label>
+                  <input class="form-control form-control-sm" type="text" id="phoneLandlord">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-object border-0 shadow-sm">
+            <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+              <div class="fw-light fs-4">Информация об объекте</div>
+              <div class="text-success text-nowrap">ID: 00001-01</div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="addressObject" class="form-label">Адрес объекта</label>
+                  <input class="form-control form-control-sm" type="text" id="addressObject">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="areaObject" class="form-label">Площадь</label>
+                  <input class="form-control form-control-sm" type="text" id="areaObject">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="numberRooms" class="form-label">Количество комнат</label>
+                  <input class="form-control form-control-sm" type="text" id="numberRooms">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="nameDoc" class="form-label">Документ, подтверждающий право собственности или дающий право
+                    на
+                    распоряжение (управление) объектом</label>
+                  <input class="form-control form-control-sm" type="text" id="nameDoc">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="numberDoc" class="form-label">Номер документа</label>
+                  <input class="form-control form-control-sm" type="text" id="numberDoc">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="dateDoc" class="form-label">Дата выдачи</label>
+                  <input class="form-control form-control-sm" type="date" id="dateDoc">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="organDoc" class="form-label">Кем выдан</label>
+                  <input class="form-control form-control-sm" type="text" id="organDoc">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-object border-0 shadow-sm">
+            <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+              <div class="fw-light fs-4">Условия аренды</div>
+              <div class="text-success text-nowrap">ID: 00001-01</div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="monthlyAmount" class="form-label">Ежемесячная сумма</label>
+                  <input class="form-control form-control-sm" type="text" id="monthlyAmount">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label class="form-label form-label-sm">Срок аренды</label>
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="rentalPeriod" class="visually-hidden">Срок</label>
+                  <input class="form-control form-control-sm" type="text" id="rentalPeriod">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="rentalPeriod2" class="visually-hidden">Дни, месяцы, годы</label>
+                  <select class="form-select form-select-sm" type="text" id="rentalPeriod2">
+                    <option value="days">дней</option>
+                    <option value="months">месяца(-ев)</option>
+                    <option value="years">год(-а)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="datePay" class="form-label">Какого числа оплата</label>
+                  <input class="form-control form-control-sm" type="text" id="datePay">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="amountFirst" class="form-label">Сумма первого платежа</label>
+                  <input class="form-control form-control-sm" type="text" id="amountFirst">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="howManyMonths" class="form-label">За сколько месяцев</label>
+                  <input class="form-control form-control-sm" type="text" id="howManyMonths">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="amountDeposit" class="form-label">Сумма депозита</label>
+                  <input class="form-control form-control-sm" type="text" id="amountDeposit">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="whoPays" class="form-label">Оплата комунальных платежей</label>
+                  <select class="form-select form-select-sm" type="text" id="whoPays">
+                    <option value="landlord">Арендодатель</option>
+                    <option value="tenant">Арендатор</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-object border-0 shadow-sm">
+            <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+              <div class="fw-light fs-4">Условия аренды</div>
+              <div class="text-success text-nowrap">ID: 00001-01</div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="monthlyAmount" class="form-label">Ежемесячная сумма</label>
+                  <input class="form-control form-control-sm" type="text" id="monthlyAmount">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label class="form-label form-label-sm">Срок аренды</label>
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="rentalPeriod" class="visually-hidden">Срок</label>
+                  <input class="form-control form-control-sm" type="text" id="rentalPeriod">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="rentalPeriod2" class="visually-hidden">Дни, месяцы, годы</label>
+                  <select class="form-select form-select-sm" type="text" id="rentalPeriod2">
+                    <option value="days">дней</option>
+                    <option value="months">месяца(-ев)</option>
+                    <option value="years">год(-а)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="datePay" class="form-label">Какого числа оплата</label>
+                  <input class="form-control form-control-sm" type="text" id="datePay">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="amountFirst" class="form-label">Сумма первого платежа</label>
+                  <input class="form-control form-control-sm" type="text" id="amountFirst">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="howManyMonths" class="form-label">За сколько месяцев</label>
+                  <input class="form-control form-control-sm" type="text" id="howManyMonths">
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                  <label for="amountDeposit" class="form-label">Сумма депозита</label>
+                  <input class="form-control form-control-sm" type="text" id="amountDeposit">
+                </div>
+                <div class="col col-sm-6 col-lg-3">
+                  <label for="whoPays" class="form-label">Оплата комунальных платежей</label>
+                  <select class="form-select form-select-sm" type="text" id="whoPays">
+                    <option value="landlord">Арендодатель</option>
+                    <option value="tenant">Арендатор</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-object border-0 shadow-sm">
+            <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+              <div class="fw-light fs-4">Условия аренды</div>
+              <div class="text-success text-nowrap">ID: 00001-01</div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3 align-items-center">
+                <div class="col-sm col-lg-6 mb-3 mb-lg-0">
+                  <label for="fioResident" class="form-label">Фамилия Имя Отчество</label>
+                  <input class="form-control form-control-sm" type="text" id="fioResident">
+                </div>
+              </div>
+              <button class="btn btn-outline-success btn-sm mb-3"><i class="bi bi-plus-lg me-1"></i>Добавить</button>
+            </div>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Даю своё <a href="#" target="_blank">согласие</a> на
+              обработку персональных данных в соответствии с <a href="#" target="_blank">политикой в отношении обработки
+                персональных данных</a></label>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <button class="btn btn-primary btn-sm" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Сохраняем...
+              </button>
+              <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+              <a href="object_profile.html" class="btn btn-link btn-sm">Закрыть</a>
+            </div>
+            <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/object-detail/modals-object-detail.html')
+</body>
+
+</html>
