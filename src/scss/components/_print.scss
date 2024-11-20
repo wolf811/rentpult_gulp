@@ -1,0 +1,19 @@
+@media print {
+  * {
+    visibility: hidden !important;
+  }
+
+  .d-print-block, .d-print-block * {
+    visibility: visible !important;
+  }
+
+  .d-print-block {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+

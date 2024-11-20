@@ -1,17 +1,28 @@
 <form action="">
   <div class="row mb-3 align-items-center">
-    <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
-      <label for="monthlyAmount" class="form-label">Ежемесячная сумма</label>
+    <div class="col col-md-3 col-xl-2 mb-3 mb-md-0">
+      <label for="monthlyAmount" class="form-label small">Ежемесячная сумма</label>
       <input class="form-control form-control-sm" type="text" id="monthlyAmount">
+    </div>
+    <div class="col col-md-3 col-xl-2 mb-3 mb-md-0">
+      <label for="amountDeposit" class="form-label small">Сумма депозита</label>
+      <input class="form-control form-control-sm" type="text" id="amountDeposit">
+    </div>
+    <div class="col-md-4 col-xl-2">
+      <label for="whoPays" class="form-label small">Комунальные платежи</label>
+      <select class="form-select form-select-sm" type="text" id="whoPays">
+        <option value="landlord">Арендодатель</option>
+        <option value="tenant">Арендатор</option>
+      </select>
     </div>
   </div>
   <div class="row mb-3 align-items-center">
-    <label class="form-label form-label-sm">Срок аренды</label>
-    <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
+    <label class="form-label small">Срок аренды</label>
+    <div class="col col-md-3 col-xl-2">
       <label for="rentalPeriod" class="visually-hidden">Срок</label>
       <input class="form-control form-control-sm" type="text" id="rentalPeriod">
     </div>
-    <div class="col col-sm-6 col-lg-3">
+    <div class="col col-md-3 col-xl-2">
       <label for="rentalPeriod2" class="visually-hidden">Дни, месяцы, годы</label>
       <select class="form-select form-select-sm" type="text" id="rentalPeriod2">
         <option value="days">дней</option>
@@ -20,41 +31,20 @@
       </select>
     </div>
   </div>
-  <div class="row mb-3 align-items-center">
-    <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
-      <label for="datePay" class="form-label">Какого числа оплата</label>
-      <input class="form-control form-control-sm" type="text" id="datePay">
+  <div class="my-4">
+    <p class="small fw-light text-uppercase">График платежей:</p>
+    <div class="row mb-3 align-items-center">
+      <div class="col col-md-3 col-xl-2">
+        <label for="datePay" class="form-label small">до</label>
+        <input class="form-control form-control-sm" type="date" id="datePay">
+      </div>
+      <div class="col col-md-3 col-xl-2">
+        <label for="amountFirst" class="form-label small">сумма</label>
+        <input class="form-control form-control-sm" type="text" id="amountFirst">
+      </div>
     </div>
-    <div class="col col-sm-6 col-lg-3">
-      <label for="amountFirst" class="form-label">Сумма первого платежа</label>
-      <input class="form-control form-control-sm" type="text" id="amountFirst">
-    </div>
-    <div class="col col-sm-6 col-lg-3">
-      <label for="howManyMonths" class="form-label">За сколько месяцев</label>
-      <input class="form-control form-control-sm" type="text" id="howManyMonths">
-    </div>
+    <button class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</button>
   </div>
-  <div class="row mb-3 align-items-center">
-    <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
-      <label for="amountDeposit" class="form-label">Сумма депозита</label>
-      <input class="form-control form-control-sm" type="text" id="amountDeposit">
-    </div>
-    <div class="col col-sm-6 col-lg-3">
-      <label for="whoPays" class="form-label">Комунальные платежи</label>
-      <select class="form-select form-select-sm" type="text" id="whoPays">
-        <option value="landlord">Арендодатель</option>
-        <option value="tenant">Арендатор</option>
-      </select>
-    </div>
-  </div>
-  <div class="d-flex align-items-center justify-content-between">
-    <div>
-      <button class="btn btn-primary btn-sm" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        Сохраняем...
-      </button>
-      <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
-    </div>
-    <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
-  </div>
+
+  <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
 </form>

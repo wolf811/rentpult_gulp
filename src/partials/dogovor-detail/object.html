@@ -1,51 +1,63 @@
 <form action="">
   <div class="row mb-3 align-items-center">
-    <div class="col-sm col-lg-6 mb-3 mb-lg-0">
-      <label for="addressObject" class="form-label">Адрес объекта</label>
+    <div class="col-sm col-md-6">
+      <label for="addressObject" class="form-label small">Адрес объекта</label>
       <input class="form-control form-control-sm" type="text" id="addressObject">
     </div>
   </div>
   <div class="row mb-3 align-items-center">
-    <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
-      <label for="areaObject" class="form-label">Площадь</label>
+    <div class="col col-md-3 col-xl-2">
+      <label for="areaObject" class="form-label small">Площадь</label>
       <input class="form-control form-control-sm" type="text" id="areaObject">
     </div>
-    <div class="col col-sm-6 col-lg-3">
-      <label for="numberRooms" class="form-label">Количество комнат</label>
+    <div class="col col-md-3 col-xl-2">
+      <label for="numberRooms" class="form-label small">Кол-во комнат</label>
       <input class="form-control form-control-sm" type="text" id="numberRooms">
     </div>
   </div>
   <div class="row mb-3 align-items-center">
-    <div class="col-sm col-lg-6 mb-3 mb-lg-0">
-      <label for="nameDoc" class="form-label">Документ, подтверждающий право собственности или дающий право на
+    <div class="col-sm col-md-6">
+      <label for="nameDoc" class="form-label small">Документ, подтверждающий право собственности или дающий право на
         распоряжение (управление) объектом</label>
-      <input class="form-control form-control-sm" type="text" id="nameDoc">
+      <textarea class="form-control form-control-sm" rows="3" name="" id="nameDoc"
+        placeholder="название, №, дата выдачи, кем выдан"></textarea>
     </div>
   </div>
-  <div class="row mb-3 align-items-center">
-    <div class="col col-sm-6 col-lg-3 mb-3 mb-lg-0">
-      <label for="numberDoc" class="form-label">Номер документа</label>
+  <!-- <div class="row mb-3 align-items-center">
+    <div class="col col-md-3 col-xl-2">
+      <label for="numberDoc" class="form-label small">№ документа</label>
       <input class="form-control form-control-sm" type="text" id="numberDoc">
     </div>
-    <div class="col col-sm-6 col-lg-3">
-      <label for="dateDoc" class="form-label">Дата выдачи</label>
+    <div class="col col-md-3 col-xl-2">
+      <label for="dateDoc" class="form-label small">Дата выдачи</label>
       <input class="form-control form-control-sm" type="date" id="dateDoc">
     </div>
   </div>
   <div class="row mb-3 align-items-center">
-    <div class="col-sm col-lg-6 mb-3 mb-lg-0">
-      <label for="organDoc" class="form-label">Кем выдан</label>
+    <div class="col-sm col-md-6">
+      <label for="organDoc" class="form-label small">Кем выдан</label>
       <input class="form-control form-control-sm" type="text" id="organDoc">
     </div>
-  </div>
-  <div class="d-flex align-items-center justify-content-between">
-    <div>
-      <button class="btn btn-primary btn-sm" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        Сохраняем...
-      </button>
-      <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+  </div> -->
+  <div class="row mb-3 align-items-center">
+    <div class="col col-md-3 col-xl-2">
+      <label for="reriodFrom" class="form-label small">Период аренды с</label>
+      <input class="form-control form-control-sm" type="date" id="reriodFrom">
     </div>
-    <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
+    <div class="col col-md-3 col-xl-2">
+      <label for="periodTo" class="form-label small">по</label>
+      <input class="form-control form-control-sm" type="date" id="periodTo">
+    </div>
   </div>
+  <div class="my-4">
+    <p class="small fw-light text-uppercase">Проживающие вместе с арендатором:</p>
+    <div class="row mb-3 align-items-center">
+      <div class="col-sm col-md-6">
+        <label for="fio1" class="form-label small">Фамилия Имя Отчество</label>
+        <input class="form-control form-control-sm" type="text" id="fio1">
+      </div>
+    </div>
+    <button class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</button>
+  </div>
+  <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
 </form>
