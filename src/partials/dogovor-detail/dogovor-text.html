@@ -1,6 +1,7 @@
 <form action="">
   <div class="alert alert-light small shadow-sm">
-    <div class="d-print-block">
+    <!-- <div class="page-break-after"></div> -->
+    <div class="d-print-block dogovor-print">
       <div class="h3 text-center">Договор аренды квартиры № <span class="text-danger">номер</span></div>
       <table class="table table-borderless table-sm">
         <tr>
@@ -26,15 +27,11 @@
           </td>
         </tr>
         <tr>
-          <th colspan="2" class="text-uppercase text-center">1. Предмет договора аренды</th>
+          <th colspan="2" class="text-uppercase text-center page-brake-avoid">1. Предмет договора аренды</th>
         </tr>
         <tr>
           <td colspan="2">
             1.1. Арендодатель передает Арендатору и постоянно проживающим с ним лицам:
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
             <div class="text-danger ms-2">1.1.1. Фамилия Имя Отчество</div>
             <div class="text-danger ms-2">1.1.2. Фамилия Имя Отчество</div>
           </td>
@@ -85,7 +82,7 @@
           </td>
         </tr>
         <tr>
-          <th colspan="2" class="text-uppercase text-center">2. Обязанности и права арендодателя</th>
+          <th colspan="2" class="text-uppercase text-center page-brake-avoid">2. Обязанности и права арендодателя</th>
         </tr>
         <tr>
           <td colspan="2">
@@ -94,12 +91,229 @@
           </td>
         </tr>
         <tr>
-          <td class="align-middle">
-            <button class="btn btn-outline-danger btn-sm d-print-none" title="Удалить пункт"><i class="bi bi-x-lg"></i></button>
-          </td>
-          <td>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
             2.2. Арендодатель обязуется: передать Арендатору благоустроенное жилое помещение, пригодное для проживания,
             отвечающее санитарным и техническим требованиям, обычно предъявляемым к жилым помещениям. Одновременно передаются ключи от помещения.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            2.3. Арендодатель обязуется: нести ответственность за недостатки сданного внаем жилого помещения и находящегося в нем имущества, препятствующие пользованию им, даже если во время заключения договора аренды не знал об этих недостатках.
+          </td>
+        </tr>
+        <tr class="d-print-none">
+          <td colspan="2">
+            <div class="collapse w-lg-50 mb-3" id="collapseAddPoint2">
+              <div class="input-group input-group-sm">
+                <span class="input-group-text">1.5.</span>
+                <textarea class="form-control"></textarea>
+                <span class="input-group-text">
+                  <div class="btn-group btn-group-sm" role="group">
+                    <a href="#" class="btn btn-outline-primary" role="button"><i class="bi bi-check-lg" title="Сохранить"></i></a>
+                    <a href="#collapseAddPoint2" class="btn btn-outline-danger" title="Удалить" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseAddPoint2"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-success btn-sm mb-3" data-bs-toggle="collapse" data-bs-target="#collapseAddPoint2" aria-expanded="false" aria-controls="collapseAddPoint2"><i class="bi bi-plus-lg me-1"></i>Добавить пункт</button>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="text-uppercase text-center page-brake-avoid">3. Обязанности и права арендатора</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            3.1. Арендатор обязан использовать жилое помещение только для собственного проживания и проживания лиц, указанных в пункте 1.1. договора аренды.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            3.2. Коммерческое использование, сдача помещения в субаренду, равно как и любое другое использование помещения не по назначению, не допускается.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            3.3. Арендатор обязан своевременно вносить плату за пользование жилым помещением.
+          </td>
+        </tr>
+        <tr class="d-print-none">
+          <td colspan="2">
+            <div class="collapse w-lg-50 mb-3" id="collapseAddPoint3">
+              <div class="input-group input-group-sm">
+                <span class="input-group-text">1.5.</span>
+                <textarea class="form-control"></textarea>
+                <span class="input-group-text">
+                  <div class="btn-group btn-group-sm" role="group">
+                    <a href="#" class="btn btn-outline-primary" role="button"><i class="bi bi-check-lg" title="Сохранить"></i></a>
+                    <a href="#collapseAddPoint3" class="btn btn-outline-danger" title="Удалить" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseAddPoint3"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-success btn-sm mb-3" data-bs-toggle="collapse" data-bs-target="#collapseAddPoint3" aria-expanded="false" aria-controls="collapseAddPoint3"><i class="bi bi-plus-lg me-1"></i>Добавить пункт</button>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="text-uppercase text-center page-brake-avoid">4. Платежи и порядок расчетов</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            4.1. Ежемесячная плата за аренду жилого помещения составляет <span class="text-danger">ежемесячная сумма</span> (<span class="text-danger">сумма прописью</span>) рублей в <span class="text-danger">???</span> (день, месяц, год).
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            4.2. Гарантийные депозиты по данному помещению составляют:
+            <div class="ms-2">4.2.1. <span class="text-danger">сумма депозита</span> руб. - гарантийный депозит за сохранность имущества.</div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            4.3. Гарантийные депозиты по данному помещению составляют:
+            <div class="ms-2">4.3.1. До <span class="text-danger">дата</span> г. - <span class="text-danger">сумма</span> руб.</div>
+            <div class="ms-2">4.3.2. До <span class="text-danger">дата</span> г. - <span class="text-danger">сумма</span> руб.</div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            4.4. Гарантийные депозиты возвращаются после проверки квартиры Арендодателем после окончания договора аренды ( в том числе при досрочном), и при отсутствии повреждений имущества Арендодателя (за исключением естественного износа). В случае отсутствия обоснованных претензий все депозиты возвращается в 5-и дневный срок на расчётный счёт Арендатора.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            4.5. Оплату коммунальных платежей, квартплаты, стоимости эксплуатации, междугородних телефонных переговоров, городского телефона и Интернета осуществляет <span class="text-danger">арендодатель/арендатор</span>. Подтверждением оплаты являются сканы (фотографии) каждого оплаченного счёта, высылаемого на электронную почту Арендодателя, и выписка об отсутствии задолженности (предоставляется Арендатором в последний месяц аренды). При отсутствии сканов / фотографий оплаченных счетов сумма арендной платы увеличивается на <span class="text-danger">сумма штрафа</span> рублей в месяц за каждый месяц отсутствия сканов / фотографий.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            4.6. В случае просрочки по уплате платежей по настоящему договору аренды Арендатор уплачивает Арендодателю неустойку в размере:
+            <div class="ms-2">4.6.1. 1% от ежемесячного платежа за каждый день просрочки оплаты, в течение первых 10 дней просрочки</div>
+            <div class="ms-2">4.6.2. 2% от ежемесячного платежа за каждый день просрочки оплаты, в течение с 10го по 20й день просрочки</div>
+          </td>
+        </tr>
+        <tr class="d-print-none">
+          <td colspan="2">
+            <div class="collapse w-lg-50 mb-3" id="collapseAddPoint4">
+              <div class="input-group input-group-sm">
+                <span class="input-group-text">4.7.</span>
+                <textarea class="form-control"></textarea>
+                <span class="input-group-text">
+                  <div class="btn-group btn-group-sm" role="group">
+                    <a href="#" class="btn btn-outline-primary" role="button"><i class="bi bi-check-lg" title="Сохранить"></i></a>
+                    <a href="#collapseAddPoint4" class="btn btn-outline-danger" title="Удалить" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseAddPoint4"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-success btn-sm mb-3" data-bs-toggle="collapse" data-bs-target="#collapseAddPoint4" aria-expanded="false" aria-controls="collapseAddPoint4"><i class="bi bi-plus-lg me-1"></i>Добавить пункт</button>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="text-uppercase text-center page-brake-avoid">5. Ответственность сторон</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            5.1. Изменение условий настоящего договора аренды и его досрочное расторжение может иметь место по соглашению сторон, с обязательным составлением документа в письменном виде.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            5.2. Расторжение договора аренды в одностороннем порядке до истечения срока, указанного в пункте 1.4., может быть произведено любой стороной при систематическом (2 и более раз) несоблюдении другой стороной условий настоящего договора аренды.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            5.3. Расторжение в одностороннем порядке производится посредством направления инициатором досрочного прекращения договора аренды нарушившей стороне письменного уведомления с указанием причины и даты расторжения.
+          </td>
+        </tr>
+        <tr class="d-print-none">
+          <td colspan="2">
+            <div class="collapse w-lg-50 mb-3" id="collapseAddPoint5">
+              <div class="input-group input-group-sm">
+                <span class="input-group-text">5.4.</span>
+                <textarea class="form-control"></textarea>
+                <span class="input-group-text">
+                  <div class="btn-group btn-group-sm" role="group">
+                    <a href="#" class="btn btn-outline-primary" role="button"><i class="bi bi-check-lg" title="Сохранить"></i></a>
+                    <a href="#collapseAddPoint5" class="btn btn-outline-danger" title="Удалить" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseAddPoint5"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-success btn-sm mb-3" data-bs-toggle="collapse" data-bs-target="#collapseAddPoint5" aria-expanded="false" aria-controls="collapseAddPoint5"><i class="bi bi-plus-lg me-1"></i>Добавить пункт</button>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="text-uppercase text-center page-brake-avoid">6. Особые условия</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            6.1. Перечисленные в пункте 1.1. настоящего договора аренды лица, проживающие совместно с Арендатором, несут все обязанности по настоящему договору аренды наравне с Арендатором.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="#" class="btn btn-outline-danger btn-sm d-print-none me-2" title="Удалить пункт"><i class="bi bi-x-lg"></i></a>
+            6.2. Неотделимые улучшения, произведенные в жилом помещении Арендатором без согласования с Арендодателем, переходят к Арендодателю без возмещения их стоимости.
+          </td>
+        </tr>
+        <tr class="d-print-none">
+          <td colspan="2">
+            <div class="collapse w-lg-50 mb-3" id="collapseAddPoint6">
+              <div class="input-group input-group-sm">
+                <span class="input-group-text">6.3.</span>
+                <textarea class="form-control"></textarea>
+                <span class="input-group-text">
+                  <div class="btn-group btn-group-sm" role="group">
+                    <a href="#" class="btn btn-outline-primary" role="button"><i class="bi bi-check-lg" title="Сохранить"></i></a>
+                    <a href="#collapseAddPoint6" class="btn btn-outline-danger" title="Удалить" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseAddPoint6"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-success btn-sm mb-3" data-bs-toggle="collapse" data-bs-target="#collapseAddPoint6" aria-expanded="false" aria-controls="collapseAddPoint6"><i class="bi bi-plus-lg me-1"></i>Добавить пункт</button>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="text-uppercase text-center page-brake-avoid">7. Реквизиты сторон</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="fw-light text-uppercase mb-2">Арендодатель</div>
+            <div class="mb-3">
+              <div class="mb-1"><span class="text-danger">Фамилия Имя Отчество</span></div>
+              <div class="mb-1">Паспортные данные: <span class="text-danger">серия/номер, кем выдан, дата выдачи</span></div>
+              <div class="mb-0">Телефон/Email: <span class="text-danger">телефон</span> <span class="text-danger">email</span></div>
+            </div>
+            <div class="mb-3">
+              <strong>Реквизиты:</strong>
+              <div><span class="text-danger">реквизиты</span></div>
+            </div>
+            <p>С условиями договора аренды ознакомлен и полностью согласен.</p>
+            Подпись: <img src="img/signature.jpeg" alt="Signature" style="width: 150px;">
+          </td>
+          <td>
+            <div class="fw-light text-uppercase mb-2">Арендатор</div>
+            <div class="mb-3">
+              <div class="mb-1"><span class="text-danger">Фамилия Имя Отчество</span></div>
+              <div class="mb-1">Паспортные данные: <span class="text-danger">серия/номер, кем выдан, дата выдачи</span></div>
+              <div class="mb-0">Телефон/Email: <span class="text-danger">телефон</span> <span class="text-danger">email</span></div>
+            </div>
+            <div class="mb-3">
+              <strong>Реквизиты:</strong>
+              <div><span class="text-danger">реквизиты</span></div>
+            </div>
+            <p>С условиями договора аренды ознакомлен и полностью согласен.</p>
+            Подпись: <img src="img/signature.jpeg" alt="Signature" style="width: 150px;">
           </td>
         </tr>
       </table>
@@ -168,7 +382,7 @@
 
     </div>
   </div>
-  <div class="d-flex justify-content-between">
+  <div class="d-print-none d-flex justify-content-between">
     <button type="submit" class="btn btn-primary"><i class="bi bi-save me-1"></i>Сохранить</button>
     <button class="btn btn-outline-primary" onClick="window.print()"><i class="bi bi-printer me-1"></i>Распечатать</button>
     <a href="#" class="btn btn-outline-primary"><i class="bi bi-pencil-square me-1"></i>Подписать ЭЦП</a>
