@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar-after-login.html')
+    @include('partials/user-profile-compact/header.html')
+    <main class="mb-5">
+      <div class="container">
+        <!-- @include('partials/breadcrumb_for_all.html') -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb breadcrumb-sm">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="object_profile.html">Название объекта</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Акт приема-передачи</li>
+          </ol>
+        </nav>
+        @include('partials/page-title-inside.html', {
+        "pageTitle": "Акт приема-передачи квартиры"
+        })
+        <ul class="nav nav-pills mb-4 d-print-none" id="tabAct" role="tablist">
+          <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info-tab-pane" type="button" role="tab" aria-controls="info-tab-pane" aria-selected="true">Основные данные</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="points-tab" data-bs-toggle="tab" data-bs-target="#points-tab-pane" type="button" role="tab" aria-controls="points-tab-pane" aria-selected="false">Текст акта приема-передачи</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="tabDogovorContent">
+          <div class="tab-pane fade show active" id="info-tab-pane" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+            <div class="accordion mb-4" id="accordionActForm">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button bg-light fw-light fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAct_01" aria-expanded="false" aria-controls="collapseAct_01">
+                    Место / дата
+                  </button>
+                </h2>
+                <div id="collapseAct_01" class="accordion-collapse collapse" data-bs-parent="#accordionActForm">
+                  <div class="accordion-body">
+                    @include('partials/dogovor-detail/act-info.html')
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button bg-light fw-light fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAct_02" aria-expanded="false" aria-controls="collapseAct_02">
+                    Арендодатель
+                  </button>
+                </h2>
+                <div id="collapseAct_02" class="accordion-collapse collapse" data-bs-parent="#accordionActForm">
+                  <div class="accordion-body">
+                    @include('partials/dogovor-detail/landlord.html')
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button bg-light fw-light fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAct_03" aria-expanded="false" aria-controls="collapseAct_03">
+                    Арендатор
+                  </button>
+                </h2>
+                <div id="collapseAct_03" class="accordion-collapse collapse" data-bs-parent="#accordionActForm">
+                  <div class="accordion-body">
+                    @include('partials/dogovor-detail/tenant.html')
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button bg-light fw-light fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDogovorPhoto" aria-expanded="false" aria-controls="collapseDogovorPhoto">
+                    Фотоотчёт
+                  </button>
+                </h2>
+                <div id="collapseDogovorPhoto" class="accordion-collapse collapse" data-bs-parent="#accordionActForm">
+                  <div class="accordion-body">
+                    @include('partials/dogovor-detail/photo.html')
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button bg-light fw-light fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseActProperty" aria-expanded="false" aria-controls="collapseActProperty">
+                    Список имущества
+                  </button>
+                </h2>
+                <div id="collapseActProperty" class="accordion-collapse collapse" data-bs-parent="#accordionActForm">
+                  <div class="accordion-body">
+                    @include('partials/dogovor-detail/property.html')
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button bg-light fw-light fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseActIndications" aria-expanded="false" aria-controls="collapseActIndications">
+                    Показания счётчиков
+                  </button>
+                </h2>
+                <div id="collapseActIndications" class="accordion-collapse collapse" data-bs-parent="#accordionActForm">
+                  <div class="accordion-body">
+                    @include('partials/dogovor-detail/indications.html')
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <a href="#points-tab-pane" class="btn btn-outline-primary btn-sm" data-bs-toggle="tab">К
+              тексту договора<i class="bi bi-arrow-right ms-1"></i></a> -->
+          </div>
+          <div class="tab-pane fade" id="points-tab-pane" role="tabpanel" aria-labelledby="points-tab" tabindex="0">
+            @include('partials/dogovor-detail/act-text.html')
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/object-detail/modals-object-detail.html')
+  @include('partials/dogovor-detail/modal-menu-dogovor.html')
+</body>
+
+</html>
