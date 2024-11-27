@@ -1,42 +1,123 @@
 <form action="">
-  <div class="mb-4">
-    <p class="small fw-light text-uppercase">Арендодатель:</p>
-    <div class="row mb-3 align-items-center">
-      <div class="col col-md-3 col-xl-2">
-        <label for="phoneLandlord" class="form-label small">Телефон</label>
-        <input class="form-control form-control-sm" type="text" id="phoneLandlord">
+  <button type="button" class="btn btn-outline-success btn-sm mb-3" data-bs-toggle="modal" data-bs-target="#modalPhotoReportChoose"><i class="bi bi-plus-lg me-1"></i>Добавить фотоотчёт</button>
+  <div class="mb-3">
+    <p class="fw-bold">Название фотоотчета от 20.11.2024 г.</p>
+    <div class="row row-cols-2 row-cols-md-4 row-cols-xl-6 g-3">
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/object1.jpg" data-fancybox="gallery" data-caption="Вид с лоджии">
+            <img src="img/object1.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Вид с лоджии</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
       </div>
-      <div class="col col-md-3 col-xl-2">
-        <label for="emailLandlord" class="form-label small">E-mail</label>
-        <input class="form-control form-control-sm" type="email" id="emailLandlord">
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/thai_phi_phi.jpg" data-fancybox="gallery" data-caption="Пример горизонтальной фотки">
+            <img src="img/thai_phi_phi.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Пример горизонтальной фотки</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row mb-3 align-items-center">
-      <div class="col-sm col-md-6">
-        <label for="bankInfoLandlord" class="form-label small">Реквизиты</label>
-        <textarea class="form-control form-control-sm" name="" id="bankInfoLandlord" rows="3"></textarea>
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/object2.jpg" data-fancybox="gallery" data-caption="Вид с кухни">
+            <img src="img/object2.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Вид с кухни</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="mb-4">
-    <p class="small fw-light text-uppercase">Арендатор:</p>
-    <div class="row mb-3 align-items-center">
-      <div class="col col-md-3 col-xl-2">
-        <label for="phoneTenant" class="form-label small">Телефон</label>
-        <input class="form-control form-control-sm" type="text" id="phoneTenant">
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/object3.jpg" data-fancybox="gallery" data-caption="Вид с улицы, адрес дома">
+            <img src="img/object3.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Вид с улицы, адрес дома</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
       </div>
-      <div class="col col-md-3 col-xl-2">
-        <label for="emailTenant" class="form-label small">E-mail</label>
-        <input class="form-control form-control-sm" type="email" id="emailTenant">
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/object1.jpg" data-fancybox="gallery" data-caption="Вид с лоджии">
+            <img src="img/object1.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Вид с лоджии</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row mb-3 align-items-center">
-      <div class="col-sm col-md-6">
-        <label for="bankInfoTenant" class="form-label small">Реквизиты</label>
-        <textarea class="form-control form-control-sm" name="" id="bankInfoTenant" rows="3"></textarea>
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/object2.jpg" data-fancybox="gallery" data-caption="Вид с кухни">
+            <img src="img/object2.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Вид с кухни</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/object3.jpg" data-fancybox="gallery" data-caption="Вид с улицы, адрес дома">
+            <img src="img/object3.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Вид с улицы, адрес дома</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/object1.jpg" data-fancybox="gallery" data-caption="Вид с лоджии">
+            <img src="img/object1.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Вид с лоджии</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 card-file-gallery">
+          <a href="img/object2.jpg" data-fancybox="gallery" data-caption="Вид с кухни">
+            <img src="img/object2.jpg" class="card-img" alt="foto">
+          </a>
+          <button type="button" class="btn btn-light btn-sm rounded-circle" title="Удалить"><i class="bi bi-x-lg text-danger"></i></button>
+          <div class="card-img-overlay text-light px-2 py-1">
+            <p class="card-text text-small mb-1">Вид с кухни</p>
+            <p class="card-text text-small mb-0"><small class="text-light">07 июля 2022 г.</small></p>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </div>
+  <div class="text-info mb-1"><em>Для акта при выезде</em></div>
+  <div class="mb-3 w-md-75 w-xl-50">
+    <label for="defects" class="form-label">Выявленные повреждения</label>
+    <textarea class="form-control form-control-sm" id="defects" rows="2"></textarea>
+  </div>
   <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
 </form>
