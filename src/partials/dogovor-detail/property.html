@@ -1,5 +1,72 @@
 <form action="">
-  Список имущества
+  <div class="table-responsive mt-2">
+    <table class="table align-middle small">
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">#</th>
+          <th scope="col">Название</th>
+          <th scope="col">Стоимость, руб.</th>
+          <th scope="col">Фото при въезде</th>
+          <th scope="col">Фото при выезде</th>
+          <th scope="col">Повреждения, руб.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center">
+            <a href="#" class="btn btn-outline-danger btn-sm" title="Удалить"><i class="bi bi-x-lg"></i></a>
+          </td>
+          <td>Диван</td>
+          <td>7000</td>
+          <td width="100" class="text-center bg-white">
+            <div class="card h-100 card-file-gallery">
+              <a href="img/object1.jpg" data-fancybox="gallery2">
+                <img src="img/object1.jpg" class="card-img" alt="foto">
+              </a>
+              <button type="button" class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#modalPhotoChange" title="Изменить"><i class="bi bi-pencil text-success"></i></button>
+            </div>
+          </td>
+          <td width="100" class="text-center bg-white">
+            <div class="card h-100 card-file-gallery">
+              <a href="img/object1.jpg" data-fancybox="gallery2">
+                <img src="img/object1.jpg" class="card-img" alt="foto">
+              </a>
+              <button type="button" class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#modalPhotoChange" title="Изменить"><i class="bi bi-pencil text-success"></i></button>
+            </div>
+          </td>
+          <td>
+            <input type="text" class="form-control form-control-sm">
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <a href="#" class="btn btn-outline-danger btn-sm" title="Удалить"><i class="bi bi-x-lg"></i></a>
+          </td>
+          <td>Кровать двухспальная</td>
+          <td>21000</td>
+          <td width="120" class="text-center bg-white">
+            <div class="card h-100 card-file-gallery">
+              <a href="img/object1.jpg" data-fancybox="gallery3">
+                <img src="img/object1.jpg" class="card-img" alt="foto">
+              </a>
+              <button type="button" class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#modalPhotoChange" title="Изменить"><i class="bi bi-pencil text-success"></i></button>
+            </div>
+          </td>
+          <td width="120" class="text-center bg-white">
+            <div class="card h-100 card-file-gallery">
+              <a href="img/object2.jpg" data-fancybox="gallery3">
+                <img src="img/object2.jpg" class="card-img" alt="foto">
+              </a>
+              <button type="button" class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#modalPhotoChange" title="Изменить"><i class="bi bi-pencil text-success"></i></button>
+            </div>
+          </td>
+          <td>
+            <input type="text" class="form-control form-control-sm">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <!-- <div class="row mb-3 align-items-center">
     <div class="col-sm col-md-6">
       <label for="addressObject" class="form-label small">Адрес объекта</label>

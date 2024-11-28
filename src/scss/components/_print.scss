@@ -79,9 +79,17 @@
   .dogovor-print {
     font-size: 14pt !important;
   }
-  .page-brake-avoid {
-    page-break-after: avoid;
+  .page-break-avoid {
+    page-break-after: avoid !important;
   }
+  .page-break-inside {
+    page-break-inside: auto !important;
+  }
+  // .photo-list {
+  //   img {
+  //     max-width: 120px;
+  //   }
+  // }
 }
 
 
