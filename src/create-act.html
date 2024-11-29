@@ -14,17 +14,17 @@
           <ol class="breadcrumb breadcrumb-sm">
             <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
             <li class="breadcrumb-item"><a href="object_profile.html">Название объекта</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Акт приема-передачи</li>
+            <li class="breadcrumb-item active" aria-current="page">Акт приема-передачи <span class="text-info">(возврата)</span></li>
           </ol>
         </nav>
         @include('partials/page-title-inside.html', {
-        "pageTitle": "Акт приема-передачи квартиры"
+        "pageTitle": "Акт приема-передачи (возврата) квартиры"
         })
         <ul class="nav nav-pills mb-4 d-print-none" id="tabAct" role="tablist">
           <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info-tab-pane" type="button" role="tab" aria-controls="info-tab-pane" aria-selected="true">Основные данные</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="points-tab" data-bs-toggle="tab" data-bs-target="#points-tab-pane" type="button" role="tab" aria-controls="points-tab-pane" aria-selected="false">Текст акта приема-передачи</button>
+            <button class="nav-link" id="points-tab" data-bs-toggle="tab" data-bs-target="#points-tab-pane" type="button" role="tab" aria-controls="points-tab-pane" aria-selected="false">Текст акта приема-передачи <span class="text-info">(возврата)</span></button>
           </li>
         </ul>
         <div class="tab-content" id="tabDogovorContent">
