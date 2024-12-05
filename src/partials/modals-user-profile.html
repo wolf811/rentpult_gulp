@@ -18,23 +18,35 @@
               <input type="file" class="form-control" id="avatar">
             </div>
             <div class="row">
-              <div class="col-sm">
+              <div class="col-sm-6">
                 <div class="mb-3">
                   <label for="userBirthday" class="form-label">Дата рождения</label>
                   <input type="date" class="form-control" id="userBirthday">
                 </div>
               </div>
+            </div>
+            <div class="row">
               <div class="col-sm">
                 <div class="mb-3">
                   <label for="userPhone" class="form-label">Телефон</label>
                   <input type="text" class="form-control" id="userPhone">
                 </div>
               </div>
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="userEmail" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="userEmail">
+                </div>
+              </div>
             </div>
-            <div class="form-check form-switch">
+            <div class="form-check form-switch mb-3">
               <input class="form-check-input" type="checkbox" role="switch" id="phoneYesNo">
               <label class="form-check-label text-secondary" for="phoneYesNo">Скрыть телефон для других
                 пользователей</label>
+            </div>
+            <div class="mb-3">
+              <label for="userAbout" class="form-label">О себе</label>
+              <textarea class="form-control" name="userAbout" id="userAbout" rows="3"></textarea>
             </div>
           </div>
           <hr>

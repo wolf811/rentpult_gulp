@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar-after-login.html')
+    @include('partials/user-profile-compact/header.html')
+    <main class="mb-5">
+      <div class="container">
+        <!-- @include('partials/breadcrumb_for_all.html') -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb breadcrumb-sm">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Личное пространство</li>
+          </ol>
+        </nav>
+        @include('partials/page-title-inside.html', {
+        "pageTitle": "Фамилия Имя Отчество"
+        })
+        <ul class="nav nav-pills mb-4 d-print-none" id="tabSpace" role="tablist">
+          <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true">Профиль</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="docs-tab" data-bs-toggle="tab" data-bs-target="#docs-tab-pane" type="button" role="tab" aria-controls="docs-tab-pane" aria-selected="false">Документы</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="access-tab" data-bs-toggle="tab" data-bs-target="#access-tab-pane" type="button" role="tab" aria-controls="access-tab-pane" aria-selected="false">Доступ</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="tabSpaceContent">
+          <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            @include('partials/space-detail/profile.html')
+          </div>
+          <div class="tab-pane fade" id="docs-tab-pane" role="tabpanel" aria-labelledby="docs-tab" tabindex="0">
+            @include('partials/space-detail/docs.html')
+          </div>
+          <div class="tab-pane fade" id="access-tab-pane" role="tabpanel" aria-labelledby="access-tab" tabindex="0">
+            @include('partials/space-detail/access.html')
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('partials/modals-user-profile.html')
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>
