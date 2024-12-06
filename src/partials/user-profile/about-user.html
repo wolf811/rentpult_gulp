@@ -32,7 +32,15 @@
     <div class="row">
       <div class="col-sm mb-3 mb-sm-0">
         <a href="#" class="btn btn-outline-success btn-sm" role="button" data-bs-toggle="modal" data-bs-target="#modalUserInfo"><i class="bi bi-pencil me-1"></i>Изменить данные</a>
-        <a href="space-detail.html" class="btn btn-outline-success btn-sm" role="button"><i class="bi bi-person me-1"></i>Личное пространство</a>
+
+        <span class="dropdown">
+          <a href="#" class="btn btn-outline-success btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person me-1"></i>Личное пространство</a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="space-detail.html">Собственник<i class="bi bi-arrow-right ms-1"></i></a></li>
+            <li><a class="dropdown-item" href="space-detail.html">Управляющий<i class="bi bi-arrow-right ms-1"></i></a></li>
+            <li><a class="dropdown-item" href="space-detail.html">Арендатор<i class="bi bi-arrow-right ms-1"></i></a></li>
+          </ul>
+        </span>
       </div>
       <div class="col-sm text-sm-end">
         <a href="all-chronology.html" class="btn btn-outline-primary btn-sm" role="button">Вся хронология<i class="bi bi-arrow-right ms-1"></i></a>

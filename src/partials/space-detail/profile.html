@@ -7,6 +7,7 @@
     </h2>
     <div id="collapseProfile_01" class="accordion-collapse collapse show" data-bs-parent="#accordionProfileForm">
       <div class="accordion-body">
+        <a href="#" class="btn btn-success btn-sm" role="button" data-bs-toggle="modal" data-bs-target="#modalSpaceProfile"><i class="bi bi-plus-lg me-1"></i>Добавить данные</a>
         <div class="row mb-3">
           <div class="col-sm-3 col-lg-2 mb-2 mb-sm-0 text-center">
             <img src="img/avatar.png" class="img-fluid" alt="avatar">
@@ -36,23 +37,59 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn btn-outline-success btn-sm" role="button" data-bs-toggle="modal" data-bs-target="#modalUserInfo"><i class="bi bi-pencil me-1"></i>Изменить данные</a>
+        <a href="#" class="btn btn-outline-success btn-sm" role="button" data-bs-toggle="modal" data-bs-target="#modalSpaceProfile"><i class="bi bi-pencil me-1"></i>Изменить данные</a>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button bg-light fw-light fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDogovor_02" aria-expanded="false" aria-controls="collapseDogovor_02">
-        Собственность
+        Соарендаторы
       </button>
     </h2>
     <div id="collapseDogovor_02" class="accordion-collapse collapse" data-bs-parent="#accordionProfileForm">
       <div class="accordion-body">
-        Информация о собственности, с перечислением арендаторов и инфой о них
+        <a href="#" class="btn btn-success btn-sm mb-3" role="button" data-bs-toggle="modal" data-bs-target="#modalSpaceProfile"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+        <div class="table-responsive">
+          <table class="table small align-middle">
+            <thead>
+              <tr>
+                <th scope="col" width="50" class="text-center">#</th>
+                <th scope="col" width="80">Фото</th>
+                <th scope="col">ФИО/дата рождения</th>
+                <th scope="col">Телефон/E-mail</th>
+                <th scope="col">О себе</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  <div class="btn-group btn-group-sm" role="group">
+                    <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalSpaceProfile"><i class="bi bi-pencil" title="Редактировть"></i></a>
+                    <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </td>
+                <td><img src="img/avatar.png" class="img-fluid" alt="avatar"></td>
+                <td>
+                  <div class="mb-1">
+                    Иванов Иван Иванович
+                    <div class="badge bg-secondary bg-opacity-10 text-dark fw-normal">id:&nbsp;00001</div>
+                  </div>
+                  <div>15.10.1985</div>
+                </td>
+                <td>
+                  <div class="text-nowrap mb-1"><a href="tel:+79265568904">8(926)556-89-04</a></div>
+                  <div class="text-nowrap mb-1"><a href="mailto:mail@mail.ru">mail@mail.ru</a></div>
+                </td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-  <div class="accordion-item">
+  <!-- <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button bg-light fw-light fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDogovor_03" aria-expanded="false" aria-controls="collapseDogovor_03">
         Аренда
@@ -75,5 +112,5 @@
         Информация об объектах в управлении, инфой о собственнике и арендаторах
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
