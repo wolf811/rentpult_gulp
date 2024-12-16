@@ -1,42 +1,52 @@
 <nav class="navbar navbar-main navbar-expand-xl shadow">
   <div class="container">
     <a class="navbar-brand fw-bold text-uppercase" href="#">rent-pult.ru</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
-      aria-controls="navbarOffcanvasLg">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
       <i class="bi bi-list"></i>
     </button>
-    <div class="offcanvas offcanvas-main offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
-      aria-labelledby="navbarOffcanvasLgLabel">
+    <div class="offcanvas offcanvas-main offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
-        <button type="button" class="btn btn-link text-light" data-bs-dismiss="offcanvas" aria-label="Close"><i
-            class="bi bi-x-lg"></i></button>
+        <button type="button" class="btn btn-link text-light" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1">
           <li class="nav-item">
+            <a class="nav-link" href="user_profile_compact.html">Управление</a>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link" href="index.html">О системе</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">О системе</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://rent-pult.ru/about/">Справочник</a></li>
+              <li><a class="dropdown-item" href="#">Контакты</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="https://rent-pult.ru/map/">Карта ДУ</a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link" href="apartments.html">Квартиры</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Квартиры в аренду</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="apartments.html">Квартиры</a></li>
+              <li><a class="dropdown-item" href="https://rent-pult.ru/map/">Карта ДУ</a></li>
+              <li><a class="dropdown-item" href="#">Маркетплейс услуг</a></li>
+              <li><a class="dropdown-item" href="#">Истории</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://rent-pult.ru/forum/">Форум</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user_profile_compact.html">Управление</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="contacts.html">Контакты</a>
           </li> -->
           <li class="nav-item">
             <a class="nav-link" href="payment_admin.html">Админка</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://rent-pult.ru/about/">Справочник</a>
           </li>
         </ul>
         <ul class="navbar-nav justify-content-end flex-grow-1">
@@ -45,8 +55,7 @@
               Регистрация</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="bi bi-person-circle me-2"></i><span
-                class="d-inline-block d-lg-none d-xl-inline-block">eroshenkov@gmail.com</span></a>
+            <a class="nav-link active" href="#"><i class="bi bi-person-circle me-2"></i><span class="d-inline-block d-lg-none d-xl-inline-block">eroshenkov@gmail.com</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html"><i class="bi bi-box-arrow-left me-2"></i>Выйти</a>
@@ -58,10 +67,8 @@
   <!-- ДОБАВИТЬ -->
   <div class="view-buttons d-none d-xxl-block">
     <div class="btn-group btn-group-sm" role="group">
-      <a href="user_profile.html" class="btn btn-outline-secondary active" title="Полный вид"><i
-          class="bi bi-grid-fill"></i></a>
-      <a href="user_profile_compact.html" class="btn btn-outline-secondary" title="Компактный вид"><i
-          class="bi bi-grid-3x3-gap-fill"></i></a>
+      <a href="user_profile.html" class="btn btn-outline-secondary active" title="Полный вид"><i class="bi bi-grid-fill"></i></a>
+      <a href="user_profile_compact.html" class="btn btn-outline-secondary" title="Компактный вид"><i class="bi bi-grid-3x3-gap-fill"></i></a>
       <!-- <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
           <label class="btn btn-outline-primary" for="btnradio1"><i class="bi bi-grid-fill"></i></label>
 

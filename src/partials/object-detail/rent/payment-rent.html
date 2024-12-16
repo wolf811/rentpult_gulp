@@ -1,60 +1,89 @@
 <div class="card-body">
-  <a class="btn btn-outline-success btn-sm mb-2" href="#" role="button" data-bs-toggle="modal"
-    data-bs-target="#modalAddPayment"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+  <div class="row align-items-center mb-3">
+    <div class="col-xl">
+      <div class="mb-2 mb-xl-0">
+        <a class="btn btn-outline-success btn-sm mb-2" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modalAddPayment"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+      </div>
+    </div>
+    <div class="col-xl">
+      <div class="p-2 shadow-sm bg-success bg-gradient bg-opacity-10">
+        <form action="" method="POST" class="d-flex flex-wrap">
+          <div class="mb-2 mb-sm-0 me-2">
+            <input type="radio" class="btn-check" name="rooms" value="180" id="btn-check-room180" checked="" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-room180">Все</label>
+          </div>
+          <div class="mb-2 mb-sm-0 me-2">
+            <label for="chooseTenant" class="visually-hidden">Выбор</label>
+            <select name="" id="chooseTenant" class="form-select form-select-sm">
+              <option value="1">Ивановы</option>
+              <option value="2">Петровы</option>
+              <option value="3">Сидоровы</option>
+            </select>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
   <div class="table-responsive mt-2">
     <table class="table table-light small">
       <thead>
         <tr>
           <th scope="col" width="50" class="text-center">#</th>
-          <th scope="col">Дата</th>
-          <th scope="col">Сумма/период</th>
+          <th scope="col">Дата <small class="text-secondary">(период)</small></th>
+          <th scope="col">Итого <small class="text-secondary">(Аренда+ЖКХ)</small></th>
           <!-- <th scope="col">Штрафы</th>
           <th scope="col">Блок</th> -->
-          <th scope="col">Файл</th>
-          <th scope="col">Комментарий</th>
+          <th scope="col">Файлы</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="text-center">
-            <div class="btn-group btn-group-sm" role="group">
-              <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalAddPayment"><i
-                  class="bi bi-pencil" title="Редактировть"></i></a>
-              <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
-            </div>
+          <td></td>
+          <td>ВЕСЬ 2024 г.</td>
+          <td colspan="2">
+            51400 <small class="text-secondary text-nowrap">(44000+7400)</small>
           </td>
-          <td>11.05.2022</td>
-          <td>
-            <p class="text-nowrap mb-1">60000 </p>
-            <small class="text-secondary">01.01.2022 - 30.03.2022</small>
-          </td>
-          <!-- <td class="text-nowrap">2000 </td>
-          <td class="text-nowrap">5000 </td> -->
-          <td><a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
-                class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a></td>
-          <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
         </tr>
         <tr>
           <td class="text-center">
             <div class="btn-group btn-group-sm" role="group">
-              <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalAddPayment"><i
-                  class="bi bi-pencil" title="Редактировть"></i></a>
+              <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalAddPayment"><i class="bi bi-pencil" title="Редактировть"></i></a>
               <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
             </div>
           </td>
-          <td>31.12.2021</td>
           <td>
-            <p class="text-nowrap mb-1">20000 </p>
-            <small class="text-secondary">декабрь 2021 г.</small>
+            11.12.224 <small class="text-secondary">(за декабрь 2024)</small>
           </td>
-          <!-- <td class="text-nowrap">-</td>
-          <td class="text-nowrap">-</td> -->
-          <td><a href="#" class="mb-1 mb-sm-0 me-3 text-nowrap" target="_blank"><i
-                class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a></td>
-          <td>Lorem ipsum dolor sit amet consectetur adipisicing.</td>
+          <td>
+            25700 <small class="text-secondary">(22000+3700)</small>
+          </td>
+          <td>
+            <p class="mb-1"><a href="#" class="text-nowrap" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a></p>
+            <p class="mb-0"><a href="#" class="text-nowrap" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Подтверждение.pdf</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <div class="btn-group btn-group-sm" role="group">
+              <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalAddPayment"><i class="bi bi-pencil" title="Редактировть"></i></a>
+              <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+            </div>
+          </td>
+          <td>
+            11.11.224 <small class="text-secondary">(за ноябрь 2024)</small>
+          </td>
+          <td>
+            25700 <small class="text-secondary">(22000+3700)</small>
+          </td>
+          <td>
+            <p class="mb-1"><a href="#" class="text-nowrap" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>file_payment.pdf</a></p>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
+
 
 </div>
