@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper compact-view">
+    @include('partials/navbar.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+        "pageTitle": "Маркетплейс услуг"
+        })
+
+        @include('partials/marketplace-filter.html')
+        <!-- <div class="row align-items-center justify-content-between mb-3">
+          <div class="col-sm-auto">
+            <div class="input-group input-group-sm">
+              <span class="input-group-text" id="basic-addon1">Сортировать:</span>
+              <select name="" class="form-select">
+                <option selected value="">сначала дешевле</option>
+                <option value="">сначала дороже</option>
+                <option value="">по площади</option>
+              </select>
+            </div>
+          </div>
+        </div> -->
+        <div class="card card-object rounded-0">
+          <div class="row align-items-center">
+            <div class="col-sm-2 text-center">
+              <a href="img/avatar.png" data-fancybox="gallery-a">
+                <!-- <img src="img/object1.jpg" class="card-img-object" alt="plug"> -->
+                <img src="img/avatar.png" class="img-fluid" data-fancybox="gallery-a" alt="avatar" style="max-width: 120px; object-fit: contain;">
+              </a>
+              <!-- <div style="display:none">
+                <a href="https://lipsum.app/id/61/1800x1200" data-fancybox="gallery-a">
+                  <img src="https://lipsum.app/id/61/120x80">
+                </a>
+                <a href="https://lipsum.app/id/62/1800x1200" data-fancybox="gallery-a">
+                  <img src="https://lipsum.app/id/62/120x80">
+                </a>
+                <a href="https://lipsum.app/id/63/1800x1200" data-fancybox="gallery-a">
+                  <img src="https://lipsum.app/id/63/120x80">
+                </a>
+              </div> -->
+            </div>
+            <div class="col-sm">
+              <div class="card-object-content">
+                <div class="card-title">
+                  <!-- <a href="#collapseApartDetail" class="text-uppercase  fw-semibold mb-1 mb-sm-0" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseApartDetail">Иванов Иван Иванович</a> -->
+                  <div class="text-uppercase  fw-semibold mb-1 mb-sm-0">Иванов Иван Иванович</div>
+                  <div class="text-success text-nowrap me-2"><strong>г. Домодедово</strong></div>
+                </div>
+                <div class="card-body">
+                  <!-- <p class="fw-semibold">Домодедово, ул. Мечты, д.3к3, 2-й этаж</p> -->
+                  <div class="row">
+                    <div class="col-lg-4 mb-3 mb-lg-0">
+                      <div class="card-object-badge mb-3">
+                        <span class="badge-item bg-secondary bg-opacity-10 fs-6">Сантехника</span>
+                        <span class="badge-item bg-secondary bg-opacity-10 fs-6">Электрика</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <a href="tel:+79265568904" class="btn btn-outline-success btn-sm text-nowrap me-2"><i class="bi bi-telephone me-1"></i>+7 926 556-89-04</a>
+                        <a href="mailto:mail@mail.ru" class="text-nowrap fs-6">mail@mail.ru</a>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <div class="btn-group btn-group-sm">
+                          <a href="#" class="btn btn-outline-primary" title="Telegram"><i class="bi bi-telegram"></i></a>
+                          <a href="#" class="btn btn-outline-primary" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                          <a href="#" class="btn btn-outline-primary" title="Facebook"><i class="bi bi-facebook"></i></a>
+                          <a href="#" class="btn btn-outline-primary" title="Сайт" target="_blank"><i class="bi bi-globe"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg">
+                      <p class="mb-1 fw-semibold">О себе</p>
+                      <p class="small text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+                        doloribus accusamus vitae debitis velit sit iure dolores maxime inventore repellendus
+                        explicabo aliquam voluptatem quia quisquam harum saepe blanditiis. Sequi, nostrum. Lorem ipsum
+                        dolor sit amet consectetur, adipisicing elit. Vel, doloribus accusamus vitae debitis velit sit
+                        iure dolores maxime inventore repellendus explicabo aliquam voluptatem quia quisquam harum saepe
+                        blanditiis. Sequi, nostrum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="collapse text-bg-light" id="collapseApartDetail">
+            <div class="row">
+              <div class="col-md order-2 order-sm-1">
+                <div class="d-flex flex-column p-3">
+                  <p class="mb-1 fw-semibold">О себе</p>
+                  <p class="small text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
+                    doloribus accusamus vitae debitis velit sit iure dolores maxime inventore repellendus
+                    explicabo aliquam voluptatem quia quisquam harum saepe blanditiis. Sequi, nostrum. Lorem ipsum
+                    dolor sit amet consectetur, adipisicing elit. Vel, doloribus accusamus vitae debitis velit sit
+                    iure dolores
+                    maxime inventore repellendus explicabo aliquam voluptatem quia quisquam harum saepe
+                    blanditiis. Sequi, nostrum.</p>
+                  <a href="#collapseApartDetail" class="d-block small" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseApartDetail"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
+                </div>
+              </div>
+              <div class="col-md order-1 order-sm-2 mb-3 mb-sm-0">
+
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <nav aria-label="...">
+          <ul class="pagination pagination-sm">
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">1</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/modals-user-profile.html')
+</body>
+
+</html>

@@ -75,32 +75,6 @@
     </div>
   </div>
 </div>
-<!-- <div class="modal modal-main fade" id="modalObjectRequest" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Запрос на добавление объекта</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="">
-                    <div class="modal-body">
-                        <p class="text-secondary fs-5">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Nostrum, aliquam. Vitae, autem accusantium distinctio magnam.</p>
-                        <div class="mb-3">
-                            <label for="userId" class="form-label">Кому (ID пользовтеля или Email)</label>
-                            <input type="text" class="form-control" id="userId" placeholder="ID/Email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="userMessage" class="form-label">Сообщение</label>
-                            <textarea rows="2" class="form-control" id="userMessage"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success">Отправить</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
 <div class="modal modal-main fade" id="modalObjectNotice" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg">
     <div class="modal-content">
@@ -219,6 +193,168 @@
                 <input type="number" class="form-control" placeholder="площадь">
               </div>
             </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-main fade" id="modalAddSpecialist" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добавить специалиста</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="mb-3">
+            <div class="mb-3">
+              <label for="userFio" class="form-label">Фамилия Имя Отчество</label>
+              <input type="text" class="form-control form-control-sm" id="userFio">
+            </div>
+            <div class="mb-3">
+              <label for="avatar" class="form-label">Фото профиля (аватар)</label>
+              <input type="file" class="form-control form-control-sm" id="avatar">
+            </div>
+            <!-- <div class="mb-3">
+              <label for="signature" class="form-label">Фото подписи для ЭЦП</label>
+              <input type="file" class="form-control" id="signature">
+            </div> -->
+            <!-- <div class="row">
+              <div class="col-sm-6">
+                <div class="mb-3">
+                  <label for="userBirthday" class="form-label">Дата рождения</label>
+                  <input type="date" class="form-control" id="userBirthday">
+                </div>
+              </div>
+            </div> -->
+            <div class="row">
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="userPhone" class="form-label">Телефон</label>
+                  <input type="text" class="form-control form-control-sm" id="userPhone">
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="userEmail" class="form-label">E-mail</label>
+                  <input type="email" class="form-control form-control-sm" id="userEmail">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="telegram" class="form-label">Telegram</label>
+                  <input type="text" class="form-control form-control-sm" id="telegram">
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="WhatsApp" class="form-label">WhatsApp</label>
+                  <input type="text" class="form-control form-control-sm" id="WhatsApp">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="Facebook" class="form-label">Facebook</label>
+                  <input type="text" class="form-control form-control-sm" id="Facebook">
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="mb-3">
+                  <label for="site" class="form-label">Сайт</label>
+                  <input type="text" class="form-control form-control-sm" id="site">
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="userAbout" class="form-label">О&nbsp;себе</label>
+              <textarea class="form-control form-control-sm" name="userAbout" id="userAbout" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <h5 class="fw-light fs-5">Предоставляемые услуги</h5>
+              <div class="row small">
+                <div class="col-md-6 mb-2 mb-md-0">
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_0" checked="">
+                    <label class="form-check-label" for="check_menu_0">Сантехник</label>
+                  </div>
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_1" checked="">
+                    <label class="form-check-label" for="check_menu_1">Электрик</label>
+                  </div>
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_2">
+                    <label class="form-check-label" for="check_menu_2">Клининг</label>
+                  </div>
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_3">
+                    <label class="form-check-label" for="check_menu_3">Переезды</label>
+                  </div>
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_4">
+                    <label class="form-check-label" for="check_menu_4">Сборка/разборка мебели</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_5">
+                    <label class="form-check-label" for="check_menu_5">Ремонт бытовой техники</label>
+                  </div>
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_6">
+                    <label class="form-check-label" for="check_menu_6">Ремонт компьютерной техники</label>
+                  </div>
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_7">
+                    <label class="form-check-label" for="check_menu_7">Строительно-ремонтные работы</label>
+                  </div>
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_8">
+                    <label class="form-check-label" for="check_menu_8">Работы на участке</label>
+                  </div>
+                  <div class="form-check form-switch mb-2 me-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="check_menu_9">
+                    <label class="form-check-label" for="check_menu_9">Прочее</label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- <div class="mb-3">
+              <label for="otherService" class="form-label">Другая услуга</label>
+              <input type="text" class="form-control form-control-sm" id="otherService">
+            </div> -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-main fade" id="modalAddCity" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добавить город</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="cityName" class="form-label">Название города</label>
+            <input type="text" class="form-control" id="cityName">
           </div>
         </div>
         <div class="modal-footer">
