@@ -179,25 +179,19 @@
               <div class="tab-pane fade" id="useful-contacts" role="tabpanel" aria-labelledby="useful-contacts-list">
                 <div class="card card-object border-0 shadow-sm">
                   <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
-                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-contacts-tab" data-bs-toggle="pill" data-bs-target="#pills-contacts" type="button" role="tab" aria-controls="pills-contacts" aria-selected="true">Полезные контакты</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-marketplace-tab" data-bs-toggle="pill" data-bs-target="#pills-marketplace" type="button" role="tab" aria-controls="pills-marketplace" aria-selected="false">Маркетплейс услуг</button>
-                      </li>
-                    </ul>
-                    <!-- <div class="fw-light fs-4">Полезные контакты</div> -->
+                    <div class="fw-light fs-4">Полезные контакты</div>
                     <div class="text-success text-nowrap">ID: 00001-01</div>
                   </div>
-                  <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-contacts" role="tabpanel" aria-labelledby="pills-contacts-tab" tabindex="0">
-                      @include('partials/object-detail/about-object/useful-contacts.html')
-                    </div>
-                    <div class="tab-pane fade" id="pills-marketplace" role="tabpanel" aria-labelledby="pills-marketplace-tab" tabindex="0">
-                      @include('partials/object-detail/about-object/object-marketplace.html')
-                    </div>
+                  @include('partials/object-detail/about-object/useful-contacts.html')
+                </div>
+              </div>
+              <div class="tab-pane fade" id="object-marketplace" role="tabpanel" aria-labelledby="object-marketplace-list">
+                <div class="card card-object border-0 shadow-sm">
+                  <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                    <div class="fw-light fs-4">Маркетплейс услуг</div>
+                    <div class="text-success text-nowrap">ID: 00001-01</div>
                   </div>
+                  @include('partials/object-detail/about-object/object-marketplace.html')
                 </div>
               </div>
               <div class="tab-pane fade" id="neighbours" role="tabpanel" aria-labelledby="neighbours-list">
@@ -243,10 +237,12 @@
       </div>
     </main>
 
+
     @include('partials/footer-after-login.html')
 
   </div>
   @include('partials/object-detail/modals-object-detail.html')
+  @include('partials/modals-user-profile.html')
 </body>
 
 </html>

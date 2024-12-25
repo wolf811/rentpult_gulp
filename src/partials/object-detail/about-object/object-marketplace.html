@@ -1,35 +1,72 @@
 <div class="card-body">
-  <!-- @include('partials/marketplace-filter.html') -->
-  <!-- <div class="row align-items-center justify-content-between mb-3">
-            <div class="col-sm-auto">
-              <div class="input-group input-group-sm">
-                <span class="input-group-text" id="basic-addon1">Сортировать:</span>
-                <select name="" class="form-select">
-                  <option selected value="">сначала дешевле</option>
-                  <option value="">сначала дороже</option>
-                  <option value="">по площади</option>
-                </select>
-              </div>
-            </div>
-          </div> -->
+  <div class="card card-object shadow-sm bg-success bg-gradient bg-opacity-10 border-0 mb-4">
+    <form action="">
+      <div class="card-body py-3">
+        <div class="d-flex flex-wrap">
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-1">Сантехник</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-2">Электрик</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-3">Клининг</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-4">Переезды</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-5">Сборка/разборка мебели</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-6">Ремонт бытовой техники</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-7">Ремонт компьютерной техники</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-8" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-8">Строительно-ремонтные работы</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-9" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-9">Работы на участке</label>
+          </div>
+
+          <div class="mb-2 me-2">
+            <input type="checkbox" class="btn-check" id="btn-check-10" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="btn-check-10">Прочее</label>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-success btn-sm mb-2 mb-sm-0">Показать специалистов</button>
+        <a href="" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalAddSpecialist">Я сам специалист</a>
+      </div>
+    </form>
+  </div>
   <div class="card card-object rounded-0">
     <div class="row align-items-center">
       <div class="col-sm-3 col-md-2 text-center">
         <a href="img/avatar.png" data-fancybox="gallery-a">
-          <!-- <img src="img/object1.jpg" class="card-img-object" alt="plug"> -->
           <img src="img/avatar.png" class="img-fluid" data-fancybox="gallery-a" alt="avatar" style="max-width: 120px; object-fit: contain;">
         </a>
-        <!-- <div style="display:none">
-                  <a href="https://lipsum.app/id/61/1800x1200" data-fancybox="gallery-a">
-                    <img src="https://lipsum.app/id/61/120x80">
-                  </a>
-                  <a href="https://lipsum.app/id/62/1800x1200" data-fancybox="gallery-a">
-                    <img src="https://lipsum.app/id/62/120x80">
-                  </a>
-                  <a href="https://lipsum.app/id/63/1800x1200" data-fancybox="gallery-a">
-                    <img src="https://lipsum.app/id/63/120x80">
-                  </a>
-                </div> -->
       </div>
       <div class="col-sm">
         <div class="card-object-content">
@@ -43,12 +80,12 @@
             <div class="row">
               <div class="col-lg-4 mb-3 mb-lg-0">
                 <div class="card-object-badge mb-3">
-                  <span class="badge-item bg-secondary bg-opacity-10 fs-6">Сантехника</span>
-                  <span class="badge-item bg-secondary bg-opacity-10 fs-6">Электрика</span>
+                  <span class="badge-item bg-secondary bg-opacity-10">Сантехника</span>
+                  <span class="badge-item bg-secondary bg-opacity-10">Электрика</span>
                 </div>
-                <div class="d-flex align-items-center mb-3">
-                  <a href="tel:+79265568904" class="btn btn-outline-success btn-sm text-nowrap me-2"><i class="bi bi-telephone me-1"></i>+7 926 556-89-04</a>
-                  <a href="mailto:mail@mail.ru" class="text-nowrap fs-6">mail@mail.ru</a>
+                <div class="d-flex flex-column flex-sm-row align-items-sm-center flex-lg-column align-items-lg-start mb-3">
+                  <a href="tel:+79265568904" class="btn btn-outline-success btn-sm text-nowrap me-2 mb-3 mb-sm-0 mb-lg-3"><i class="bi bi-telephone me-1"></i>+7 926 556-89-04</a>
+                  <a href="mailto:mail@mail.ru" class="text-nowrap">mail@mail.ru</a>
                 </div>
                 <div class="d-flex align-items-center">
                   <div class="btn-group btn-group-sm">
