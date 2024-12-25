@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper compact-view">
+    @include('partials/navbar.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+        "pageTitle": "Истории"
+        })
+
+        @include('partials/stories-filter.html')
+        <!-- <div class="row align-items-center justify-content-between mb-3">
+          <div class="col-sm-auto">
+            <div class="input-group input-group-sm">
+              <span class="input-group-text" id="basic-addon1">Сортировать:</span>
+              <select name="" class="form-select">
+                <option selected value="">сначала дешевле</option>
+                <option value="">сначала дороже</option>
+                <option value="">по площади</option>
+              </select>
+            </div>
+          </div>
+        </div> -->
+        @include('partials/stories-list.html')
+        <nav aria-label="...">
+          <ul class="pagination pagination-sm">
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">1</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>
