@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    @include('partials/navbar-after-login.html')
+    @include('partials/header.html')
+    <main class="mb-5">
+      <div class="container">
+        <!-- @include('partials/breadcrumb_for_all.html') -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb breadcrumb-sm">
+            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="stories.html">Истории</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Название объекта</li>
+          </ol>
+        </nav>
+        @include('partials/page-title-inside.html', {
+        "pageTitle": "Название объекта"
+        })
+        <div class="row">
+          <div class="col-md mb-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                <div class="fw-light fs-4">Информация об арендаторе</div>
+                <!-- <div class="text-success text-nowrap">ID: 00001-01</div> -->
+              </div>
+              <form action="">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="commentAboutTenant" class="form-label">Фамилия Имя Отчество (и телефон)</label>
+                    <textarea class="form-control" name="PREVIEW_TEXT" id="commentAboutTenant" rows="1"></textarea>
+                  </div>
+                  <!-- <div class="row mb-3">
+                    <label for="nameTenant" class="form-label">(!!!) Или укажите ID арендатора (ов)</label>
+                    <div class="col-lg-4 mb-3 mb-lg-0"><input class="form-control" list="datalistOptionsTenants"
+                        id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
+                    <div class="col-lg-4 mb-3 mb-lg-0"><input class="form-control" list="datalistOptionsTenants"
+                        id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
+                    <div class="col-lg-4"><input class="form-control" list="datalistOptionsTenants" id="nameTenant"
+                        name="prop[renter_id][]" value="" placeholder="ID"></div>
+
+                  </div>
+                  <div class="row mb-3">
+                    <label for="rentalPeriod" class="form-label">Период аренды</label>
+                    <div class="col-6">
+                      <input class="form-control" type="date" id="rentalPeriodFrom">
+                    </div>
+                    <div class="col-6">
+                      <input class="form-control" type="date" id="rentalPeriodTo">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="nameContract" class="form-label">Основание<small class="text-secondary ms-1">(Договор
+                        аренды и&nbsp;пр.)</small></label>
+                    <input class="form-control" type="text" id="nameContract">
+                  </div>
+                  <div class="row mb-3 align-items-center">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
+                      <label for="paymentMonth" class="form-label">Ежемесячная плата</label>
+                      <input class="form-control" type="text" id="paymentMonth">
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="depositAmount" class="form-label">Депозит</label>
+                      <input class="form-control" type="text" id="depositAmount">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="commentAboutTenant" class="form-label">Файлы (массовая загрузка)</label>
+                    <input type="file" name="files[]" multiple="multiple" class="form-control">
+                  </div> -->
+                </div>
+                <div class="card-footer bg-transparent py-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                      <button class="btn btn-primary" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Сохраняем...
+                      </button>
+                      <button type="submit" class="btn btn-primary"><i class="bi bi-save me-1"></i>Сохранить</button>
+                      <a href="object_profile.html" class="btn btn-link">Закрыть</a>
+                    </div>
+                    <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md mb-4">
+            <div class="card border-0 shadow-sm mb-3">
+              <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                <div class="fw-light fs-4">Файлы</div>
+                <!-- <div class="text-success text-nowrap">ID: 00001-01</div> -->
+              </div>
+              <div class="card-body">
+                <!-- <p class="text-secondary"><i class="bi bi-info-circle text-orange me-2"></i>Возможно добавить сразу
+                  несколько файлов, формата .jpg, .jpeg, .png, .pdf</p> -->
+                <p class="mb-1">Загрузка файлов</p>
+                <div class="mb-3">
+                  <label for="nameFileRent" class="visually-hidden">Название файла</label>
+                  <input type="text" class="form-control" id="nameFileRent" placeholder="Название файла">
+                </div>
+                <div class="mb-3">
+                  <label for="choiceFileRent" class="visually-hidden">Выбор файла</label>
+                  <div class="input-group">
+                    <input type="file" class="form-control" id="choiceFileRent" aria-describedby="addFileRent"
+                      aria-label="Upload">
+                    <button class="btn btn-outline-primary" type="button" id="addFileRent" title="Загрузить"><i
+                        class="bi bi-download"></i></button>
+                  </div>
+                  <!-- <input type="file" class="form-control" id="choiceFileRent"> -->
+                </div>
+                <!-- <a href="#" class="btn btn-outline-primary"><i class="bi bi-download me-1"></i>Загрузить файл</a> -->
+                <div class="small mb-3">
+                  <div class="bg-light d-flex align-items-center justify-content-between border-bottom py-2">
+                    <div>
+                      <a href="#" class="btn btn-link text-secondary fs-6" title="Переместить"><i
+                          class="bi bi-three-dots-vertical"></i></a>
+                      <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-link fs-6" title="В архив"><i class="bi bi-archive"></i></a>
+                      <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
+                    </div>
+                  </div>
+                  <div class="bg-light d-flex align-items-center justify-content-between border-bottom py-2">
+                    <div>
+                      <a href="#" class="btn btn-link text-secondary fs-6" title="Переместить"><i
+                          class="bi bi-three-dots-vertical"></i></a>
+                      <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
+                    </div>
+                    <div>
+                      <a href="#" class="btn btn-link fs-6" title="В архив"><i class="bi bi-archive"></i></a>
+                      <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="card bg-success shadow-sm bg-gradient bg-opacity-10 border-0 mb-3">
+              <div class="card-title mb-0">
+                <a href="#collapseArhive" class="btn btn-link collapsed fs-6" data-bs-toggle="collapse" role="button"
+                  aria-expanded="false" aria-controls="collapseArchive">Архив файлов<i
+                    class="bi bi-chevron-down ms-2"></i></a>
+              </div>
+              <div class="card-body bg-light collapse" id="collapseArhive">
+                <div class="d-flex align-items-center justify-content-between border-bottom py-2">
+                  <div class="small">
+                    <a href="#" class="btn btn-link text-secondary fs-6" title="Переместить"><i
+                        class="bi bi-three-dots-vertical"></i></a>
+                    <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
+                  </div>
+                  <div>
+                    <a href="#" class="btn btn-link fs-6" title="Восстановить"><i class="bi bi-arrow-90deg-up"></i></a>
+                    <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between border-bottom py-2">
+                  <div class="small">
+                    <a href="#" class="btn btn-link text-secondary fs-6" title="Переместить"><i
+                        class="bi bi-three-dots-vertical"></i></a>
+                    <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
+                  </div>
+                  <div>
+                    <a href="#" class="btn btn-link fs-6" title="Восстановить"><i class="bi bi-arrow-90deg-up"></i></a>
+                    <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/object-detail/modals-object-detail.html')
+</body>
+
+</html>
