@@ -38,7 +38,7 @@
                 <p class="small">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eum tempore at aspernatur architecto ad facere vitae, error expedita, nobis provident sunt quod mollitia commodi culpa corrupti, nesciunt odit maiores corporis vel reprehenderit voluptatum inventore! Minus dolorem culpa architecto quod quaerat ipsa nam eveniet ipsum.
                 </p>
-                <p class="fw-light mb-1">Фотоотчет выезда:</p>
+                <p class="fw-light mb-1">Фотоотчет въезда:</p>
                 <div class="row row-cols-2 row-cols-md-4 row-cols-xl-6 g-3">
                   <div class="col">
                     <div class="card h-100 card-file-gallery">
@@ -106,144 +106,88 @@
                 </div>
               </div>
               <div class="card-footer bg-transparent py-3">
-                <div class="d-flex align-items-center justify-content-between">
-                  <div>
-                    <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
-                    <a href="object_profile.html" class="btn btn-link btn-sm">Закрыть</a>
-                  </div>
-                  <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
-                </div>
+                <p class="fw-light mb-1">Оценка арендатора:<span class="badge text-bg-warning ms-2">4.5</span></p>
+                <p class="small">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto ducimus optio commodi provident suscipit excepturi nesciunt illo amet alias dolore voluptatem, tenetur vero earum pariatur!
+                </p>
+                <p class="fw-light mb-1">Мнение общества: ???</p>
+                <a href="#" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEvaluate">Оценить</a>
               </div>
-              <!-- <form action="">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <label for="commentAboutTenant" class="form-label">Фамилия Имя Отчество (и телефон)</label>
-                    <textarea class="form-control" name="PREVIEW_TEXT" id="commentAboutTenant" rows="1"></textarea>
-                  </div>
-                  <div class="row mb-3">
-                    <label for="nameTenant" class="form-label">(!!!) Или укажите ID арендатора (ов)</label>
-                    <div class="col-lg-4 mb-3 mb-lg-0"><input class="form-control" list="datalistOptionsTenants"
-                        id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
-                    <div class="col-lg-4 mb-3 mb-lg-0"><input class="form-control" list="datalistOptionsTenants"
-                        id="nameTenant" name="prop[renter_id][]" value="" placeholder="ID"></div>
-                    <div class="col-lg-4"><input class="form-control" list="datalistOptionsTenants" id="nameTenant"
-                        name="prop[renter_id][]" value="" placeholder="ID"></div>
-
-                  </div>
-                  <div class="row mb-3">
-                    <label for="rentalPeriod" class="form-label">Период аренды</label>
-                    <div class="col-6">
-                      <input class="form-control" type="date" id="rentalPeriodFrom">
-                    </div>
-                    <div class="col-6">
-                      <input class="form-control" type="date" id="rentalPeriodTo">
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="nameContract" class="form-label">Основание<small class="text-secondary ms-1">(Договор
-                        аренды и&nbsp;пр.)</small></label>
-                    <input class="form-control" type="text" id="nameContract">
-                  </div>
-                  <div class="row mb-3 align-items-center">
-                    <div class="col-lg-6 mb-3 mb-lg-0">
-                      <label for="paymentMonth" class="form-label">Ежемесячная плата</label>
-                      <input class="form-control" type="text" id="paymentMonth">
-                    </div>
-                    <div class="col-lg-6">
-                      <label for="depositAmount" class="form-label">Депозит</label>
-                      <input class="form-control" type="text" id="depositAmount">
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="commentAboutTenant" class="form-label">Файлы (массовая загрузка)</label>
-                    <input type="file" name="files[]" multiple="multiple" class="form-control">
-                  </div>
-                </div>
-                <div class="card-footer bg-transparent py-3">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <div>
-                      <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
-                      <a href="object_profile.html" class="btn btn-link btn-sm">Закрыть</a>
-                    </div>
-                    <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
-                  </div>
-                </div>
-              </form> -->
             </div>
           </div>
           <div class="col-md mb-4">
-            <div class="card border-0 shadow-sm mb-3">
-              <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
-                <div class="fw-light fs-4">Файлы</div>
-                <!-- <div class="text-success text-nowrap">ID: 00001-01</div> -->
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-light py-2">
+                <div class="fs-6">
+                  <span class="fw-light me-2">Арендатор:</span>
+                  Иванов Иван Иванович <small class="text-success text-nowrap">ID: 00001-01</small>
+                </div>
+                <small class="text-muted">Период аренды: с 10.01.2024 по 10.01.2025</small>
               </div>
               <div class="card-body">
-                <!-- <p class="text-secondary"><i class="bi bi-info-circle text-orange me-2"></i>Возможно добавить сразу
-                  несколько файлов, формата .jpg, .jpeg, .png, .pdf</p> -->
-                <p class="mb-1">Загрузка файлов</p>
-                <div class="mb-3">
-                  <label for="nameFileRent" class="visually-hidden">Название файла</label>
-                  <input type="text" class="form-control" id="nameFileRent" placeholder="Название файла">
-                </div>
-                <div class="mb-3">
-                  <label for="choiceFileRent" class="visually-hidden">Выбор файла</label>
-                  <div class="input-group">
-                    <input type="file" class="form-control" id="choiceFileRent" aria-describedby="addFileRent" aria-label="Upload">
-                    <button class="btn btn-outline-primary" type="button" id="addFileRent" title="Загрузить"><i class="bi bi-download"></i></button>
-                  </div>
-                  <!-- <input type="file" class="form-control" id="choiceFileRent"> -->
-                </div>
-                <!-- <a href="#" class="btn btn-outline-primary"><i class="bi bi-download me-1"></i>Загрузить файл</a> -->
-                <div class="small mb-3">
-                  <div class="bg-light d-flex align-items-center justify-content-between border-bottom py-2">
-                    <div>
-                      <a href="#" class="btn btn-link text-secondary fs-6" title="Переместить"><i class="bi bi-three-dots-vertical"></i></a>
-                      <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
-                    </div>
-                    <div>
-                      <a href="#" class="btn btn-link fs-6" title="В архив"><i class="bi bi-archive"></i></a>
-                      <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
+                <p class="small">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eum tempore at aspernatur architecto ad facere vitae, error expedita, nobis provident sunt quod mollitia commodi culpa corrupti, nesciunt odit maiores corporis vel reprehenderit voluptatum inventore! Minus dolorem culpa architecto quod quaerat ipsa nam eveniet ipsum. Illo exercitationem vel enim alias nam rerum, voluptatibus quasi iste.
+                </p>
+                <p class="fw-light mb-1">Фотоотчет выезда:</p>
+                <div class="row row-cols-2 row-cols-md-4 row-cols-xl-6 g-3">
+                  <div class="col">
+                    <div class="card h-100 card-file-gallery">
+                      <a href="img/object1.jpg" data-fancybox="gallery-2" data-caption="Вид с лоджии">
+                        <img src="img/object1.jpg" class="card-img" alt="foto">
+                      </a>
                     </div>
                   </div>
-                  <div class="bg-light d-flex align-items-center justify-content-between border-bottom py-2">
-                    <div>
-                      <a href="#" class="btn btn-link text-secondary fs-6" title="Переместить"><i class="bi bi-three-dots-vertical"></i></a>
-                      <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
+                  <div class="col">
+                    <div class="card h-100 card-file-gallery">
+                      <a href="img/thai_phi_phi.jpg" data-fancybox="gallery-2" data-caption="Пример горизонтальной фотки">
+                        <img src="img/thai_phi_phi.jpg" class="card-img" alt="foto">
+                      </a>
                     </div>
-                    <div>
-                      <a href="#" class="btn btn-link fs-6" title="В архив"><i class="bi bi-archive"></i></a>
-                      <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 card-file-gallery">
+                      <a href="img/object2.jpg" data-fancybox="gallery-2" data-caption="Вид с кухни">
+                        <img src="img/object2.jpg" class="card-img" alt="foto">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 card-file-gallery">
+                      <a href="img/object3.jpg" data-fancybox="gallery-2" data-caption="Вид с улицы, адрес дома">
+                        <img src="img/object3.jpg" class="card-img" alt="foto">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 card-file-gallery">
+                      <a href="img/object1.jpg" data-fancybox="gallery-2" data-caption="Вид с лоджии">
+                        <img src="img/object1.jpg" class="card-img" alt="foto">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 card-file-gallery">
+                      <a href="img/object2.jpg" data-fancybox="gallery-2" data-caption="Вид с кухни">
+                        <img src="img/object2.jpg" class="card-img" alt="foto">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 card-file-gallery">
+                      <a href="img/object3.jpg" data-fancybox="gallery-2" data-caption="Вид с улицы, адрес дома">
+                        <img src="img/object3.jpg" class="card-img" alt="foto">
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-
-            </div>
-            <div class="card bg-success shadow-sm bg-gradient bg-opacity-10 border-0 mb-3">
-              <div class="card-title mb-0">
-                <a href="#collapseArhive" class="btn btn-link collapsed fs-6" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseArchive">Архив файлов<i class="bi bi-chevron-down ms-2"></i></a>
-              </div>
-              <div class="card-body bg-light collapse" id="collapseArhive">
-                <div class="d-flex align-items-center justify-content-between border-bottom py-2">
-                  <div class="small">
-                    <a href="#" class="btn btn-link text-secondary fs-6" title="Переместить"><i class="bi bi-three-dots-vertical"></i></a>
-                    <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
-                  </div>
-                  <div>
-                    <a href="#" class="btn btn-link fs-6" title="Восстановить"><i class="bi bi-arrow-90deg-up"></i></a>
-                    <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-between border-bottom py-2">
-                  <div class="small">
-                    <a href="#" class="btn btn-link text-secondary fs-6" title="Переместить"><i class="bi bi-three-dots-vertical"></i></a>
-                    <a href="#" target="_blank"><i class="bi bi-file-earmark-arrow-down me-1"></i>Название файла</a>
-                  </div>
-                  <div>
-                    <a href="#" class="btn btn-link fs-6" title="Восстановить"><i class="bi bi-arrow-90deg-up"></i></a>
-                    <a href="#" class="btn btn-link text-danger"><i class="bi bi-x-lg"></i></a>
-                  </div>
-                </div>
+              <div class="card-footer bg-transparent py-3">
+                <p class="fw-light mb-1">Оценка собственника:<span class="badge text-bg-warning ms-2">4.5</span></p>
+                <p class="small">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto ducimus optio commodi provident suscipit excepturi nesciunt illo amet alias dolore voluptatem, tenetur vero earum pariatur!
+                </p>
+                <p class="fw-light mb-1">Мнение общества: ???</p>
+                <a href="#" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEvaluate">Оценить</a>
               </div>
             </div>
           </div>
@@ -254,7 +198,7 @@
     @include('partials/footer.html')
 
   </div>
-  @include('partials/object-detail/modals-object-detail.html')
+  @include('partials/modal-stories.html')
 </body>
 
 </html>

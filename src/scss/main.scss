@@ -16,6 +16,7 @@
 @import "./components/fancybox";
 @import "./components/compact-view";
 @import "./components/print";
+@import "./components/rating-stars";
 
 // ======== Variables =============
 // $primary: #006093 !important;
@@ -44,18 +45,22 @@ body {
   font-family: 'OpenSans', sans-serif;
   font-weight: 300;
 }
+
 .fw-normal {
   font-family: 'OpenSans', sans-serif;
   font-weight: 400;
 }
+
 .fw-semibold {
   font-family: 'OpenSans', sans-serif;
   font-weight: 600;
 }
+
 .fw-semibold {
   font-family: 'OpenSans', sans-serif;
   font-weight: 700;
 }
+
 .wrapper {
   display: flex !important;
   flex-direction: column !important;
@@ -80,6 +85,7 @@ body {
     max-width: 1920px;
   }
 }
+
 a,
 a.btn-link {
   color: #0462B1;
@@ -93,9 +99,11 @@ a.btn-link {
 a.btn-primary {
   color: #fff;
 }
+
 .pagination {
   --bs-pagination-active-bg: #0462B1;
 }
+
 .btn-primary {
   --bs-btn-bg: #0462B1;
   --bs-btn-border-color: #0462B1;
@@ -136,6 +144,7 @@ a.btn-primary {
   font-size: 0.8rem;
   border-radius: 0.2rem;
 }
+
 .bg-orange {
   background-color: #fd9843;
 }
@@ -178,7 +187,9 @@ a.btn-primary {
     // border-color: var(--bs-btn-disabled-border-color);
     // opacity: var(--bs-btn-disabled-opacity);
   }
-  .form-control, .form-select {
+
+  .form-control,
+  .form-select {
     background-color: #e9ecef;
     opacity: 1;
     pointer-events: none;
@@ -188,8 +199,8 @@ a.btn-primary {
 .text-small {
   font-size: small !important;
 }
+
 table .form-check {
   min-height: auto;
   margin-bottom: 0;
 }
-
