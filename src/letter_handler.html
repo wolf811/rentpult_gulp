@@ -11,27 +11,25 @@
       <div class="container">
         @include('partials/breadcrumb_for_all.html')
         @include('partials/page-title.html', {
-        "pageTitle": "Личный кабинет администратора"
+        "pageTitle": "Обработчик писем"
         })
 
         <!-- @include('partials/payment_admin_my.html') -->
         <ul class="nav nav-tabs mb-4">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="payment_admin.html">Счета</a>
+            <a class="nav-link" href="payment_admin.html">Счета</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="letter_handler.html">Обработчик писем</a>
+            <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
           </li>
         </ul>
 
-        <form method="POST">
+
           <div class="mb-3">
-            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить
-              всё</button>
-            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-excel me-1"></i>Экспорт в excel</a>
+            <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a>
           </div>
           <div class="table-responsive">
             <table class="table table-hover table-striped align-middle border small">
@@ -148,14 +146,14 @@
               <li class="page-item"><a class="page-link" href="#">3</a></li>
             </ul>
           </nav>
-        </form>
+
       </div>
     </main>
 
     @include('partials/footer.html')
 
   </div>
-  @include('partials/object-detail/modals-object-detail.html')
+  @include('partials/modal-import-contacts.html')
 </body>
 
 </html>

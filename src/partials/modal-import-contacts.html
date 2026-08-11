@@ -1,0 +1,38 @@
+<div class="modal fade" id="modalImportContacts" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Импорт контактов</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="importCsv" class="form-label">Вабрать файл .CSV</label>
+            <div class="input-group mb-3">
+              <input type="file" class="form-control form-control-sm" id="importCsv">
+              <button class="btn btn-outline-primary btn-sm" title="Ипортировать"><i class="bi bi-box-arrow-in-down"></i></button>
+            </div>
+          </div>
+          <div class="small text-success mb-3">
+            <p class="fw-bold"><i class="bi bi-check-lg me-1"></i>Успешно</p>
+            <p class="mb-1">Новых получателей: <strong>1000</strong></p>
+            <p class="mb-1">Новых e-mail для существующих получателей: <strong>220</strong></p>
+            <p class="mb-1">Существующих получателей: <strong>55</strong></p>
+          </div>
+          <div class="small text-danger mb-3">
+            <p class="fw-bold"><i class="bi bi-exclamation-octagon me-1"></i>Ошибка импорта</p>
+            <p class="mb-1">Проверьте файл импорта</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm" type="button" disabled="">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Сохраняем…
+          </button>
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
