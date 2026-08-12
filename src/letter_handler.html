@@ -26,126 +26,301 @@
             <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
           </li>
         </ul>
+        <div class="row" data-masonry='{"percentPosition": true }'>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <h4 class="card-title mb-0">Контакты <span class="badge text-bg-warning fw-normal">10 000</span></h4>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Toogle countries languages">
+                    <input type="radio" class="btn-check" name="toogleCountriesLanguages" value="1" id="btnCountries" autocomplete="off" checked>
+                    <label class="btn btn-outline-secondary" for="btnCountries">Страны</label>
+                    <input type="radio" class="btn-check" name="toogleCountriesLanguages" value="2" id="btnLanguages" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btnLanguages">Языки</label>
+                  </div>
+                </div>
+                <div class="card-text">
+                  <!-- <div class="row mb-3" id="countries">
+                    <div class="col border-bottom">Франция:<br><strong>780</strong></div>
+                    <div class="col border-bottom">Германия:<br><strong>550</strong></div>
+                    <div class="col border-bottom">Испания:<br><strong>625</strong></div>
+                    <div class="col border-bottom">Андора:<br><strong>480</strong></div>
+                    <div class="col border-bottom">Италия:<br><strong>610</strong></div>
+                    <div class="col border-bottom">Россия:<br><strong>100</strong></div>
+                    <div class="col border-bottom">Андора:<br><strong>100</strong></div>
+                    <div class="col border-bottom">Финляндия:<br><strong>100</strong></div>
+                    <div class="col border-bottom">Австрия:<br><strong>100</strong></div>
+                    <div class="col border-bottom">Нидерланды:<br><strong>100</strong></div>
+                  </div> -->
+                  <ul class="list-group list-group-flush mb-3 border-bottom" id="countries">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Франция
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">780</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Германия
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">560</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Испания
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">650</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Италия
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">373</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Россия
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">155</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Финляндия
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">65</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Австрия
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">263</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Нидерланды
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">490</span>
+                    </li>
+                  </ul>
+                  <ul class="list-group list-group-flush mb-3 border-bottom d-none" id="languages">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        ENG
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">780</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        RUS
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">560</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        ESP
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">650</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        FRA
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">373</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        GER
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">155</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        CHN
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">65</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        ARA
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">79</span>
+                    </li>
+                  </ul>
+                  <!-- <div class="row mb-3 d-none" id="languages">
+                    <div class="col border-bottom">ENG:<br><strong>780</strong></div>
+                    <div class="col border-bottom">RUS:<br><strong>550</strong></div>
+                    <div class="col border-bottom">ESP:<br><strong>625</strong></div>
+                    <div class="col border-bottom">FRA:<br><strong>480</strong></div>
+                    <div class="col border-bottom">GER:<br><strong>610</strong></div>
+                    <div class="col border-bottom">CHN:<br><strong>100</strong></div>
+                    <div class="col border-bottom">ARA:<br><strong>100</strong></div>
+                  </div> -->
+                </div>
+                <a href="letter_contacts.html" class="btn btn-outline-primary">Перейти к контактам<i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <h4 class="card-title mb-0">Цепочки писем <span class="badge text-bg-warning fw-normal">активных 2 из 5</span></h4>
+                </div>
+                <div class="card-text">
+                  <ol class="list-group list-group-flush list-group-numbered mb-3 border-bottom">
+                    <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        Название цепочки
+                      </div>
+                      <span class="badge text-bg-warning rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        Название цепочки
+                      </div>
+                      <span class="badge text-bg-warning rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        Название цепочки
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        Название цепочки
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        Название цепочки
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">14</span>
+                    </li>
+                  </ol>
+                </div>
+                <a href="letter_chains.html" class="btn btn-outline-primary">Перейти к цепочкам писем<i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <h4 class="card-title mb-0">Отправлено писем <span class="badge text-bg-warning fw-normal">78 521 000</span></h4>
+                </div>
+                <div class="card-text">
+                  <ul class="list-group list-group-flush mb-3 border-bottom">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Сегодня
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">3520</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Вчера
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">6820</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        За месяц
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">621000</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        За год
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">1632000</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        <strong>Почтовый ящиков</strong>
+                      </div>
+                      <span class="badge text-bg-warning rounded-pill">1256</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <a href="letter_chains.html" class="btn btn-outline-primary">Перейти к цепочкам писем<i class="bi bi-arrow-right ms-1"></i></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <h4 class="card-title mb-0">Переходы на сайт <span class="badge text-bg-warning fw-normal">185</span></h4>
+                </div>
+                <div class="card-text">
+                  <ul class="list-group list-group-flush mb-3 border-bottom">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Сегодня
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        Вчера
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">4</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        За месяц
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">18</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="me-auto">
+                        За год
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">185</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <a href="letter_chains.html" class="btn btn-outline-primary">Перейти к цепочкам писем<i class="bi bi-arrow-right ms-1"></i></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <h4 class="card-title mb-0">Выполнить действия <span class="badge text-bg-warning fw-normal">3</span></h4>
+                </div>
+                <div class="card-text">
+                  <ol class="list-group list-group-flush list-group-numbered mb-3 border-bottom">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        Действие
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        Действие
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        Действие
+                      </div>
+                      <span class="badge text-bg-secondary rounded-pill">1</span>
+                    </li>
+                  </ol>
+                </div>
+                <!-- <a href="letter_chains.html" class="btn btn-outline-primary">Перейти к цепочкам писем<i class="bi bi-arrow-right ms-1"></i></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-          <div class="mb-3">
-            <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a>
-          </div>
-          <div class="table-responsive">
-            <table class="table table-hover table-striped align-middle border small">
-              <thead>
-                <tr>
-                  <th scope="col" class="text-center">#</th>
-                  <th scope="col" class="text-nowrap">
-                    Дата платежа
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th>
-                  <th scope="col" class="text-nowrap">
-                    № объекта
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th>
-                  <th scope="col" class="text-nowrap">
-                    Пользователь
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th>
-                  <th scope="col" class="text-nowrap">
-                    Плательщик
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th>
-                  <th scope="col">Сумма</th>
-                  <th scope="col" class="text-nowrap">
-                    Оплачено
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th>
-                  <th scope="col">Срок действия</th>
-                  <th scope="col">Документы</th>
-                  <!-- <th scope="col" class="text-nowrap">
-                    VIP
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th> -->
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" class="text-center">
-                    <div class="btn-group btn-group-sm" role="group">
-                      <a href="#" class="btn btn-outline-success"><i class="bi bi-pencil" title="Редактировть"></i></a>
-                      <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
-                    </div>
-                  </td>
-                  <td>12.10.2022</td>
-                  <td>375</td>
-                  <td>Kir-ero@mail.ru</td>
-                  <td>Иванов Иван Иванович</td>
-                  <td>1200</td>
-                  <td>
-                    <div class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="paid">д.html">Обраб
-                      <label class="form-check-label" for="paid">Да</label>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex">
-                      <input type="date" class="form-control form-control-sm me-1">
-                      <input type="date" class="form-control form-control-sm">
-                    </div>
-                  </td>
-                  <td>
-                    <input type="file" class="form-control form-control-sm">
-                  </td>
-                  <!-- <td>
-                    <div class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="vip">
-                      <label class="form-check-label fw-bold" for="vip">Да</label>
-                    </div>
-                  </td> -->
-                </tr>
-                <tr>
-                  <td scope="row" class="text-center">
-                    <div class="btn-group btn-group-sm" role="group">
-                      <a href="#" class="btn btn-outline-success"><i class="bi bi-pencil" title="Редактировть"></i></a>
-                      <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
-                    </div>
-                  </td>
-                  <td>12.10.2022</td>
-                  <td>375</td>
-                  <td>Kir-ero@mail.ru</td>
-                  <td>ООО "Агентство недвижимости"</td>
-                  <td>1200</td>
-                  <td>Да</td>
-                  <td>12.10.2023 - 12.10.2024</td>
-                  <td><a href="#" target="_blank">files.zip</a></td>
-                  <!-- <td class="fw-bold">Да</td> -->
-                </tr>
-            </table>
-          </div>
-          <nav aria-label="...">
-            <ul class="pagination pagination-sm">
-              <li class="page-item active" aria-current="page">
-                <span class="page-link">1</span>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-            </ul>
-          </nav>
 
       </div>
     </main>
@@ -154,6 +329,7 @@
 
   </div>
   @include('partials/modal-import-contacts.html')
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </body>
 
 </html>
