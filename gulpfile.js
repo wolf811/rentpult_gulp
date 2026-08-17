@@ -109,7 +109,7 @@ const styles = () => {
       level: 2
     })))
     .pipe(dest(paths.buildCssFolder, { sourcemaps: '.' }))
-    .pipe(browserSync.stream());
+  // .pipe(browserSync.stream());
 };
 
 // styles backend
@@ -128,7 +128,7 @@ const stylesBackend = () => {
       overrideBrowserslist: ["last 5 versions"]
     }))
     .pipe(dest(paths.buildCssFolder))
-    .pipe(browserSync.stream());
+  // .pipe(browserSync.stream());
 };
 
 // scripts
@@ -168,7 +168,7 @@ const scripts = () => {
       this.emit('end');
     })
     .pipe(dest(paths.buildJsFolder))
-    .pipe(browserSync.stream());
+  // .pipe(browserSync.stream());
 }
 
 // scripts backend
@@ -208,7 +208,7 @@ const scriptsBackend = () => {
       this.emit('end');
     })
     .pipe(dest(paths.buildJsFolder))
-    .pipe(browserSync.stream());
+  // .pipe(browserSync.stream());
 }
 
 const resources = () => {
@@ -252,7 +252,7 @@ const htmlInclude = () => {
       locale: ['ru', 'en-US']
     }))
     .pipe(dest(buildFolder))
-    .pipe(browserSync.stream());
+  // .pipe(browserSync.stream());
 }
 
 const watchFiles = () => {

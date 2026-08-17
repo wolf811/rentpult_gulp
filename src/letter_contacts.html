@@ -11,10 +11,8 @@
       <div class="container">
         @include('partials/breadcrumb_for_all.html')
         @include('partials/page-title.html', {
-        "pageTitle": "Обработчик писем / Контакты"
+        "pageTitle": "Обработчик писем"
         })
-
-        <!-- @include('partials/payment_admin_my.html') -->
         <ul class="nav nav-tabs mb-4">
           <li class="nav-item">
             <a class="nav-link" href="payment_admin.html">Счета</a>
@@ -26,173 +24,205 @@
             <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
           </li>
         </ul>
-
-        <div class="card card-object shadow-sm bg-success bg-gradient bg-opacity-10 border-0 mb-4">
-          <form action="">
-            <div class="card-body py-3">
-              <div class="row mb-3">
-                <div class="col-md-6 col-xl-4 mb-3 mb-md-0">
-                  <input type="text" class="form-control form-control-sm" placeholder="Фамилия Имя Отчество">
-                </div>
-                <div class="col-6 col-md-3 col-xl-2">
-                  <input type="text" class="form-control form-control-sm" placeholder="ID пользователя">
-                </div>
-                <div class="col-6 col-md-3 col-xl-2">
-                  <input type="text" class="form-control form-control-sm" placeholder="Профиль LinkedIn">
-                </div>
-              </div>
-              <div class="row mb-3">
-                <div class="col-6 col-md-3 col-xl-2">
-                  <select name="" id="" class="form-select form-select-sm">
-                    <option selected="">выбрать страну</option>
-                    <option>Россия</option>
-                    <option>Беларусь</option>
-                    <option>Казахстан</option>
-                    <option>Монголия</option>
-                  </select>
-                </div>
-                <div class="col-6 col-md-3 col-xl-2 mb-3 mb-md-0">
-                  <select name="" id="" class="form-select form-select-sm">
-                    <option selected="">выбрать язык</option>
-                    <option>ENG</option>
-                    <option>RUS</option>
-                    <option>ESP</option>
-                    <option>FRA</option>
-                    <option>GER</option>
-                    <option>CHN</option>
-                    <option>ARA</option>
-                  </select>
-                </div>
-                <div class="col-md-6 col-xl-4">
-                  <input type="text" class="form-control form-control-sm" placeholder="Компания">
-                </div>
-              </div>
-            </div>
-            <div class="card-footer">
-              <button type="submit" class="btn btn-success btn-sm">Показать 3 контакта</button>
-              <!-- <button type="submit" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill me-1"></i>Показать на карте</button> -->
-            </div>
-          </form>
-        </div>
-        <div class="d-flex align-items-center justify-content-between mb-3">
-          <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a>
-          <p class="text-secondary fw-bold mb-0">25 из 10 000</strong></p>
-        </div>
-        <div class="table-responsive">
-          <table class="table table-hover table-striped align-middle border small">
-            <thead>
-              <tr>
-                <th scope="col" class="text-center">#</th>
-                <th scope="col">
-                  <span>ФИО<br><small class="fw-normal">(ID, LinkedIn)</small></span>
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-                <th scope="col" class="text-nowrap">
-                  Страна
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-                <th scope="col" class="text-nowrap">
-                  Язык
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-                <th scope="col" class="text-nowrap">
-                  Плательщик
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-                <th scope="col">Сумма</th>
-                <th scope="col" class="text-nowrap">
-                  Оплачено
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-                <th scope="col">Срок действия</th>
-                <th scope="col">Документы</th>
-                <!-- <th scope="col" class="text-nowrap">
-                    VIP
-                    <span class="ms-1">
-                      <a href="#"><i class="bi bi-arrow-down"></i></a>
-                      <a href="#"><i class="bi bi-arrow-up"></i></a>
-                    </span>
-                  </th> -->
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row" class="text-center">
-                  <div class="btn-group btn-group-sm" role="group">
-                    <a href="#" class="btn btn-outline-success"><i class="bi bi-pencil" title="Редактировть"></i></a>
-                    <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
-                  </div>
-                </td>
-                <td>12.10.2022</td>
-                <td>375</td>
-                <td>Kir-ero@mail.ru</td>
-                <td>Иванов Иван Иванович</td>
-                <td>1200</td>
-                <td>
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="paid">д.html">Обраб
-                    <label class="form-check-label" for="paid">Да</label>
-                  </div>
-                </td>
-                <td>
-                  <div class="d-flex">
-                    <input type="date" class="form-control form-control-sm me-1">
-                    <input type="date" class="form-control form-control-sm">
-                  </div>
-                </td>
-                <td>
-                  <input type="file" class="form-control form-control-sm">
-                </td>
-                <!-- <td>
-                    <div class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="vip">
-                      <label class="form-check-label fw-bold" for="vip">Да</label>
+        <h2 class="h4">Контакты</h2>
+        <div class="row">
+          <div class="col-lg-3 col-xl-2">
+            @include('partials/letter-handler/navbar-letter-handler.html')
+          </div>
+          <div class="col-lg">
+            <div class="card card-object shadow-sm bg-success bg-gradient bg-opacity-10 border-0 mb-4">
+              <form action="">
+                <div class="card-body py-3">
+                  <div class="row mb-3">
+                    <div class="col-md-6 col-xl-4 mb-3 mb-md-0">
+                      <input type="text" class="form-control form-control-sm" placeholder="Фамилия Имя Отчество">
                     </div>
-                  </td> -->
-              </tr>
-              <tr>
-                <td scope="row" class="text-center">
-                  <div class="btn-group btn-group-sm" role="group">
-                    <a href="#" class="btn btn-outline-success"><i class="bi bi-pencil" title="Редактировть"></i></a>
-                    <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+                    <div class="col-6 col-md-3 col-xl-2">
+                      <input type="text" class="form-control form-control-sm" placeholder="ID пользователя">
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-2">
+                      <input type="text" class="form-control form-control-sm" placeholder="Профиль LinkedIn">
+                    </div>
                   </div>
-                </td>
-                <td>12.10.2022</td>
-                <td>375</td>
-                <td>Kir-ero@mail.ru</td>
-                <td>ООО "Агентство недвижимости"</td>
-                <td>1200</td>
-                <td>Да</td>
-                <td>12.10.2023 - 12.10.2024</td>
-                <td><a href="#" target="_blank">files.zip</a></td>
-                <!-- <td class="fw-bold">Да</td> -->
-              </tr>
-          </table>
+                  <div class="row mb-3">
+                    <div class="col-6 col-md-3 col-xl-2">
+                      <select name="" id="" class="form-select form-select-sm">
+                        <option selected="">выбрать страну</option>
+                        <option>Россия</option>
+                        <option>Беларусь</option>
+                        <option>Казахстан</option>
+                        <option>Монголия</option>
+                      </select>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-2 mb-3 mb-md-0">
+                      <select name="" id="" class="form-select form-select-sm">
+                        <option selected="">выбрать язык</option>
+                        <option>ENG</option>
+                        <option>RUS</option>
+                        <option>ESP</option>
+                        <option>FRA</option>
+                        <option>GER</option>
+                        <option>CHN</option>
+                        <option>ARA</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <input type="text" class="form-control form-control-sm" placeholder="Компания">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-success btn-sm">Показать 3 контакта</button>
+                  <!-- <button type="submit" class="btn btn-outline-success"><i class="bi bi-geo-alt-fill me-1"></i>Показать на карте</button> -->
+                </div>
+              </form>
+            </div>
+            <div class="d-flex-column d-md-flex align-items-center justify-content-between mb-3">
+              <div class="mb-2 mb-sm-0">
+                <a href="letter_contact_detail.html" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+                <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a>
+              </div>
+              <p class="text-secondary fw-bold mb-0">3 из 10 000</strong></p>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover table-striped align-middle border small">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col">
+                      <span>ФИО</span>
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      Страна
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      Язык
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Компания, должность</th>
+                    <th scope="col" class="text-nowrap">
+                      Добавлен
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      ID
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row" class="text-center">
+                      <div class="btn-group btn-group-sm" role="group">
+                        <a href="letter_contact_detail.html" class="btn btn-outline-success"><i class="bi bi-pencil" title="Редактировть"></i></a>
+                        <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+                      </div>
+                    </td>
+                    <td>
+                      Иванов Иван Иванович
+                      <div class="small text-secondary">LinkedIn: 2145642126</div>
+                    </td>
+                    <td>Россия</td>
+                    <td>RUS</td>
+                    <td>
+                      <div>ivanov@mail.ru</div>
+                      <div>ivan@mail.ru</div>
+                      <div>superivanov@mail.ru</div>
+                    </td>
+                    <td>
+                      ООО "Серьезная компания"
+                      <div class="small text-secondary">менеджер по недвижимости</div>
+                    </td>
+                    <td>15.05.2026</td>
+                    <td>
+                      <div class="text-success">124563</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-center">
+                      <div class="btn-group btn-group-sm" role="group">
+                        <a href="letter_contact_detail.html" class="btn btn-outline-success"><i class="bi bi-pencil" title="Редактировть"></i></a>
+                        <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+                      </div>
+                    </td>
+                    <td>
+                      Петров Александр Алексеевич
+                      <div class="small text-secondary">LinkedIn: 2145642126</div>
+                    </td>
+                    <td>Нидерланды</td>
+                    <td>ENG</td>
+                    <td>
+                      <div>petrov@mail.ru</div>
+                      <div>petrov_aleksandr@mail.ru</div>
+                    </td>
+                    <td>
+                      ООО "Очень серьезная компания"
+                      <div class="small text-secondary">генеральный директор</div>
+                    </td>
+                    <td>15.05.2026</td>
+                    <td>
+                      ---
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-center">
+                      <div class="btn-group btn-group-sm" role="group">
+                        <a href="letter_contact_detail.html" class="btn btn-outline-success"><i class="bi bi-pencil" title="Редактировть"></i></a>
+                        <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+                      </div>
+                    </td>
+                    <td>
+                      Мария Бернар
+                      <div class="small text-secondary">LinkedIn: 2145642126</div>
+                    </td>
+                    <td>Франция</td>
+                    <td>FRA</td>
+                    <td>
+                      <div>bernand123@gmail.com</div>
+                      <div>maria_bernard@yahoo.com</div>
+                    </td>
+                    <td>
+                      ООО "Очень серьезная компания"
+                      <div class="small text-secondary">заместитель генеральный директор</div>
+                    </td>
+                    <td>15.05.2026</td>
+                    <td>
+                      ---
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <nav aria-label="...">
+              <ul class="pagination pagination-sm">
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">1</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <nav aria-label="...">
-          <ul class="pagination pagination-sm">
-            <li class="page-item active" aria-current="page">
-              <span class="page-link">1</span>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-          </ul>
-        </nav>
+
 
       </div>
     </main>

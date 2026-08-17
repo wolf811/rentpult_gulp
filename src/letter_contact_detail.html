@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper compact-view">
+    @include('partials/navbar-after-login.html')
+    @include('partials/user-profile-compact/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+        "pageTitle": "Обработчик писем"
+        })
+        <ul class="nav nav-tabs mb-4">
+          <li class="nav-item">
+            <a class="nav-link" href="payment_admin.html">Счета</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
+          </li>
+        </ul>
+        <h2 class="h4">Контакты / <span class="text-secondary">Карточка получателя</span></h2>
+        <div class="row">
+          <div class="col-lg-3 col-xl-2">
+            @include('partials/letter-handler/navbar-letter-handler.html')
+          </div>
+          <div class="col-lg">
+            <div class="card card-object border-0 shadow-sm">
+              <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+                <div class="fw-light fs-4">Фамилия Имя Отчество</div>
+                <div class="text-success text-nowrap">ID: ---</div>
+              </div>
+              <div class="card-body">
+                <div class="my-3 border-bottom">
+                  <a class="btn btn-outline-success btn-sm mb-3" data-bs-toggle="collapse" href="#formEditContact" role="button" aria-expanded="false" aria-controls="formEditContact"><i class="bi bi-pencil me-1"></i>Редактировать</a>
+                  <div class="collapse" id="formEditContact">
+                    <div class="card card-body rounded-0">
+                      <form action="">
+                        <fieldset class="small my-3">
+                          <div class="row mb-3">
+                            <label for="fio" class="col-md-4 col-form-label">Фамилия Имя Отчество</label>
+                            <div class="col-sm col-xl-2">
+                              <input class="form-control form-control-sm" type="text" placeholder="Фамилия">
+                            </div>
+                            <div class="col-sm col-xl-2">
+                              <input class="form-control form-control-sm" type="text" placeholder="Имя">
+                            </div>
+                            <div class="col-sm col-xl-2">
+                              <input class="form-control form-control-sm" type="text" placeholder="Отчество">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="nameLinkRecord" class="col-md-4 col-form-label">Страна / язык</label>
+                            <div class="col-sm-3">
+                              <select name="country" class="form-select form-select-sm">
+                                <option selected="">выбрать страну</option>
+                                <option>Россия</option>
+                                <option>Беларусь</option>
+                                <option>Казахстан</option>
+                                <option>Монголия</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-3">
+                              <select name="lang" class="form-select form-select-sm">
+                                <option selected="">выбрать язык</option>
+                                <option>ENG</option>
+                                <option>RUS</option>
+                                <option>ESP</option>
+                                <option>FRA</option>
+                                <option>GER</option>
+                                <option>CHN</option>
+                                <option>ARA</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="profielLinkedIn" class="col-md-4 col-form-label">Профиль LinkedIn</label>
+                            <div class="col-sm-3">
+                              <input class="form-control form-control-sm" type="text" id="profielLinkedIn">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label">E-mail</label>
+                            <div class="col-sm col-xl-6">
+                              <textarea class="form-control form-control-sm" name="" id="email" rows="2"></textarea>
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="company" class="col-md-4 col-form-label">Компания</label>
+                            <div class="col-sm col-xl-6">
+                              <input class="form-control form-control-sm" type="text" id="company">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="jobTitle" class="col-md-4 col-form-label">Должность</label>
+                            <div class="col-sm col-xl-6">
+                              <input class="form-control form-control-sm" type="text" id="jobTitle">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="recordDate" class="col-md-4 col-form-label">Дата добавления</label>
+                            <div class="col-sm-3">
+                              <input class="form-control form-control-sm" type="date" id="recordDate">
+                            </div>
+                          </div>
+                        </fieldset>
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div>
+                            <button class="btn btn-primary btn-sm" type="button" disabled>
+                              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                              Сохраняем...
+                            </button>
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+                            <a href="#formEditContact" class="btn btn-link btn-sm" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="formEditContact">Закрыть</a>
+                            <!-- <a href="letter_contacts.html" class="btn btn-link btn-sm">К списку контактов<i class="bi bi-arrow-right ms-1"></i></a> -->
+                          </div>
+                          <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div>
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 border-bottom">
+                  <p class="h5 mb-1">Последняя отправка</p>
+                  <p class="small text-secondary mb-1">Цепочка: 2 / Сообщение: 4 / 10.08.2026</p>
+                  <p class="small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quasi, magnam corporis adipisci reiciendis, ut id provident sequi accusamus iusto mollitia suscipit molestias, saepe at!</p>
+                  <p class="h6 text-secondary">Следующее сообщение запланировано: не ранее 15.08.2026</p>
+                </div>
+                <div class="d-flex">
+                  <a class="btn btn-outline-success btn-sm mb-3 me-1"><i class="bi bi-pause-fill me-1"></i>Поставить на паузу</a>
+                  <a class="btn btn-outline-success btn-sm mb-3 me-1"><i class="bi bi-stop-fill me-1"></i>Остановить</a>
+                  <div class="dropdown">
+                    <button class="btn btn-outline-success btn-sm mb-3 me-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Запустить цепочку сообщение</button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-play-fill me-1"></i>2</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-play-fill me-1"></i>3</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-play-fill me-1"></i>4</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- <a class="btn btn-outline-success btn-sm mb-3"><i class="bi bi-play-fill me-1"></i>Запустить цепочку</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/modal-import-contacts.html')
+</body>
+
+</html>
