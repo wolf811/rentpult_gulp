@@ -24,7 +24,7 @@
             <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
           </li>
         </ul>
-        <h2 class="h4">Цепочки писем</h2>
+        <h2 class="h4">Сообщения</h2>
         <div class="row">
           <div class="col-lg-3 col-xl-2">
             <nav class="navbar-object navbar-expand-lg bg-light shadow-sm">
@@ -46,10 +46,10 @@
                       <a class="nav-link" href="letter_contacts.html">Контакты</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="letter_chains.html">Цепочки писем</a>
+                      <a class="nav-link" href="letter_chains.html">Цепочки писем</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="letter_messages.html">Сообщения</a>
+                      <a class="nav-link active" href="letter_messages.html">Сообщения</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="letters_send.html">Отправленные письма</a>
@@ -60,12 +60,13 @@
             </nav>
           </div>
           <div class="col-lg">
+            @include('partials/letter-handler/filter-messages.html')
             <div class="d-flex align-items-center justify-content-between mb-3">
               <!-- <div class="mb-2 mb-sm-0">
                             <a href="letter_contact_detail.html" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
                             <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a>
                           </div> -->
-              <a href="#" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalLetterChain"><i class="bi bi-plus-lg me-1"></i>Добавить цепочку</a>
+              <a href="letter_message_detail.html" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a>
               <p class="text-secondary fw-bold mb-0">3 из 10 000</strong></p>
             </div>
             <div class="table-responsive">
@@ -81,22 +82,22 @@
                       </span>
                     </th>
                     <th scope="col" class="text-nowrap">
+                      Цепочка
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
                       Язык
                       <span class="ms-1">
                         <a href="#"><i class="bi bi-arrow-down"></i></a>
                         <a href="#"><i class="bi bi-arrow-up"></i></a>
                       </span>
                     </th>
-                    <th scope="col">Сообщения</th>
+                    <th scope="col">Варианты текстов</th>
                     <th scope="col" class="text-nowrap">
                       Изменена
-                      <span class="ms-1">
-                        <a href="#"><i class="bi bi-arrow-down"></i></a>
-                        <a href="#"><i class="bi bi-arrow-up"></i></a>
-                      </span>
-                    </th>
-                    <th scope="col" class="text-nowrap">
-                      №
                       <span class="ms-1">
                         <a href="#"><i class="bi bi-arrow-down"></i></a>
                         <a href="#"><i class="bi bi-arrow-up"></i></a>
@@ -112,17 +113,17 @@
                           <i class="bi bi-list"></i>
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item small" href="#" data-bs-toggle="modal" data-bs-target="#modalLetterChain"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                          <li><a class="dropdown-item small" href="letter_message_detail.html"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li>
+                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                          <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li>
                           <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
                         </ul>
                       </div>
                     </td>
+                    <td>Название сообщения</td>
                     <td>Новая цепочка</td>
                     <td>ITA</td>
-                    <td class="text-nowrap"><span class="badge text-bg-secondary fs-6 me-2">0</span><a href="letter_message_detail.html" class="small"><i class="bi bi-plus-lg mу-1"></i>Добавить</a></td>
+                    <td></td>
                     <td>15.05.2026</td>
-                    <td>124563</td>
                   </tr>
                   <tr>
                     <td scope="row" class="text-center">
@@ -131,17 +132,17 @@
                           <i class="bi bi-list"></i>
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item small" href="#" data-bs-toggle="modal" data-bs-target="#modalLetterChain"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                          <li><a class="dropdown-item small" href="letter_message_detail.html"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li>
+                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                          <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li>
                           <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
                         </ul>
                       </div>
                     </td>
+                    <td>Название сообщения</td>
                     <td>Первая цепочка сообщений</td>
                     <td>RUS</td>
-                    <td class="text-nowrap"><span class="badge text-bg-warning fs-6 me-2">10</span><a href="#" class="small">Смотреть<i class="bi bi-arrow-right ms-1"></i></a></td>
+                    <td></td>
                     <td>15.05.2026</td>
-                    <td>124563</td>
                   </tr>
                   <tr>
                     <td scope="row" class="text-center">
@@ -150,17 +151,17 @@
                           <i class="bi bi-list"></i>
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item small" href="#" data-bs-toggle="modal" data-bs-target="#modalLetterChain"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                          <li><a class="dropdown-item small" href="letter_message_detail.html"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li>
+                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                          <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li>
                           <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
                         </ul>
                       </div>
                     </td>
+                    <td>Название сообщения</td>
                     <td>Вторая цепочка сообщений</td>
                     <td>ENG</td>
-                    <td class="text-nowrap"><span class="badge text-bg-warning fs-6 me-2">6</span><a href="#" class="small">Смотреть<i class="bi bi-arrow-right ms-1"></i></a></td>
+                    <td></td>
                     <td>15.05.2026</td>
-                    <td>124563</td>
                   </tr>
                   <tr>
                     <td scope="row" class="text-center">
@@ -169,17 +170,17 @@
                           <i class="bi bi-list"></i>
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item small" href="#" data-bs-toggle="modal" data-bs-target="#modalLetterChain"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                          <li><a class="dropdown-item small" href="letter_message_detail.html"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li>
+                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                          <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li>
                           <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
                         </ul>
                       </div>
                     </td>
+                    <td>Название сообщения</td>
                     <td>Ещё цепочка сообщений</td>
                     <td>ENG</td>
-                    <td class="text-nowrap"><span class="badge text-bg-warning fs-6 me-2">2</span><a href="#" class="small">Смотреть<i class="bi bi-arrow-right ms-1"></i></a></td>
+                    <td></td>
                     <td>15.05.2026</td>
-                    <td>124563</td>
                   </tr>
                 </tbody>
               </table>
