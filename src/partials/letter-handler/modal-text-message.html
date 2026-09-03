@@ -1,20 +1,16 @@
-<div class="modal modal-main fade" id="modalLetterChain" tabindex="-1" aria-hidden="true">
+<div class="modal modal-main fade" id="modalTextMessage" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="h5 modal-title">Добавить цепочку</div>
+        <div class="h5 modal-title">Добавить текст</div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="">
         <div class="modal-body">
           <div class="mb-3">
             <div class="mb-3">
-              <label for="nameChain" class="form-label">Название</label>
-              <input type="text" class="form-control form-control-sm" id="nameChain">
-            </div>
-            <div class="mb-3">
-              <label for="langChain" class="form-label">Язык цепочки</label>
-              <select name="langChain" id="" class="form-select form-select-sm">
+              <label for="langChain" class="form-label">Язык</label>
+              <select name="langChain" id="" class="form-select">
                 <option selected="">выбрать</option>
                 <option>ENG</option>
                 <option>RUS</option>
@@ -25,10 +21,14 @@
                 <option>ARA</option>
               </select>
             </div>
+            <div class="mb-3">
+              <label for="textMessage" class="form-label">Текст</label>
+              <input type="text" class="form-control" id="textMessage">
+            </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+          <button type="button" class="btn btn-primary">Сохранить</button>
         </div>
       </form>
     </div>

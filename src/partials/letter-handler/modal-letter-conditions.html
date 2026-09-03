@@ -1,18 +1,24 @@
-<div class="modal modal-main fade" id="modalLetterChain" tabindex="-1" aria-hidden="true">
+<div class="modal modal-main fade" id="modalLetterСonditions" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="h5 modal-title">Добавить цепочку</div>
+        <div class="h5 modal-title">Добавить условие</div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="">
         <div class="modal-body">
           <div class="mb-3">
             <div class="mb-3">
-              <label for="nameChain" class="form-label">Название</label>
-              <input type="text" class="form-control form-control-sm" id="nameChain">
+
+              <label for="nameCondition" class="form-label">Название</label>
+              <input type="text" class="form-control form-control-sm" id="nameCondition">
             </div>
-            <div class="mb-3">
+            <div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control" aria-describedby="button-addon2">
+              <button class="btn btn-outline-danger" type="button" id="button-addon2"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <a href="#" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+            <!-- <div class="mb-3">
               <label for="langChain" class="form-label">Язык цепочки</label>
               <select name="langChain" id="" class="form-select form-select-sm">
                 <option selected="">выбрать</option>
@@ -24,7 +30,7 @@
                 <option>CHN</option>
                 <option>ARA</option>
               </select>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="modal-footer">
