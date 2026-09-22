@@ -21,147 +21,107 @@
             <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
+            <a class="nav-link active" aria-current="page" href="letter_contacts.html">Обработчик писем</a>
           </li>
         </ul>
-        <h2 class="h4">Сообщения / <span class="text-secondary">Сообщение детально</span></h2>
-        <div class="row">
-          <div class="col-lg-3 col-xl-2">
-            <nav class="navbar-object navbar-expand-lg bg-light shadow-sm">
-              <div class="container">
-                <a href="#" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarLetterHandler" aria-controls="navbarObject" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="text-primary fs-4">Меню</span>
-                  <div>
-                    <i class="bi bi-list text-primary fs-2"></i>
-                  </div>
-                </a>
-
-                <div class="collapse navbar-collapse" id="navbarLetterHandler">
-                  <ul class="navbar-nav">
-                    <!-- <p class="mb-0 fs-5 py-2 mb-2 border-bottom w-100">Контакты</p> -->
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_handler.html">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_contacts.html">Контакты</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_chains.html">Цепочки писем</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="letter_messages.html">Сообщения</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_send.html">Очередь отправки</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_custom_actions.html">Настройка действий</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
+        <h2 class="h4 mb-4"><a href="letter_messages.html"><i class="bi bi-arrow-left me-1"></i>Письма</a> / <span class="text-secondary">Сообщение детально</span></h2>
+        <div class="card card-object border-0 shadow-sm">
+          <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
+            <div class="fw-light fs-4">Название сообщения
+              <div class="small text-secondary">Цепочка: название цепочки, язык</div>
+            </div>
+            <div class="text-success text-nowrap">ID: 125478</div>
           </div>
-          <div class="col-lg">
-            <div class="card card-object border-0 shadow-sm">
-              <div class="card-header bg-light d-flex flex-wrap align-items-center justify-content-between py-3">
-                <div class="fw-light fs-4">Название сообщения
-                  <div class="small text-secondary">Цепочка: название цепочки, язык</div>
-                </div>
-                <div class="text-success text-nowrap">ID: 125478</div>
-              </div>
-              <div class="card-body">
-                <div class="my-3">
+          <div class="card-body">
+            <div class="my-3">
 
-                  <form action="">
-                    <fieldset class="small mb-3">
-                      <div class="row mb-3">
-                        <label for="nameChain" class="col-md-4 col-form-label">Цепочка сообщений</label>
-                        <div class="col-sm col-xl-6">
-                          <select name="nameChain" class="form-select form-select-sm">
-                            <option selected="">выбрать цепочку</option>
-                            <option>новая цепочка</option>
-                            <option>первая цепочка сообщений</option>
-                            <option>вторая цепочка сообщений</option>
-                            <option>еще цепочка сообщений</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <label for="company" class="col-md-4 col-form-label">Название сообщения</label>
-                        <div class="col-sm col-xl-6">
-                          <input class="form-control form-control-sm" type="text" id="company">
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <label for="sendingPause" class="col-md-4 col-form-label">Пауза в отправке, дни</label>
-                        <div class="col-sm-3">
-                          <input class="form-control form-control-sm" type="text" id="sendingPause">
-                          <!-- <select name="sendingPause" class="form-select form-select-sm">
-                            <option selected="">выбрать</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>7</option>
-                          </select> -->
-                        </div>
-                      </div>
-
-                      <!-- Основное поле (всегда есть) -->
-                      <div class="row mb-3">
-                        <label for="variantText" class="col-md-4 col-form-label">Вариант(-ы) текста</label>
-                        <div class="col-sm col-xl-6">
-                          <textarea class="form-control form-control-sm" name="" id="variantText" rows="2"></textarea>
-                        </div>
-                      </div>
-
-                      <!-- Контейнер для динамических вариантов -->
-                      <div id="variants"></div>
-
-                      <!-- Кнопка Добавить -->
-                      <div class="row mb-3">
-                        <div class="offset-md-4 col-md">
-                          <a class="btn btn-outline-success btn-sm mb-3" href="#" role="button" id="addVariantBtn">
-                            <i class="bi bi-plus-lg me-1"></i>Добавить
-                          </a>
-                        </div>
-                      </div>
-                      <!-- <div class="row mb-3">
-                        <label for="variantText" class="col-md-4 col-form-label">Вариант(-ы) текста</label>
-                        <div class="col-sm col-xl-6">
-                          <textarea class="form-control form-control-sm" name="" id="variantText" rows="2"></textarea>
-                        </div>
-                      </div>
-                      <div id="variants">
-                        <div class="row mb-3">
-                          <div class="offset-md-4 col-md col-xl-6">
-                            <textarea class="form-control form-control-sm" name="" id="variant_1" rows="2"></textarea>
-                          </div>
-                          <div class="col">
-                            <a href="#" class="btn btn-outline-danger btn-sm remove-variant" title="Удалить вариант"><i class="bi bi-x-lg"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="offset-md-4 col-md">
-                          <a class="btn btn-outline-success btn-sm mb-3" href="#" role="button" id="addVariantBtn"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
-                        </div>
-                      </div> -->
-
-                    </fieldset>
-                    <div class="d-flex align-items-center justify-content-between">
-                      <div>
-                        <!-- <button class="btn btn-primary btn-sm" type="button" disabled>
-                          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                          Сохраняем...
-                        </button> -->
-                        <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
-                      </div>
-                      <!-- <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div> -->
+              <form action="">
+                <fieldset class="small mb-3">
+                  <div class="row mb-3">
+                    <label for="nameChain" class="col-md-4 col-form-label">Цепочка сообщений</label>
+                    <div class="col-sm col-xl-6">
+                      <select name="nameChain" class="form-select form-select-sm">
+                        <option selected="">выбрать цепочку</option>
+                        <option>новая цепочка</option>
+                        <option>первая цепочка сообщений</option>
+                        <option>вторая цепочка сообщений</option>
+                        <option>еще цепочка сообщений</option>
+                      </select>
                     </div>
-                  </form>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="company" class="col-md-4 col-form-label">Название сообщения</label>
+                    <div class="col-sm col-xl-6">
+                      <input class="form-control form-control-sm" type="text" id="company">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="sendingPause" class="col-md-4 col-form-label">Пауза в отправке, дни</label>
+                    <div class="col-sm-3">
+                      <input class="form-control form-control-sm" type="text" id="sendingPause">
+                      <!-- <select name="sendingPause" class="form-select form-select-sm">
+                                    <option selected="">выбрать</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>7</option>
+                                  </select> -->
+                    </div>
+                  </div>
+
+                  <!-- Основное поле (всегда есть) -->
+                  <div class="row mb-3">
+                    <label for="variantText" class="col-md-4 col-form-label">Вариант(-ы) текста</label>
+                    <div class="col-sm col-xl-6">
+                      <textarea class="form-control form-control-sm" name="" id="variantText" rows="2"></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Контейнер для динамических вариантов -->
+                  <div id="variants"></div>
+
+                  <!-- Кнопка Добавить -->
+                  <div class="row mb-3">
+                    <div class="offset-md-4 col-md">
+                      <a class="btn btn-outline-success btn-sm mb-3" href="#" role="button" id="addVariantBtn">
+                        <i class="bi bi-plus-lg me-1"></i>Добавить
+                      </a>
+                    </div>
+                  </div>
+                  <!-- <div class="row mb-3">
+                                <label for="variantText" class="col-md-4 col-form-label">Вариант(-ы) текста</label>
+                                <div class="col-sm col-xl-6">
+                                  <textarea class="form-control form-control-sm" name="" id="variantText" rows="2"></textarea>
+                                </div>
+                              </div>
+                              <div id="variants">
+                                <div class="row mb-3">
+                                  <div class="offset-md-4 col-md col-xl-6">
+                                    <textarea class="form-control form-control-sm" name="" id="variant_1" rows="2"></textarea>
+                                  </div>
+                                  <div class="col">
+                                    <a href="#" class="btn btn-outline-danger btn-sm remove-variant" title="Удалить вариант"><i class="bi bi-x-lg"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row mb-3">
+                                <div class="offset-md-4 col-md">
+                                  <a class="btn btn-outline-success btn-sm mb-3" href="#" role="button" id="addVariantBtn"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+                                </div>
+                              </div> -->
+
+                </fieldset>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <!-- <button class="btn btn-primary btn-sm" type="button" disabled>
+                                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                  Сохраняем...
+                                </button> -->
+                    <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+                  </div>
+                  <!-- <div class="text-success text-nowrap"><i class="bi bi-check-lg me-1"></i>Сохранено</div> -->
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper compact-view">
+    @include('partials/navbar-after-login.html')
+    @include('partials/user-profile-compact/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+        "pageTitle": "Обработчик писем"
+        })
+        <ul class="nav nav-tabs mb-4">
+          <li class="nav-item">
+            <a class="nav-link" href="payment_admin.html">Счета</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
+          </li>
+        </ul>
+        <h2 class="h4">Контакты</h2>
+        <div class="row">
+          <div class="col-lg-3 col-xl-2">
+            @include('partials/letter-handler/navbar-letter-handler.html')
+          </div>
+          <div class="col-lg">
+            @include('partials/letter-handler/filter-contacts.html')
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <!-- <div class="mb-2 mb-sm-0">
+                <a href="letter_contact_detail.html" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+                <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a>
+              </div> -->
+              <div class="dropdown">
+                <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Действия
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-plus-lg me-1"></i>Добавить контакт</a></li>
+                  <li><a class="dropdown-item small" href="#" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a></li>
+                  <li><a class="dropdown-item small" href="#"><i class="bi bi-envelope me-1"></i>Отправить сообщение</a></li>
+                </ul>
+              </div>
+              <p class="text-secondary fw-bold mb-0">3 из 10 000</strong></p>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover table-striped align-middle border small">
+                <thead>
+                  <tr>
+                    <!-- <th colspan="2" scope="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                        <label class="form-check-label" for="checkAll">
+                          Все
+                        </label>
+                      </div>
+                    </th> -->
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col">
+                      <div class="form-check d-inline-block">
+                        <input class="form-check-input" type="checkbox" value="" id="checkAll">
+                        <label class="form-check-label" for="checkAll">
+                          ФИО
+                        </label>
+                      </div>
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      Страна
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      Язык
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Компания, должность</th>
+                    <th scope="col" class="text-nowrap">
+                      Добавлен
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                    <th scope="col" class="text-nowrap">
+                      ID
+                      <span class="ms-1">
+                        <a href="#"><i class="bi bi-arrow-down"></i></a>
+                        <a href="#"><i class="bi bi-arrow-up"></i></a>
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row" class="text-center">
+                      <div class="dropdown">
+                        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
+                          <i class="bi bi-list"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                          <li><a class="dropdown-item small" href="#"><i class="bi bi-envelope me-1"></i>Отправить сообщение</a></li>
+                          <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
+                        </ul>
+                      </div>
+                      <!-- <div class="btn-group btn-group-sm" role="group">
+                        <a href="letter_contact_detail.html" class="btn btn-outline-success"><i class="bi bi-pencil" title="Редактировть"></i></a>
+                        <a href="#" class="btn btn-outline-danger" title="Удалить"><i class="bi bi-x-lg"></i></a>
+                      </div> -->
+                    </td>
+                    <td>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkId_00001">
+                        <label class="form-check-label" for="checkId_00001">
+                          Иванов Иван Иванович
+                        </label>
+                      </div>
+                      <div class="small text-secondary">LinkedIn: 2145642126</div>
+                    </td>
+                    <td>Россия</td>
+                    <td>RUS</td>
+                    <td>
+                      <div>ivanov@mail.ru</div>
+                      <div>ivan@mail.ru</div>
+                      <div>superivanov@mail.ru</div>
+                    </td>
+                    <td>
+                      ООО "Серьезная компания"
+                      <div class="small text-secondary">менеджер по недвижимости</div>
+                    </td>
+                    <td>15.05.2026</td>
+                    <td>
+                      <div class="text-success">124563</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-center">
+                      <div class="dropdown">
+                        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
+                          <i class="bi bi-list"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                          <li><a class="dropdown-item small" href="#"><i class="bi bi-envelope me-1"></i>Отправить сообщение</a></li>
+                          <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkId_00002">
+                        <label class="form-check-label" for="checkId_00002">
+                          Петров Александр Алексеевич
+                        </label>
+                      </div>
+                      <div class="small text-secondary">LinkedIn: 2145642126</div>
+                    </td>
+                    <td>Нидерланды</td>
+                    <td>ENG</td>
+                    <td>
+                      <div>petrov@mail.ru</div>
+                      <div>petrov_aleksandr@mail.ru</div>
+                    </td>
+                    <td>
+                      ООО "Очень серьезная компания"
+                      <div class="small text-secondary">генеральный директор</div>
+                    </td>
+                    <td>15.05.2026</td>
+                    <td>
+                      ---
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" class="text-center">
+                      <div class="dropdown">
+                        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
+                          <i class="bi bi-list"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                          <li><a class="dropdown-item small" href="#"><i class="bi bi-envelope me-1"></i>Отправить сообщение</a></li>
+                          <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkId_00003">
+                        <label class="form-check-label" for="checkId_00003">
+                          Мария Бернар
+                        </label>
+                      </div>
+
+                      <div class="small text-secondary">LinkedIn: 2145642126</div>
+                    </td>
+                    <td>Франция</td>
+                    <td>FRA</td>
+                    <td>
+                      <div>bernand123@gmail.com</div>
+                      <div>maria_bernard@yahoo.com</div>
+                    </td>
+                    <td>
+                      ООО "Очень серьезная компания"
+                      <div class="small text-secondary">заместитель генеральный директор</div>
+                    </td>
+                    <td>15.05.2026</td>
+                    <td>
+                      ---
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <nav aria-label="...">
+              <ul class="pagination pagination-sm">
+                <li class="page-item active" aria-current="page">
+                  <span class="page-link">1</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/modal-import-contacts.html')
+</body>
+
+</html>

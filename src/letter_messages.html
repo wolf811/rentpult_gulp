@@ -21,310 +21,140 @@
             <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
+            <a class="nav-link active" aria-current="page" href="letter_contacts.html">Обработчик писем</a>
           </li>
         </ul>
-        <h2 class="h4">Сообщения</h2>
-        <div class="row">
-          <div class="col-lg-3 col-xl-2">
-            <nav class="navbar-object navbar-expand-lg bg-light shadow-sm">
-              <div class="container">
-                <a href="#" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarLetterHandler" aria-controls="navbarObject" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="text-primary fs-4">Меню</span>
-                  <div>
-                    <i class="bi bi-list text-primary fs-2"></i>
-                  </div>
-                </a>
-
-                <div class="collapse navbar-collapse" id="navbarLetterHandler">
-                  <ul class="navbar-nav">
-                    <!-- <p class="mb-0 fs-5 py-2 mb-2 border-bottom w-100">Контакты</p> -->
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_handler.html">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_contacts.html">Контакты</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_chains.html">Цепочки писем</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="letter_messages.html">Сообщения</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_send.html">Очередь отправки</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="letter_custom_actions.html">Настройка действий</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-          <div class="col-lg">
-            @include('partials/letter-handler/filter-messages.html')
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <!-- <div class="mb-2 mb-sm-0">
-                            <a href="letter_contact_detail.html" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
-                            <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a>
-                          </div> -->
-              <a href="letter_message_detail.html" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a>
-              <p class="text-secondary fw-bold mb-0">3 из 10 000</strong></p>
-            </div>
-            <div class="table-responsive">
-              <table class="table table-hover table-striped align-middle border small">
-                <thead>
-                  <tr>
-                    <th scope="col" class="text-center">#</th>
-                    <th scope="col" class="text-nowrap">
-                      Название
-                      <span class="ms-1">
-                        <a href="#"><i class="bi bi-arrow-down"></i></a>
-                        <a href="#"><i class="bi bi-arrow-up"></i></a>
-                      </span>
-                    </th>
-                    <th scope="col" class="text-nowrap">
-                      Цепочка
-                      <span class="ms-1">
-                        <a href="#"><i class="bi bi-arrow-down"></i></a>
-                        <a href="#"><i class="bi bi-arrow-up"></i></a>
-                      </span>
-                    </th>
-                    <th scope="col" class="text-nowrap">
-                      Язык цепочки
-                      <span class="ms-1">
-                        <a href="#"><i class="bi bi-arrow-down"></i></a>
-                        <a href="#"><i class="bi bi-arrow-up"></i></a>
-                      </span>
-                    </th>
-                    <th scope="col">Паузы</th>
-                    <th scope="col" class="text-nowrap">
-                      Изменено
-                      <span class="ms-1">
-                        <a href="#"><i class="bi bi-arrow-down"></i></a>
-                        <a href="#"><i class="bi bi-arrow-up"></i></a>
-                      </span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row" class="text-center">
-                      <div class="dropdown">
-                        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
-                          <i class="bi bi-list"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                          <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
-                          <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                    <td>Название сообщения</td>
-                    <td>Новая цепочка</td>
-                    <td>ITA</td>
-                    <td>2</td>
-                    <td>15.05.2026</td>
-                  </tr>
-                  <tr>
-                    <td scope="row" class="text-center">
-                      <div class="dropdown">
-                        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
-                          <i class="bi bi-list"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                          <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
-                          <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                    <td>Название сообщения</td>
-                    <td>Первая цепочка сообщений</td>
-                    <td>RUS</td>
-                    <td>2</td>
-                    <td>15.05.2026</td>
-                  </tr>
-                  <tr>
-                    <td scope="row" class="text-center">
-                      <div class="dropdown">
-                        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
-                          <i class="bi bi-list"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                          <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
-                          <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                    <td>Название сообщения</td>
-                    <td>Вторая цепочка сообщений</td>
-                    <td>ENG</td>
-                    <td>1</td>
-                    <td>15.05.2026</td>
-                  </tr>
-                  <tr>
-                    <td scope="row" class="text-center">
-                      <div class="dropdown">
-                        <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
-                          <i class="bi bi-list"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                          <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
-                          <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
-                        </ul>
-                      </div>
-                    </td>
-                    <td>Название сообщения</td>
-                    <td>Ещё цепочка сообщений</td>
-                    <td>ENG</td>
-                    <td>7</td>
-                    <td>15.05.2026</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <nav aria-label="...">
-              <ul class="pagination pagination-sm">
-                <li class="page-item active" aria-current="page">
-                  <span class="page-link">1</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-              </ul>
-            </nav>
-            <!-- <div class="card card-object">
-              <div class="row g-0">
-                <div class="col-md">
-                  <div class="card-object-content">
-                    <div class="card-title">
-                      <a href="object_profile.html" class="h5 mb-1 mb-sm-0">1. Первая цепочка сообщений</a>
-                      <div class="d-flex align-items-center">
-                        <div class="text-success text-nowrap small me-2">ID: 00001-01</div>
-                        <button class="btn btn-outline-secondary btn-xs position-relative me-2" data-bs-toggle="modal" data-bs-target="#modalObjectNotice" title="Уведомления"><i class="bi bi-bell"></i>
-                          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            3
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </button>
-                        <a href="object_profile.html" class="btn btn-outline-success btn-xs me-2" role="button" title="Управление объектом"><i class="bi bi-gear"></i></a>
-                        <a href="#" class="btn btn-outline-danger btn-xs me-2" role="button" title="Удалить объект"><i class="bi bi-x-lg"></i></a>
-                        <a href="#collapseObjInProp3" class="btn btn-outline-primary btn-xs" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseObjInProp3" title="Подробнее"><i class="bi bi-chevron-down"></i></a>
-                        <a href="#" class="btn btn-link text-secondary fs-6 pe-0" title="Переместить"><i class="bi bi-three-dots-vertical"></i></a>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-sm">
-                          <div class="card-text text-orange">
-                            <span class="text-secondary fw-bold me-2">Собственник:</span>
-                            <span>Иванов Иван Иванович</span>
-                          </div>
-                          <div class="card-object-badge">
-                            <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00001</div>
-                            <div class="badge-item bg-secondary bg-opacity-10">eroshenkov@gmail.com</div>
-                            <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
-                          </div>
-                        </div>
-                        <div class="col-sm">
-                          <div class="card-text">
-                            <span class="text-secondary fw-bold me-2">Управляющий:</span>
-                            <span>Петров Арсений Евгеньевич</span>
-                          </div>
-                          <div class="card-object-badge">
-                            <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00002</div>
-                            <div class="badge-item bg-secondary bg-opacity-10">mail@gmail.com</div>
-                            <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
-                          </div>
-                        </div>
-                        <div class="col-sm">
-                          <div class="card-text">
-                            <span class="text-secondary fw-bold me-2">Арендатор:</span>
-                            <span>Миронов Лаврентий Валерьевич</span>
-                          </div>
-                          <div class="card-object-badge">
-                            <div class="badge-item bg-secondary bg-opacity-10">id:&nbsp;00002</div>
-                            <div class="badge-item bg-secondary bg-opacity-10">mail@gmail.com</div>
-                            <div class="badge-item bg-secondary bg-opacity-10">+79265568904</div>
-                            <div class="badge-item bg-secondary bg-opacity-10">до 17.06.22</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="collapse text-bg-light" id="collapseObjInProp3">
-                <div class="card-object-collapse">
-                  <div class="d-flex align-items-center justify-content-between pb-1 border-bottom mb-2">
-                    <p class="text-secondary mb-0">Хронология</p>
-                    <a href="chronology.html" class="btn btn-outline-secondary btn-xs"><i class="bi bi-clock-history me-1"></i>Показать всё</a>
-                  </div>
-                  <div class="mb-3">
-                    <div class="row small fw-bold text-secondary d-none d-md-flex border-bottom pb-1">
-                      <div class="col">Дата</div>
-                      <div class="col">Событие</div>
-                      <div class="col">Описание</div>
-                      <div class="col">Действия</div>
-                      <div class="col">Период</div>
-                    </div>
-                    <div class="row border-bottom text-small lh-sm py-1">
-                      <div class="col-md">04.12.2023</div>
-                      <div class="col-md">Оплата аренды</div>
-                      <div class="col-md">Коммуналка</div>
-                      <div class="col-md">Добавлено значение: 20000р.</div>
-                      <div class="col-md">ноябрь 2023</div>
-                    </div>
-                    <div class="row border-bottom text-small lh-sm py-1">
-                      <div class="col-md">30.11.2023</div>
-                      <div class="col-md">Оплата аренды</div>
-                      <div class="col-md">Аренда</div>
-                      <div class="col-md">Добавлено значение: 20000р.</div>
-                      <div class="col-md">октябрь 2023</div>
-                    </div>
-                    <div class="row border-bottom text-small lh-sm py-1">
-                      <div class="col-md">29.11.2023</div>
-                      <div class="col-md">Платежи</div>
-                      <div class="col-md">Электричество</div>
-                      <div class="col-md">Добавлено значение: 20000р.</div>
-                      <div class="col-md"></div>
-                    </div>
-                    <div class="row border-bottom text-small lh-sm py-1">
-                      <div class="col-md">29.11.2023</div>
-                      <div class="col-md">Платежи</div>
-                      <div class="col-md">ЖКХ</div>
-                      <div class="col-md">Добавлено значение: 20000р.</div>
-                      <div class="col-md"></div>
-                    </div>
-                    <div class="row border-bottom text-small lh-sm py-1">
-                      <div class="col-md">27.11.2023</div>
-                      <div class="col-md">Фотоотчёты</div>
-                      <div class="col-md">05.02.2023 - Фотоотчет</div>
-                      <div class="col-md">Изменено описание фотографии<br>Новый текст: мойка из нержавейки<br>Старай текст: мойка
-                      </div>
-                      <div class="col-md"></div>
-                    </div>
-                  </div>
-
-                  <div class="d-flex align-items-center justify-content-between">
-                    <select name="" id="" class="form-select form-select-sm w-auto">
-                      <option value="2">1</option>
-                      <option value="2">2</option>
-                      <option selected>3</option>
-                    </select>
-                    <a href="#collapseObjInProp3" class="small" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseObjInProp3"><i class="bi bi-x-lg me-1"></i>Закрыть</a>
-                  </div>
-
-                </div>
-              </div>
-            </div> -->
-
-          </div>
+        <h2 class="h4 mb-4"><a href="letter_contacts.html"><i class="bi bi-arrow-left me-1"></i>Контакты</a> / <span class="text-secondary">Письма</span></h2>
+        <!-- @include('partials/letter-handler/filter-messages.html') -->
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <a href="letter_message_detail.html" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a>
+          <p class="text-secondary fw-bold mb-0">3 из 10 000</strong></p>
         </div>
+        <div class="table-responsive">
+          <table class="table table-hover table-striped align-middle border small">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center">#</th>
+                <th scope="col" class="text-nowrap">
+                  Название
+                  <span class="ms-1">
+                    <a href="#"><i class="bi bi-arrow-down"></i></a>
+                    <a href="#"><i class="bi bi-arrow-up"></i></a>
+                  </span>
+                </th>
+                <th scope="col" class="text-nowrap">
+                  Цепочка
+                  <span class="ms-1">
+                    <a href="#"><i class="bi bi-arrow-down"></i></a>
+                    <a href="#"><i class="bi bi-arrow-up"></i></a>
+                  </span>
+                </th>
+                <th scope="col" class="text-nowrap">
+                  Язык цепочки
+                  <span class="ms-1">
+                    <a href="#"><i class="bi bi-arrow-down"></i></a>
+                    <a href="#"><i class="bi bi-arrow-up"></i></a>
+                  </span>
+                </th>
+                <th scope="col">Паузы</th>
+                <th scope="col" class="text-nowrap">
+                  Изменено
+                  <span class="ms-1">
+                    <a href="#"><i class="bi bi-arrow-down"></i></a>
+                    <a href="#"><i class="bi bi-arrow-up"></i></a>
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row" class="text-center">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
+                      <i class="bi bi-list"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                      <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
+                      <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
+                    </ul>
+                  </div>
+                </td>
+                <td>Название сообщения</td>
+                <td>Новая цепочка</td>
+                <td>ITA</td>
+                <td>2</td>
+                <td>15.05.2026</td>
+              </tr>
+              <tr>
+                <td scope="row" class="text-center">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
+                      <i class="bi bi-list"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                      <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
+                      <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
+                    </ul>
+                  </div>
+                </td>
+                <td>Название сообщения</td>
+                <td>Первая цепочка сообщений</td>
+                <td>RUS</td>
+                <td>2</td>
+                <td>15.05.2026</td>
+              </tr>
+              <tr>
+                <td scope="row" class="text-center">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
+                      <i class="bi bi-list"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                      <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
+                      <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
+                    </ul>
+                  </div>
+                </td>
+                <td>Название сообщения</td>
+                <td>Вторая цепочка сообщений</td>
+                <td>ENG</td>
+                <td>1</td>
+                <td>15.05.2026</td>
+              </tr>
+              <tr>
+                <td scope="row" class="text-center">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
+                      <i class="bi bi-list"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
+                      <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
+                      <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
+                    </ul>
+                  </div>
+                </td>
+                <td>Название сообщения</td>
+                <td>Ещё цепочка сообщений</td>
+                <td>ENG</td>
+                <td>7</td>
+                <td>15.05.2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <nav aria-label="...">
+          <ul class="pagination pagination-sm">
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">1</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
 
 
       </div>

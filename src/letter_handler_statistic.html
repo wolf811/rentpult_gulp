@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper compact-view">
+    @include('partials/navbar-after-login.html')
+    @include('partials/user-profile-compact/header.html')
+    <main class="mb-5">
+      <div class="container">
+        @include('partials/breadcrumb_for_all.html')
+        @include('partials/page-title.html', {
+        "pageTitle": "Обработчик писем"
+        })
+        <ul class="nav nav-tabs mb-4">
+          <li class="nav-item">
+            <a class="nav-link" href="payment_admin.html">Счета</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="letter_contacts.html">Обработчик писем</a>
+          </li>
+        </ul>
+        <h2 class="h4"><a href="letter_contacts.html"><i class="bi bi-arrow-left me-1"></i>Контакты</a> / <span class="text-secondary">Статистика</span></h2>
+
+      </div>
+    </main>
+
+    @include('partials/footer.html')
+
+  </div>
+  @include('partials/modal-import-contacts.html')
+</body>
+
+</html>

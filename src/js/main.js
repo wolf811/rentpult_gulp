@@ -137,3 +137,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Ставим/убираем галки с чекбоксов в таблице Контакрты - Обработчик писем
+document.addEventListener('DOMContentLoaded', () => {
+  const checkAll = document.getElementById('checkAll');
+  const rowChecks = document.querySelectorAll('tbody .form-check-input');
+
+  // Клик по "родителю" — ставим/снимаем все дочерние
+  checkAll.addEventListener('change', () => {
+    rowChecks.forEach(cb => cb.checked = checkAll.checked);
+    checkAll.indeterminate = false;
+  });
+
+  // Изменение любого дочернего — синхронизируем "родителя"
+  rowChecks.forEach(cb => {
+    cb.addEventListener('change', () => {
+      const checkedCount = [...rowChecks].filter(c => c.checked).length;
+      checkAll.checked = checkedCount === rowChecks.length && rowChecks.length > 0;
+      checkAll.indeterminate = checkedCount > 0 && checkedCount < rowChecks.length;
+    });
+  });
+});
