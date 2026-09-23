@@ -15,7 +15,7 @@
         })
 
         <!-- @include('partials/payment_admin_my.html') -->
-        <ul class="nav nav-tabs mb-4">
+        <!-- <ul class="nav nav-tabs mb-4">
           <li class="nav-item">
             <a class="nav-link" href="payment_admin.html">Счета</a>
           </li>
@@ -25,7 +25,8 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="letter_contacts.html">Обработчик писем</a>
           </li>
-        </ul>
+        </ul> -->
+        <h2 class="h4 mb-4">Контакты</h2>
         <div class="mb-3">
           <div class="dropdown d-inline-block">
             <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,63 +60,85 @@
           <table class="table table-hover table-bordered align-middle small">
             <thead>
               <tr class="align-middle">
-                <th scope="col" class="text-nowrap">
-                  <div class="form-check d-inline-block">
+                <th>
+                  <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="checkAll">
                     <label class="form-check-label" for="checkAll">
-                      Фамилия Имя
+                      ID
                     </label>
                   </div>
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
                 </th>
-                <th scope="col">E-mail</th>
+                <th scope="col">
+                  Имя
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="firstName">
+                  </div>
+                </th>
                 <th scope="col" class="text-nowrap">
+                  Фамилия
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="lastName">
+                  </div>
+                </th>
+                <th scope="col">
+                  E-mail
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="emailName">
+                  </div>
+                </th>
+                <th scope="col">
                   Язык
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="langName">
+                  </div>
                 </th>
-                <th scope="col" class="text-nowrap">
+                <th scope="col">
                   Страна
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="countryName">
+                  </div>
                 </th>
-                <th scope="col" class="text-nowrap">
+                <th scope="col">
                   Цепочка
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="chainName">
+                  </div>
                 </th>
-                <th scope="col">Кол-во в цепочке</th>
-                <th scope="col">№ посл.</th>
-                <th scope="col">Дней до след.</th>
-                <th scope="col" class="text-nowrap">
+                <th scope="col">
+                  Кол-во в цепочке
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="quanInChain">
+                  </div>
+                </th>
+                <th scope="col">
+                  № посл.
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="numbLast">
+                  </div>
+                </th>
+                <th scope="col">
+                  Дней до след.
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="quanForNext">
+                  </div>
+                </th>
+                <th scope="col">
                   Статус
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="statusName">
+                  </div>
                 </th>
                 <th scope="col" class="text-nowrap">
-                  ID
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
+                  ID на сайте
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="idSite">
+                  </div>
                 </th>
                 <th scope="col" class="text-nowrap">
-                  Дата<br>регистрации
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
+                  Дата регистрации
+                  <div>
+                    <input type="text" class="form-control form-control-sm" id="dateReg">
+                  </div>
                 </th>
               </tr>
             </thead>
@@ -125,12 +148,12 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="checkId_00001">
                     <label class="form-check-label" for="checkId_00001">
-                      Иванов Иван
+                      1
                     </label>
                   </div>
-                  <a class="small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a>
-                  <!-- <div class="small text-secondary">LinkedIn: 2145642126</div> -->
                 </td>
+                <td><a href="letter_contact_detail.html">Иван</a></td>
+                <td><a href="letter_contact_detail.html">Иванов</a></td>
                 <td>
                   <div>ivanov@mail.ru</div>
                   <div>ivan@mail.ru</div>
@@ -151,11 +174,12 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="checkId_00002">
                     <label class="form-check-label" for="checkId_00002">
-                      Петров Александр
+                      2
                     </label>
                   </div>
-                  <a class="small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a>
                 </td>
+                <td><a href="letter_contact_detail.html">Александр</a></td>
+                <td><a href="letter_contact_detail.html">Петров</a></td>
                 <td>
                   <div>petrov@mail.ru</div>
                   <div>petrov_aleksandr@mail.ru</div>
@@ -175,11 +199,12 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="checkId_00003">
                     <label class="form-check-label" for="checkId_00003">
-                      Мария Бернар
+                      3
                     </label>
                   </div>
-                  <a class="small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a>
                 </td>
+                <td><a href="letter_contact_detail.html">Мария</a></td>
+                <td><a href="letter_contact_detail.html">Бернар</a></td>
                 <td>
                   <div>bernand123@gmail.com</div>
                   <div>maria_bernard@yahoo.com</div>

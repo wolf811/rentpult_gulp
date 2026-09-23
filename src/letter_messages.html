@@ -13,157 +13,161 @@
         @include('partials/page-title.html', {
         "pageTitle": "Обработчик писем"
         })
-        <ul class="nav nav-tabs mb-4">
-          <li class="nav-item">
-            <a class="nav-link" href="payment_admin.html">Счета</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="letter_contacts.html">Обработчик писем</a>
-          </li>
-        </ul>
-        <h2 class="h4 mb-4"><a href="letter_contacts.html"><i class="bi bi-arrow-left me-1"></i>Контакты</a> / <span class="text-secondary">Письма</span></h2>
-        <!-- @include('partials/letter-handler/filter-messages.html') -->
-        <div class="d-flex align-items-center justify-content-between mb-3">
-          <a href="letter_message_detail.html" class="btn btn-outline-success btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a>
-          <p class="text-secondary fw-bold mb-0">3 из 10 000</strong></p>
+        <h2 class="h4 mb-4">Письма</h2>
+        <div class="mb-3">
+          <!-- <a href="letter_message_detail.html" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить письмо</a> -->
+          <a href="letter_contacts.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-lines-fill me-1"></i>Контакты</a>
+          <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
+          <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a>
+          <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
+          <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
         </div>
-        <div class="table-responsive">
-          <table class="table table-hover table-striped align-middle border small">
-            <thead>
-              <tr>
-                <th scope="col" class="text-center">#</th>
-                <th scope="col" class="text-nowrap">
-                  Название
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-                <th scope="col" class="text-nowrap">
-                  Цепочка
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-                <th scope="col" class="text-nowrap">
-                  Язык цепочки
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-                <th scope="col">Паузы</th>
-                <th scope="col" class="text-nowrap">
-                  Изменено
-                  <span class="ms-1">
-                    <a href="#"><i class="bi bi-arrow-down"></i></a>
-                    <a href="#"><i class="bi bi-arrow-up"></i></a>
-                  </span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row" class="text-center">
-                  <div class="dropdown">
-                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
-                      <i class="bi bi-list"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                      <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
-                      <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
-                    </ul>
+
+        <div class="mb-3" id="chainLetters_1">
+          <div class="fw-light fs-4 mb-2">Цепочка:<strong class="ms-1">рус-1</strong></div>
+
+          <div class="card shadow small mb-3">
+            <div class="card-header bg-light">
+              <div class="row align-items-center">
+                <div class="col-sm-4">
+                  <div class="h5 mb-0">Письмо 1</div>
+                </div>
+                <div class="col-sm">
+                  Отправлять не ранее, чем через <input type="text" class="form-control form-control-sm d-inline" style="width: 50px;"> дней после добавления пользователя
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-2">
+                <div class="col-sm-4">
+                  <label for="variant_1" class="col-form-label col-form-label-sm">Вариант_1</label>
+                  <div class="text-secondary">
+                    <p class="mb-1">
+                      Отправлено: 566
+                    </p>
+                    <p class="mb-1">
+                      Переходы: 6
+                    </p>
+                    <p class="mb-1">
+                      Эффективность: 1%
+                    </p>
                   </div>
-                </td>
-                <td>Название сообщения</td>
-                <td>Новая цепочка</td>
-                <td>ITA</td>
-                <td>2</td>
-                <td>15.05.2026</td>
-              </tr>
-              <tr>
-                <td scope="row" class="text-center">
-                  <div class="dropdown">
-                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
-                      <i class="bi bi-list"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                      <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
-                      <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
-                    </ul>
+                </div>
+                <div class="col-sm">
+                  <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam officiis iusto quisquam, quaerat quia eveniet earum adipisci harum dolor, tempore distinctio doloribus. Accusantium tenetur voluptas inventore nostrum odio optio laudantium explicabo at cupiditate tempore, rem maxime, deleniti quam nisi magnam eius ullam molestias velit dolore eum numquam neque quo?
+                    </textarea>
+                  </p>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-sm-4">
+                  <label for="variant_1" class="col-form-label col-form-label-sm">Вариант_2</label>
+                  <div class="text-secondary">
+                    <p class="mb-1">
+                      Отправлено: 1523
+                    </p>
+                    <p class="mb-1">
+                      Переходы: 18
+                    </p>
+                    <p class="mb-1">
+                      Эффективность: 2.8%
+                    </p>
                   </div>
-                </td>
-                <td>Название сообщения</td>
-                <td>Первая цепочка сообщений</td>
-                <td>RUS</td>
-                <td>2</td>
-                <td>15.05.2026</td>
-              </tr>
-              <tr>
-                <td scope="row" class="text-center">
-                  <div class="dropdown">
-                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
-                      <i class="bi bi-list"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                      <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
-                      <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
-                    </ul>
+                </div>
+                <div class="col-sm">
+                  <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam officiis iusto quisquam, quaerat quia eveniet earum adipisci harum dolor, tempore distinctio doloribus. Accusantium tenetur voluptas inventore nostrum odio optio laudantium explicabo at cupiditate tempore, rem maxime, deleniti quam nisi magnam eius ullam molestias velit dolore eum numquam neque quo?</textarea>
+                  </p>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-sm-4">
+                  <label for="variant_1" class="col-form-label col-form-label-sm">Вариант_3</label>
+                  <div class="text-secondary">
+                    <p class="mb-1">
+                      Отправлено: 662
+                    </p>
+                    <p class="mb-1">
+                      Переходы: 5
+                    </p>
+                    <p class="mb-1">
+                      Эффективность: 0.8%
+                    </p>
                   </div>
-                </td>
-                <td>Название сообщения</td>
-                <td>Вторая цепочка сообщений</td>
-                <td>ENG</td>
-                <td>1</td>
-                <td>15.05.2026</td>
-              </tr>
-              <tr>
-                <td scope="row" class="text-center">
-                  <div class="dropdown">
-                    <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Действия">
-                      <i class="bi bi-list"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item small" href="letter_contact_detail.html"><i class="bi bi-pencil me-1"></i>Редактировать</a></li>
-                      <!-- <li><a class="dropdown-item small" href="#"><i class="bi bi-plus-lg me-1"></i>Добавить сообщение</a></li> -->
-                      <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-x-lg me-1"></i>Удалить</a></li>
-                    </ul>
+                </div>
+                <div class="col-sm">
+                  <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam officiis iusto quisquam, quaerat quia eveniet earum adipisci harum dolor, tempore distinctio doloribus. Accusantium tenetur voluptas inventore nostrum odio optio laudantium explicabo at cupiditate tempore, rem maxime, deleniti quam nisi magnam eius ullam molestias velit dolore eum numquam neque quo?</textarea>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="offset-sm-4 col-sm">
+                  <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalValuesCounters"><i class="bi bi-plus-lg me-1"></i>Добавить вариант</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</a>
+            </div>
+          </div>
+          <div class="card shadow small mb-3">
+            <div class="card-header bg-light">
+              <div class="row align-items-center">
+                <div class="col-sm-4">
+                  <div class="h5 mb-0">Письмо 2</div>
+                </div>
+                <div class="col-sm">
+                  Отправлять не ранее, чем через <input type="text" class="form-control form-control-sm d-inline" style="width: 50px;"> дней после добавления пользователя
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row mb-2">
+                <div class="col-sm-4">
+                  <label for="variant_1" class="col-form-label col-form-label-sm">Вариант_1</label>
+                  <div class="text-secondary">
+                    <p class="mb-1">
+                      Отправлено: 0
+                    </p>
+                    <p class="mb-1">
+                      Переходы: 0
+                    </p>
+                    <p class="mb-1">
+                      Эффективность: 0%
+                    </p>
                   </div>
-                </td>
-                <td>Название сообщения</td>
-                <td>Ещё цепочка сообщений</td>
-                <td>ENG</td>
-                <td>7</td>
-                <td>15.05.2026</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <nav aria-label="...">
-          <ul class="pagination pagination-sm">
-            <li class="page-item active" aria-current="page">
-              <span class="page-link">1</span>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-          </ul>
-        </nav>
+                </div>
+                <div class="col-sm">
+                  <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6"></textarea>
+                  </p>
+                </div>
+              </div>
 
 
+              <div class="row">
+                <div class="offset-sm-4 col-sm">
+                  <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalValuesCounters"><i class="bi bi-plus-lg me-1"></i>Добавить вариант</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</a>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalLetterNew"><i class="bi bi-plus-lg me-1"></i>Добавить письмо</a>
+
+        </div>
+        <div class="mb-3" id="chainLetters_2">
+          <div class="fw-light fs-4 mb-2">Цепочка:<strong class="ms-1">рус-2</strong></div>
+          <a class="btn btn-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalLetterNew"><i class="bi bi-plus-lg me-1"></i>Добавить письмо</a>
+        </div>
+        <div class="mb-3" id="chainLetters_3">
+          <div class="fw-light fs-4 mb-2">Цепочка:<strong class="ms-1">фр-1</strong></div>
+          <a class="btn btn-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalLetterNew"><i class="bi bi-plus-lg me-1"></i>Добавить письмо</a>
+        </div>
       </div>
     </main>
 
     @include('partials/footer.html')
 
   </div>
-  @include('partials/letter-handler/modal-letter-chain.html')
+  @include('partials/letter-handler/modal-letter-new.html')
 </body>
 
 </html>
