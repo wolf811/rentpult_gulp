@@ -1,0 +1,62 @@
+<div class="modal fade" id="modalEmailSettings" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добавить E-mail</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body small">
+          <div class="row mb-3">
+            <div class="col-sm-6">
+              <label for="newEmail" class="form-label">E-mail</label>
+              <input type="mail" class="form-control form-control-sm" id="newEmail">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-6">
+              <label for="login" class="form-label">Логин</label>
+              <input type="text" class="form-control form-control-sm" id="login">
+            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <label for="password" class="form-label">Пароль</label>
+              <input type="password" class="form-control form-control-sm" id="password">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <label for="pop3" class="form-label">POP3</label>
+              <input type="text" class="form-control form-control-sm" id="pop3">
+            </div>
+            <div class="col-sm-6">
+              <label for="smtp" class="form-label">SMTP</label>
+              <input type="text" class="form-control form-control-sm" id="smtp">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <label for="server" class="form-label">Сервер</label>
+              <input type="text" class="form-control form-control-sm" id="server">
+            </div>
+            <div class="col-sm-6">
+              <label for="limits" class="form-label">Лимиты</label>
+              <input type="text" class="form-control form-control-sm" id="limits">
+            </div>
+          </div>
+          <label for="pause" class="form-label">Пауза между сообщениями (сек)</label>
+          <div class="row mb-3">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <input type="text" class="form-control form-control-sm" id="pauseFrom" placeholder="от">
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control form-control-sm" id="pauseTo" placeholder="до">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

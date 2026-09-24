@@ -14,19 +14,15 @@
         "pageTitle": "Обработчик писем"
         })
 
-        <!-- @include('partials/payment_admin_my.html') -->
-        <!-- <ul class="nav nav-tabs mb-4">
-          <li class="nav-item">
-            <a class="nav-link" href="payment_admin.html">Счета</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="letter_contacts.html">Обработчик писем</a>
-          </li>
-        </ul> -->
         <h2 class="h4 mb-4">Контакты</h2>
+        <div class="mb-3">
+          <a href="letter_contacts.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-lines-fill me-1"></i>Контакты</a>
+          <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
+          <!-- <a href="letter_messages.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-inboxes me-1"></i>Письма</a> -->
+          <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a>
+          <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
+          <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
+        </div>
         <div class="mb-3">
           <div class="dropdown d-inline-block">
             <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,19 +44,15 @@
               <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-trash me-1"></i>Удалить выбранные</a></li>
             </ul>
           </div>
+          <a href="letter_contact_detail.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
           <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalImportContacts"><i class="bi bi-box-arrow-in-down me-1"></i>Импорт контактов</a>
-          <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
-          <a href="letter_messages.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-inboxes me-1"></i>Письма</a>
-          <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a>
-          <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
-          <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
         </div>
         <p class="text-secondary fw-bold mb-0">3 из 10 000</strong></p>
         <div class="table-responsive">
           <table class="table table-hover table-bordered align-middle small">
             <thead>
               <tr class="align-middle">
-                <th>
+                <th rowspan="2">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="checkAll">
                     <label class="form-check-label" for="checkAll">
@@ -68,78 +60,32 @@
                     </label>
                   </div>
                 </th>
-                <th scope="col">
-                  Имя
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="firstName">
-                  </div>
-                </th>
-                <th scope="col" class="text-nowrap">
-                  Фамилия
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="lastName">
-                  </div>
-                </th>
-                <th scope="col">
-                  E-mail
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="emailName">
-                  </div>
-                </th>
-                <th scope="col">
-                  Язык
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="langName">
-                  </div>
-                </th>
-                <th scope="col">
-                  Страна
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="countryName">
-                  </div>
-                </th>
-                <th scope="col">
-                  Цепочка
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="chainName">
-                  </div>
-                </th>
-                <th scope="col">
-                  Кол-во в цепочке
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="quanInChain">
-                  </div>
-                </th>
-                <th scope="col">
-                  № посл.
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="numbLast">
-                  </div>
-                </th>
-                <th scope="col">
-                  Дней до след.
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="quanForNext">
-                  </div>
-                </th>
-                <th scope="col">
-                  Статус
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="statusName">
-                  </div>
-                </th>
-                <th scope="col" class="text-nowrap">
-                  ID на сайте
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="idSite">
-                  </div>
-                </th>
-                <th scope="col" class="text-nowrap">
-                  Дата регистрации
-                  <div>
-                    <input type="text" class="form-control form-control-sm" id="dateReg">
-                  </div>
-                </th>
+                <th scope="col">Имя</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Язык</th>
+                <th scope="col">Страна</th>
+                <th scope="col">Цепочка</th>
+                <th scope="col">Кол-во в цепочке</th>
+                <th scope="col">№ посл.</th>
+                <th scope="col">Дней до след.</th>
+                <th scope="col">Статус</th>
+                <th scope="col" class="text-nowrap">ID на сайте</th>
+                <th scope="col" class="text-nowrap">Дата регистрации</th>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control form-control-sm" id="firstName"></td>
+                <td><input type="text" class="form-control form-control-sm" id="lastName"></td>
+                <td><input type="text" class="form-control form-control-sm" id="emailName"></td>
+                <td><input type="text" class="form-control form-control-sm" id="langName"></td>
+                <td><input type="text" class="form-control form-control-sm" id="countryName"></td>
+                <td><input type="text" class="form-control form-control-sm" id="chainName"></td>
+                <td><input type="text" class="form-control form-control-sm" id="quanInChain"></td>
+                <td><input type="text" class="form-control form-control-sm" id="numbLast"></td>
+                <td><input type="text" class="form-control form-control-sm" id="quanForNext"></td>
+                <td><input type="text" class="form-control form-control-sm" id="statusName"></td>
+                <td><input type="text" class="form-control form-control-sm" id="idSite"></td>
+                <td><input type="text" class="form-control form-control-sm" id="dateReg"></td>
               </tr>
             </thead>
             <tbody>
@@ -161,7 +107,7 @@
                 </td>
                 <td>RU</td>
                 <td>Россия евро</td>
-                <td><a href="#">рус-1</a></td>
+                <td><a href="letter_message_detail.html" title="Переход к письмам цепочки">рус-1</a></td>
                 <td>20</td>
                 <td>15</td>
                 <td>5</td>
@@ -186,7 +132,7 @@
                 </td>
                 <td>EN</td>
                 <td>Нидерланды</td>
-                <td><a href="#">рус-2</a></td>
+                <td><a href="letter_message_detail.html" title="Переход к письмам цепочки">рус-2</a></td>
                 <td>20</td>
                 <td>16</td>
                 <td>3</td>
@@ -212,7 +158,7 @@
                 @include('partials/modal-change-chain.html')
                 <td>FR</td>
                 <td>Франция</td>
-                <td><a href="#">фр-1</a></td>
+                <td><a href="letter_message_detail.html" title="Переход к письмам цепочки">фр-1</a></td>
                 <td>15</td>
                 <td>6</td>
                 <td>15</td>

@@ -15,9 +15,9 @@
         })
         <h2 class="h4 mb-4">Письма</h2>
         <div class="mb-3">
-          <!-- <a href="letter_message_detail.html" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg me-1"></i>Добавить письмо</a> -->
           <a href="letter_contacts.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-lines-fill me-1"></i>Контакты</a>
           <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
+          <!-- <a href="letter_messages.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-inboxes me-1"></i>Письма</a> -->
           <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a>
           <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
           <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
@@ -33,7 +33,7 @@
                   <div class="h5 mb-0">Письмо 1</div>
                 </div>
                 <div class="col-sm">
-                  Отправлять не ранее, чем через <input type="text" class="form-control form-control-sm d-inline" style="width: 50px;"> дней после добавления пользователя
+                  Отправлять не ранее, чем через <input type="text" class="form-control form-control-sm d-inline" style="width: 50px;"> дней после предыдущего письма
                 </div>
               </div>
             </div>
@@ -54,9 +54,8 @@
                   </div>
                 </div>
                 <div class="col-sm">
-                  <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam officiis iusto quisquam, quaerat quia eveniet earum adipisci harum dolor, tempore distinctio doloribus. Accusantium tenetur voluptas inventore nostrum odio optio laudantium explicabo at cupiditate tempore, rem maxime, deleniti quam nisi magnam eius ullam molestias velit dolore eum numquam neque quo?
-                    </textarea>
+                  <input type="text" class="form-control form-control-sm mb-3" placeholder="Тема письма">
+                  <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam officiis iusto quisquam, quaerat quia eveniet earum adipisci harum dolor, tempore distinctio doloribus. Accusantium tenetur voluptas inventore nostrum odio optio laudantium explicabo at cupiditate tempore, rem maxime, deleniti quam nisi magnam eius ullam molestias velit dolore eum numquam neque quo?</textarea>
                   </p>
                 </div>
               </div>
@@ -76,6 +75,7 @@
                   </div>
                 </div>
                 <div class="col-sm">
+                  <input type="text" class="form-control form-control-sm mb-3" placeholder="Тема письма">
                   <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam officiis iusto quisquam, quaerat quia eveniet earum adipisci harum dolor, tempore distinctio doloribus. Accusantium tenetur voluptas inventore nostrum odio optio laudantium explicabo at cupiditate tempore, rem maxime, deleniti quam nisi magnam eius ullam molestias velit dolore eum numquam neque quo?</textarea>
                   </p>
                 </div>
@@ -96,6 +96,7 @@
                   </div>
                 </div>
                 <div class="col-sm">
+                  <input type="text" class="form-control form-control-sm mb-3" placeholder="Тема письма">
                   <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam officiis iusto quisquam, quaerat quia eveniet earum adipisci harum dolor, tempore distinctio doloribus. Accusantium tenetur voluptas inventore nostrum odio optio laudantium explicabo at cupiditate tempore, rem maxime, deleniti quam nisi magnam eius ullam molestias velit dolore eum numquam neque quo?</textarea>
                   </p>
                 </div>
@@ -115,7 +116,7 @@
                   <div class="h5 mb-0">Письмо 2</div>
                 </div>
                 <div class="col-sm">
-                  Отправлять не ранее, чем через <input type="text" class="form-control form-control-sm d-inline" style="width: 50px;"> дней после добавления пользователя
+                  Отправлять не ранее, чем через <input type="text" class="form-control form-control-sm d-inline" style="width: 50px;"> дней после предыдущего письма
                 </div>
               </div>
             </div>
@@ -136,6 +137,7 @@
                   </div>
                 </div>
                 <div class="col-sm">
+                  <input type="text" class="form-control form-control-sm mb-3" placeholder="Тема письма">
                   <textarea name="" id="variant_1" class="form-control form-control-sm" rows="6"></textarea>
                   </p>
                 </div>
@@ -153,14 +155,14 @@
           <a class="btn btn-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalLetterNew"><i class="bi bi-plus-lg me-1"></i>Добавить письмо</a>
 
         </div>
-        <div class="mb-3" id="chainLetters_2">
+        <!-- <div class="mb-3" id="chainLetters_2">
           <div class="fw-light fs-4 mb-2">Цепочка:<strong class="ms-1">рус-2</strong></div>
           <a class="btn btn-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalLetterNew"><i class="bi bi-plus-lg me-1"></i>Добавить письмо</a>
         </div>
         <div class="mb-3" id="chainLetters_3">
           <div class="fw-light fs-4 mb-2">Цепочка:<strong class="ms-1">фр-1</strong></div>
           <a class="btn btn-primary btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalLetterNew"><i class="bi bi-plus-lg me-1"></i>Добавить письмо</a>
-        </div>
+        </div> -->
       </div>
     </main>
 

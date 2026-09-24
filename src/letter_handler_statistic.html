@@ -13,18 +13,219 @@
         @include('partials/page-title.html', {
         "pageTitle": "Обработчик писем"
         })
-        <ul class="nav nav-tabs mb-4">
-          <li class="nav-item">
-            <a class="nav-link" href="payment_admin.html">Счета</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="letter_contacts.html">Обработчик писем</a>
-          </li>
-        </ul>
-        <h2 class="h4"><a href="letter_contacts.html"><i class="bi bi-arrow-left me-1"></i>Контакты</a> / <span class="text-secondary">Статистика</span></h2>
+
+        <h2 class="h4 mb-4">Статистика</h2>
+        <div class="mb-3">
+          <a href="letter_contacts.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-lines-fill me-1"></i>Контакты</a>
+          <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
+          <!-- <a href="letter_messages.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-inboxes me-1"></i>Письма</a> -->
+          <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a>
+          <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
+          <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
+        </div>
+        <div class="row" data-masonry='{"percentPosition": true }'>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow small">
+              <div class="card-header bg-light">
+                <div class="h5 mb-0">Контакты</div>
+              </div>
+              <div class="card-body">
+                <table class="table table-hover align-middle small">
+                  <thead>
+                    <tr class="align-middle">
+                      <th scope="col">Всего</th>
+                      <th scope="col">в статусе PLAY</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>458</td>
+                      <td>201</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow small">
+              <div class="card-header bg-light">
+                <div class="h5 mb-0">Контакты по странам</div>
+              </div>
+              <div class="card-body">
+                <table class="table table-hover align-middle small">
+                  <thead>
+                    <tr class="align-middle">
+                      <th scope="col">Страна</th>
+                      <th scope="col">Кол-во</th>
+                      <th scope="col">% переходов</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Франция</td>
+                      <td>201</td>
+                      <td>3%</td>
+                    </tr>
+                    <tr>
+                      <td>Россия</td>
+                      <td>185</td>
+                      <td>3%</td>
+                    </tr>
+                    <tr>
+                      <td>Германия</td>
+                      <td>226</td>
+                      <td>5%</td>
+                    </tr>
+                    <tr>
+                      <td>Нидерланды</td>
+                      <td>119</td>
+                      <td>5%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow small">
+              <div class="card-header bg-light">
+                <div class="h5 mb-0">Контакты по языкам</div>
+              </div>
+              <div class="card-body">
+                <table class="table table-hover align-middle small">
+                  <thead>
+                    <tr class="align-middle">
+                      <th scope="col">Язык</th>
+                      <th scope="col">Кол-во</th>
+                      <th scope="col">% переходов</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Французский</td>
+                      <td>201</td>
+                      <td>3%</td>
+                    </tr>
+                    <tr>
+                      <td>Русский</td>
+                      <td>185</td>
+                      <td>3%</td>
+                    </tr>
+                    <tr>
+                      <td>Немецкий</td>
+                      <td>226</td>
+                      <td>5%</td>
+                    </tr>
+                    <tr>
+                      <td>Итальянский</td>
+                      <td>119</td>
+                      <td>5%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow small">
+              <div class="card-header bg-light">
+                <div class="h5 mb-0">Цепочки сообщений</div>
+              </div>
+              <div class="card-body">
+                <table class="table table-hover align-middle small">
+                  <thead>
+                    <tr class="align-middle">
+                      <th scope="col">Название</th>
+                      <th scope="col">Кол-во</th>
+                      <th scope="col">% переходов</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>рус-1</td>
+                      <td>201</td>
+                      <td>3%</td>
+                    </tr>
+                    <tr>
+                      <td>рус-2</td>
+                      <td>185</td>
+                      <td>3%</td>
+                    </tr>
+                    <tr>
+                      <td>фр-1</td>
+                      <td>226</td>
+                      <td>5%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow small">
+              <div class="card-header bg-light">
+                <div class="h5 mb-0">Отправлено писем</div>
+              </div>
+              <div class="card-body">
+                <table class="table table-hover align-middle small">
+                  <tbody>
+                    <tr>
+                      <td>Сегодня</td>
+                      <td>201</td>
+                    </tr>
+                    <tr>
+                      <td>Вчера</td>
+                      <td>185</td>
+                    </tr>
+                    <tr>
+                      <td>За месяц</td>
+                      <td>11226</td>
+                    </tr>
+                    <tr>
+                      <td>Всего</td>
+                      <td>11522226</td>
+                    </tr>
+                    <tr>
+                      <td>Очередь на отправку</td>
+                      <td>115226</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card shadow small">
+              <div class="card-header bg-light">
+                <div class="h5 mb-0">Переходы по ссылкам из писем</div>
+              </div>
+              <div class="card-body">
+                <table class="table table-hover align-middle small">
+                  <tbody>
+                    <tr>
+                      <td>Сегодня</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Вчера</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>За месяц</td>
+                      <td>28</td>
+                    </tr>
+                    <tr>
+                      <td>Всего</td>
+                      <td>116</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </main>
@@ -33,6 +234,7 @@
 
   </div>
   @include('partials/modal-import-contacts.html')
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </body>
 
 </html>

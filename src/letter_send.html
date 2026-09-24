@@ -16,6 +16,14 @@
 
         <h2 class="h4 mb-4">Очередь отправки</h2>
         <div class="mb-3">
+          <a href="letter_contacts.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-lines-fill me-1"></i>Контакты</a>
+          <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
+          <!-- <a href="letter_messages.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-inboxes me-1"></i>Письма</a> -->
+          <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a>
+          <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
+          <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
+        </div>
+        <div class="mb-3">
           <div class="dropdown d-inline-block">
             <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Действия c выбранными
@@ -34,19 +42,46 @@
               <li><a class="dropdown-item small text-danger" href="#"><i class="bi bi-trash me-1"></i>Удалить выбранные</a></li>
             </ul>
           </div>
-          <a href="letter_contacts.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-lines-fill me-1"></i>Контакты</a>
-          <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
-          <a href="letter_messages.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-inboxes me-1"></i>Письма</a>
-          <!-- <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a> -->
-          <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
-          <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
+        </div>
+        <div class="card w-lg-50 shadow small mb-3">
+          <div class="card-header bg-light">
+            <div class="h5 mb-0">Назначено писем к отправке</div>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover align-middle small">
+              <thead>
+                <tr class="align-middle">
+                  <th scope="col">E-mail</th>
+                  <th scope="col">Сегодня</th>
+                  <th scope="col">Завтра</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="mailto:Eroshenkov@gmail.com">Eroshenkov@gmail.com</a></td>
+                  <td>458</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td><a href="mailto:kir-ero@mail.ru ">kir-ero@mail.ru </a></td>
+                  <td>235</td>
+                  <td>322</td>
+                </tr>
+                <tr>
+                  <td><a href="mailto:kir-ero@yandex.ru">kir-ero@yandex.ru</a></td>
+                  <td>229</td>
+                  <td>182</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <p class="text-secondary fw-bold mb-0">3 из 10 000</strong></p>
         <div class="table-responsive">
           <table class="table table-hover table-bordered align-middle small">
             <thead>
               <tr class="align-middle">
-                <th>
+                <th rowspan="2">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="checkAll">
                     <label class="form-check-label" for="checkAll">
@@ -59,6 +94,13 @@
                 <th scope="col">E-mail</th>
                 <th scope="col">Будет отправлено</th>
                 <th scope="col">Текст</th>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control form-control-sm" id="created"></td>
+                <td><input type="text" class="form-control form-control-sm" id="recipient"></td>
+                <td><input type="text" class="form-control form-control-sm" id="emailRecipient"></td>
+                <td><input type="text" class="form-control form-control-sm" id="willBeSent"></td>
+                <td><input type="text" class="form-control form-control-sm" id="textLetter"></td>
               </tr>
             </thead>
             <tbody>

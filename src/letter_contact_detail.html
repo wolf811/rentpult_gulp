@@ -13,18 +13,17 @@
         @include('partials/page-title.html', {
         "pageTitle": "Обработчик писем"
         })
-        <ul class="nav nav-tabs mb-4">
-          <li class="nav-item">
-            <a class="nav-link" href="payment_admin.html">Счета</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="letter_contacts.html">Обработчик писем</a>
-          </li>
-        </ul>
-        <h2 class="h4"><a href="letter_contacts.html"><i class="bi bi-arrow-left me-1"></i>Контакты</a> / <span class="text-secondary">Иванов Иван</span></h2>
+
+        <!-- <h2 class="h4"><a href="letter_contacts.html"><i class="bi bi-arrow-left me-1"></i>Контакты</a> / <span class="text-secondary">Иванов Иван</span></h2> -->
+        <h2 class="h4 mb-4">Иванов Иван</h2>
+        <div class="mb-3">
+          <a href="letter_contacts.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-lines-fill me-1"></i>Контакты</a>
+          <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
+          <!-- <a href="letter_messages.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-inboxes me-1"></i>Письма</a> -->
+          <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a>
+          <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
+          <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
+        </div>
         <div class="card card-object border-0 shadow-sm">
           <div class="card-body">
             <div class="table-responsive">

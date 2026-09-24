@@ -13,299 +13,273 @@
         @include('partials/page-title.html', {
         "pageTitle": "Обработчик писем"
         })
-        <ul class="nav nav-tabs mb-4">
-          <li class="nav-item">
-            <a class="nav-link" href="payment_admin.html">Счета</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vip_clients_admin.html">VIP-клиенты</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="letter_handler.html">Обработчик писем</a>
-          </li>
-        </ul>
-        <h2 class="h4"><a href="letter_contacts.html"><i class="bi bi-arrow-left me-1"></i>Контакты</a> / <span class="text-secondary">Настройки</span></h2>
-        <!-- <div class="card card-object border-0 shadow-sm">
+
+        <h2 class="h4 mb-4">Настройки</h2>
+        <div class="mb-3">
+          <a href="letter_contacts.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-person-lines-fill me-1"></i>Контакты</a>
+          <a href="letter_chains.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-palette2 me-1"></i>Цепочки</a>
+          <!-- <a href="letter_messages.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-inboxes me-1"></i>Письма</a> -->
+          <a href="letter_send.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-calendar-week me-1"></i>Очередь отправки</a>
+          <a href="letter_handler_settings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-gear me-1"></i>Настройки</a>
+          <a href="letter_handler_statistic.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bar-chart me-1"></i>Статистика</a>
+        </div>
+        <div class="card shadow small mb-3">
+          <div class="card-header bg-light">
+            <div class="h5 mb-0">Почтовые ящики</div>
+          </div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-hover table-bordered align-middle small shadow">
+              <table class="table table-hover align-middle small">
                 <thead>
-                  <tr class="align-middle table-secondary">
-                    <th scope="col">ID</th>
-                    <th scope="col" class="text-nowrap">Фамилия Имя</th>
+                  <tr class="align-middle">
+                    <th>#</th>
                     <th scope="col">E-mail</th>
-
-                    <th scope="col">Цепочка</th>
-                    <th scope="col">Кол-во в цепочке</th>
-                    <th scope="col">№ посл.</th>
-                    <th scope="col">Дней до след.</th>
-
+                    <th scope="col">Логин</th>
+                    <th scope="col">Пароль</th>
+                    <th scope="col">POP3</th>
+                    <th scope="col">SMTP</th>
+                    <th scope="col">Сервер</th>
+                    <th scope="col">Лимиты</th>
+                    <th scope="col">Пауза между сообщениями (сек)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>Иванов Иван</td>
-                    <td>
-                      <div>ivanov@mail.ru</div>
-                      <div>ivan@mail.ru</div>
-                      <div>superivanov@mail.ru</div>
-                    </td>
-
-                    <td><a href="#">рус-1</a></td>
-                    <td>20</td>
-                    <td>15</td>
-                    <td>5</td>
-
+                    <td><a href="mailto:Eroshenkov@gmail.com">Eroshenkov@gmail.com</a></td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>500</td>
+                    <td>от 30 до 90</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><a href="mailto:kir-ero@mail.ru ">kir-ero@mail.ru </a></td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>200</td>
+                    <td>от 30 до 120</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><a href="mailto:kir-ero@yandex.ru">kir-ero@yandex.ru</a></td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>*****</td>
+                    <td>200</td>
+                    <td>от 30 до 120</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <form action="" class="pb-3 mb-3 border-bottom">
-              <div class="h5">Общие данные</div>
-              <fieldset class="small my-3">
-                <div class="row mb-3">
-                  <label for="fio" class="col-md-2 col-form-label">Фамилия Имя</label>
-                  <div class="col-sm col-xl-2">
-                    <input class="form-control form-control-sm" type="text" placeholder="Фамилия">
-                  </div>
-                  <div class="col-sm col-xl-2">
-                    <input class="form-control form-control-sm" type="text" placeholder="Имя">
-                  </div>
-                  <div class="col-sm col-xl-2">
-                    <input class="form-control form-control-sm" type="text" placeholder="Отчество">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="recordDate" class="col-md-2 col-form-label">Добавлен</label>
-                  <div class="col-sm-3 col-xl-2">
-                    <input class="form-control form-control-sm" type="date" id="recordDate">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="company" class="col-md-2 col-form-label">Компания</label>
-                  <div class="col-sm col-xl-4">
-                    <input class="form-control form-control-sm" type="text" id="company">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="jobTitle" class="col-md-2 col-form-label">Должность</label>
-                  <div class="col-sm col-xl-4">
-                    <input class="form-control form-control-sm" type="text" id="jobTitle">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="nameLinkRecord" class="col-md-2 col-form-label">Страна / язык</label>
-                  <div class="col-sm-3 col-xl-2">
-                    <select name="country" class="form-select form-select-sm">
-                      <option selected="">выбрать страну</option>
-                      <option>Россия</option>
-                      <option>Беларусь</option>
-                      <option>Казахстан</option>
-                      <option>Монголия</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-3 col-xl-2">
-                    <select name="lang" class="form-select form-select-sm">
-                      <option selected="">выбрать язык</option>
-                      <option>ENG</option>
-                      <option>RUS</option>
-                      <option>ESP</option>
-                      <option>FRA</option>
-                      <option>GER</option>
-                      <option>CHN</option>
-                      <option>ARA</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="row mb-3">
-                  <label for="email" class="col-md-2 col-form-label">E-mail</label>
-                  <div class="col-sm col-xl-4">
-                    <textarea class="form-control form-control-sm" name="" id="email" rows="2"></textarea>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="nameLinkRecord" class="col-md-2 col-form-label">Цепочка</label>
-                  <div class="col-sm-3 col-xl-2">
-                    <select name="country" class="form-select form-select-sm">
-                      <option>выбрать</option>
-                      <option selected="">рус-1</option>
-                      <option>рус-2</option>
-                      <option>фр-1</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="" class="col-md-2 col-form-label">Статус</label>
-                  <div class="col-sm-3 col-xl-2">
-                    <div class="btn-group btn-group-sm" role="group" aria-label="status_play_stop">
-                      <input type="radio" class="btn-check" name="stausLetter" id="play" autocomplete="off" checked>
-                      <label class="btn btn-outline-secondary" for="play"><i class="bi bi-play-fill"></i> Play</label>
-
-                      <input type="radio" class="btn-check" name="stausLetter" id="stop" autocomplete="off">
-                      <label class="btn btn-outline-secondary" for="stop"><i class="bi bi-stop-fill"></i> Stop</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center mb-3">
-                  <label for="" class="col-md-2 col-form-label">ID регистрации на сайте</label>
-                  <div class="col-sm-3 col-xl-2">
-                    <div class="btn-group btn-group-sm" role="group" aria-label="status_play_stop">
-                      <div class="text-success fw-bold">12345</div>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <div class="d-flex align-items-center justify-content-between">
-                <div>
-                  <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</button>
-                </div>
-              </div>
-            </form>
-
-            <div class="mb-3">
-              <p class="h5">Отправленные письма</p>
-
-              <div class="row small mb-3 border">
-                <div class="col-md">
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">№ сообщения</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">1</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Вариант</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">2</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Отправлено</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">04.09.2026</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Цепочка</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">рус-1</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">E-mail</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">superivanov@mail.ru</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Токен</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">87fhq8o487rhfoew8fb</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Токен сработал?</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">ДА</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md border-start">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, vero cumque? Ipsa expedita quos consectetur dignissimos eos itaque, delectus quas ea vitae nemo illo quis consequatur autem veniam ex rem doloremque porro omnis aspernatur quisquam culpa libero harum? Reiciendis quaerat, assumenda numquam libero praesentium labore sit, vel nulla laudantium temporibus minus doloribus voluptates facere magni maxime similique magnam quisquam fugit earum tempore quod quam! Impedit repellendus eum voluptate animi tempore numquam beatae nihil aperiam, amet fugit sunt. Repellendus, harum ipsa sint animi id dignissimos iure culpa cum minima dolore cumque et voluptatum distinctio rerum excepturi commodi, obcaecati recusandae corporis ducimus.
-                  <a href="https://rent-pult.ru/sites/ru/profile/">Детали здесь</a>
-                </div>
-              </div>
-              <div class="row small mb-3 border">
-                <div class="col-md">
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">№ сообщения</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">1</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Вариант</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">2</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Отправлено</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">04.09.2026</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Цепочка</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">рус-1</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">E-mail</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">superivanov@mail.ru</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Токен</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">87fhq8o487rhfoew8fb</p>
-                    </div>
-                  </div>
-                  <div class="row border-bottom">
-                    <div class="col-5 col-md-4">
-                      <p class="fw-bold mb-1">Токен сработал?</p>
-                    </div>
-                    <div class="col">
-                      <p class="mb-1">ДА</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md border-start">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, vero cumque? Ipsa expedita quos consectetur dignissimos eos itaque, delectus quas ea vitae nemo illo quis consequatur autem veniam ex rem doloremque porro omnis aspernatur quisquam culpa libero harum? Reiciendis quaerat, assumenda numquam libero praesentium labore sit, vel nulla laudantium temporibus minus doloribus voluptates facere magni maxime similique magnam quisquam fugit earum tempore quod quam! Impedit repellendus eum voluptate animi tempore numquam beatae nihil aperiam, amet fugit sunt. Repellendus, harum ipsa sint animi id dignissimos iure culpa cum minima dolore cumque et voluptatum distinctio rerum excepturi commodi, obcaecati recusandae corporis ducimus.
-                  <a href="https://rent-pult.ru/sites/ru/profile/">Детали здесь</a>
-                </div>
-              </div>
-              <p class="h6 text-secondary">Следующее сообщение запланировано: не ранее 15.08.2026</p>
-            </div>
+            <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalEmailSettings"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+            <!-- <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</a> -->
           </div>
-        </div> -->
+        </div>
+        <div class="card shadow small mb-3">
+          <div class="card-header bg-light">
+            <div class="h5 mb-0">График отправки</div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle small">
+                <tr class="align-middle">
+                  <th>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkMon" checked>
+                      <label class="form-check-label" for="checkMon">
+                        ПН
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkTue" checked>
+                      <label class="form-check-label" for="checkTue">
+                        ВТ
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkWed" checked>
+                      <label class="form-check-label" for="checkWed">
+                        СР
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkThu" checked>
+                      <label class="form-check-label" for="checkThu">
+                        ЧТ
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkFri" checked>
+                      <label class="form-check-label" for="checkFri">
+                        ПТ
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkSat">
+                      <label class="form-check-label" for="checkSat">
+                        СБ
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkSun">
+                      <label class="form-check-label" for="checkSun">
+                        ВС
+                      </label>
+                    </div>
+                  </th>
+                </tr>
+              </table>
+            </div>
+            <!-- <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalEmailSettings"><i class="bi bi-plus-lg me-1"></i>Добавить</a> -->
+            <!-- <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</a> -->
+          </div>
+        </div>
+        <div class="card shadow small mb-3">
+          <div class="card-header bg-light">
+            <div class="h5 mb-0">Языки</div>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover align-middle small">
+              <thead>
+                <tr class="align-middle">
+                  <th scope="col" class="w-lg-25">Полностью</th>
+                  <th scope="col">Сокращенно</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Русский</td>
+                  <td>RU</td>
+                </tr>
+                <tr>
+                  <td>Английский</td>
+                  <td>EN</td>
+                </tr>
+                <tr>
+                  <td>Французский</td>
+                  <td>FR</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalLangSettings"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+            <!-- <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</a> -->
+          </div>
+        </div>
+        <div class="card shadow small mb-3">
+          <div class="card-header bg-light">
+            <div class="h5 mb-0">Страны</div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle small">
+                <thead>
+                  <tr class="align-middle">
+                    <th scope="col" class="w-lg-25">Название</th>
+                    <th scope="col">Допустимое время отправки по времени сервера</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Россия</td>
+                    <td>от 10:00 до 14:00</td>
+                  </tr>
+                  <tr>
+                    <td>Беларусь</td>
+                    <td>от 10:00 до 14:00</td>
+                  </tr>
+                  <tr>
+                    <td>Франция</td>
+                    <td>от 11:00 до 15:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalCountrySettings"><i class="bi bi-plus-lg me-1"></i>Добавить</a>
+            <!-- <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</a> -->
+          </div>
+        </div>
+        <div class="card shadow small mb-3">
+          <div class="card-header bg-light">
+            <div class="h5 mb-0">Запуск скриптов</div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle small">
+                <thead>
+                  <tr class="align-middle">
+                    <th>#</th>
+                    <th scope="col">Скрипт</th>
+                    <th scope="col">Частота</th>
+                    <th scope="col">Время</th>
+                    <th scope="col">Запуск</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Создание писем</td>
+                    <td>ежедневно</td>
+                    <td>3:00</td>
+                    <td>
+                      <a href="#" class="btn btn-outline-success btn-sm"><i class="bi bi-play me-1"></i>Play</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Определение времени отправки</td>
+                    <td>ежедневно</td>
+                    <td>3:00</td>
+                    <td>
+                      <a href="#" class="btn btn-outline-success btn-sm"><i class="bi bi-play me-1"></i>Play</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Отправка писем</td>
+                    <td>ежедневно</td>
+                    <td>каждую секунду</td>
+                    <td>
+                      <a href="#" class="btn btn-outline-success btn-sm"><i class="bi bi-play me-1"></i>Play</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- <a class="btn btn-outline-success btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#modalEmailSettings"><i class="bi bi-plus-lg me-1"></i>Добавить</a> -->
+            <!-- <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-save me-1"></i>Сохранить</a> -->
+          </div>
+        </div>
       </div>
     </main>
 
     @include('partials/footer.html')
 
   </div>
-  @include('partials/modal-import-contacts.html')
+
+  @include('partials/modal-email-settings.html')
+  @include('partials/modal-lang-settings.html')
+  @include('partials/modal-country-settings.html')
 </body>
 
 </html>
